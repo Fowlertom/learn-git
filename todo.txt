@@ -1,4 +1,4 @@
 usefull vs extensions
 how to get help in VS Code
-
-how to install GIT (getting started)
+how to 'hook up' your git Repository in VS Code
+where are the Git Tools installed?

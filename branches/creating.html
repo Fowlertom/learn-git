@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Switching Branches</title>
+    <title>Creating Branches</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +10,17 @@
   </head>  
 
   <body>
-    <h2>Switching Branches</h2>
+    <h2>Creating Branches</h2>
 	<br/>
-	<p>To switch branches type the following:</p>
-	<blockquote><p><i>git checkout BRANCHNAME</i></p></blockquote>
+	<p>To add/edit content, a local branch must be created first.</p>
+
+	<p>If the branch exists (same name) in the remote, it will be 'linked' to that remove branch</p>
+
+	<blockquote><p><i>git checkout -b <branch></i></p></blockquote>
+	
+	<p>Creates a branch called <branch></p>
+	
+	
 	<p><b>Example</b></p>
 	<p>To switch branches to 'develop' type:</p>
 	<blockquote><p><i>git checkout develop</i></p></blockquote>
