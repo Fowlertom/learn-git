@@ -1,0 +1,4 @@
+usefull vs extensions
+how to get help in VS Code
+
+how to install GIT (getting started)
