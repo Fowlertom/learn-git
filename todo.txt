@@ -1,4 +1,9 @@
 usefull vs extensions
 how to get help in VS Code
 how to 'hook up' your git Repository in VS Code
-where are the Git Tools installed?
+How Do I....
+
+Check-in code (aka commit) 
+Create Branches
+Merge Code
+Resolve Merge Conflicts
