@@ -11,3 +11,8 @@ h1,h2 {
 {
 	 border:1px solid black;
 }
+
+.navbar {
+    background-color:gainsboro;
+   color: black
+}
