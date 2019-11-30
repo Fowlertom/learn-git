@@ -3,72 +3,58 @@
   <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Creating Branches</title>
+	<title>Switching Branches</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 	<link rel="stylesheet" href="../styles/topics_style.css">
   </head>
   <body class="manpage">
 
-	<div id="content">
-		<p></p>
-	</div>
-
-	<div id="header">
-	  <a href="../HOME.html">Back To Home</a>
+	  <div id="header">
+	  <br/>
+	  <A HREF="javascript:javascript:history.go(-1)">Back</a>
 	  <br/><br/>
 	  <a href="file:///C:/Program%20Files/Git/mingw64/share/doc/git-doc/git-checkout.html" target="_blank">See official GIT documentation</a>
-	  <h1 class="short">Switching Between Branches</h1>
-	  <h2>SUMMARY</h2>
-	  <div class="sectionbody">
-		<p>To add/edit content, a branch must 'have focus'.</p>
+	  <hr align="left">
+
+<!-- TOPIC -->        <h1 class="short">Switching Between Branches</h1><h3>INTRODUCTION</h3>
+<!-- INTRODUCTION --><div class="sectionbody"><p>To add/edit content, a branch must 'have focus'.</p> </div>
+
 	  </div>
-	</div>
 	  <div id="content">
 	  <div class="sect1">
-		<h2 id="_description">DETAILS</h2>
+		<h3 id="_description">DETAILS</h3>
 		<div class="sectionbody">
 
-		  
-		  <div class="actionparagraph">
-			<p class = "action">ACTION:</p>  Switch Branch
-		  </div>
-		  <div class="dlist"><dl>
-			  <dt class="hdlist1">
-				<em>git checkout</em> &lt;branch&gt;
-			  </dt>
-			  <dd>
-				<p>If &lt;branch&gt; exists (with the same name) in the remote, it will be 'linked' to that remote branch.</p>
-			  </dd>
-		  </dl></div>
-		  
-		 <div class="actionparagraph">
-			<p class = "action">ACTION:</p>  Create and Switch Branch (using an existing branch as a 'base')
-		  </div>
-		  <div class="dlist"><dl>
-			  <dt class="hdlist1">
-				<em>git checkout</em> -b &lt;new_branch&gt; &lt;base_branch&gt;
-			  </dt>
-			  <dd>
-				<p>&lt;base_branch&gt must exist locally. This is the transactional equivalent of: </p> 
-				<div class="listingblock">
-				  <div class="content">
-					<pre>$ git branch -f &lt;new_branch&gt; [&lt;start point&gt;]
-$ git checkout &lt;new_branch&gt;</pre>
-				  </div>
-				</div>
-			  </dd>
-		  </dl></div>
+<!-- BEGIN ACTION -->
+<!-- ACTION -->		  <div class="actionparagraph"><p class = "action">ACTION:</p>  Switch Branch</div> 
+		              <div class="dlist"><dl>
+<!-- COMMAND -->      <dt class="hdlist1"><em>git checkout</em> &lt;branch&gt;</dt>
+<!-- EXPLANATION -->  <dd><p>If &lt;branch&gt; exists (with the same name) in the remote, it will be 'linked' to that remote branch.</p></dd>
+<!-- END ACTION -->   </dl></div>
 
-
-
-		</div>
-	  </div>
-
-	  <div class="sect1">
-		  <div class="paragraph">
-			<p><a href="../HOME.html">Back To Home</a></p>
-		  </div>
-	  </div>
-	</div>
+		 
+<!-- BEGIN ACTION -->
+<!-- ACTION -->       <div class="actionparagraph"><p class = "action">ACTION:</p>  Create and Switch Branch (using an existing branch as a 'base')</div>
+                      <div class="dlist"><dl>
+<!-- COMMAND -->      <dt class="hdlist1"><em>git checkout</em> -b &lt;new_branch&gt; &lt;base_branch&gt;</dt>
+<!-- BEGIN EXPL -->   <dd><p>&lt;base_branch&gt must exist locally. This is the transactional equivalent of:</p>
+<!-- BEGIN LISTING--> <div class="listingblock"><div class="content"><pre>
+$ git branch -f &lt;new_branch&gt; [<&lt;start point&gt;]  <b class="conum">(1)</b>
+$ git checkout &lt;new_branch&gt;                    <b class="conum">(2)</b>
+</pre></div>
+    <!-- BEGIN LIST #'s--><div class="colist arabic"><ol>
+    <li><p>create branch from another branch</p></li>
+    <li><p>switch to newly created branch</p></li>
+    <!-- END LIST #'s--></ol></div>
+<!-- END LISTING-->   </div>
+<!-- BEGIN EXPL -->   </dd>
+<!-- END ACTION -->   </dl></div>
+     </div>
+    </div>
+    <hr align="left">
+    <p><a href="../HOME.html">Back To Home</a></p>
+    </div>
+  
+  
   </body>
 </html>
