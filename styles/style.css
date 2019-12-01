@@ -1,6 +1,6 @@
 body {
   font-family: helvetica, arial, sans-serif;
-  margin: 2em;
+  /* margin: 2em; */
 }
 
 h1,h2 {
@@ -13,6 +13,11 @@ h1,h2 {
 }
 
 .navbar {
-    background-color:gainsboro;
+   font-family: helvetica, arial, sans-serif;
+   background-color:gainsboro;
    color: black
+}
+
+.nav-link {
+   text-decoration: none;
 }
