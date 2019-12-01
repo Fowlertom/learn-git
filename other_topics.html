@@ -9,27 +9,15 @@
 	<link rel="stylesheet" href="styles/style.css"/>
 	<script src="scripts/jquery-3.3.1.min.js"> </script>
 	<script src="scripts/bootstrap.min.js"> </script>
+	<script src="scripts/tutorial.js"> </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            inject_Menu();
+        });</script>
   </head>  
 
-
-  <nav class="navbar navbar-expand-sm navbar-light">
-	<ul class="navbar-nav">
-	<li class="nav-item dropdown">
-		<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Home</a>
-		<div class="dropdown-menu">
-			<a class="dropdown-item" href="Welcome.html">Welcome</a>
-			<a class="dropdown-item" href="About.html">About</a>
-		</div>
-	</li>
-	<li class="nav-item"><a class="nav-link" href="GettingStarted.html" >Getting Started</a></li>
-	<li class="nav-item"><a class="nav-link" href="Topics.html" >Topics</a></li>
-	<li class="nav-item"><a class="nav-link" href="References.html" >References</a></li>
-	<li class="nav-item"><a class="nav-link" href="Other_Tutorials.html" >Other Tutorials</a></li>
-	<li class="nav-item"><a class="nav-link" href="Other_Topics.html" >Other Topics</a></li>
-	<li class="nav-item"><a class="nav-link" href="FAQ.html" >FAQ</a></li>
-
-	</ul>
-  </nav>
+  <span id="menu"></span>
 
   <body>
    	<p><b>Other Topics...</b></p>

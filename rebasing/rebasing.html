@@ -5,30 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- TITLE -->       <title>Switching Branches</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
-	<link rel="stylesheet" href="../styles/bootstrap.min.css"/>
-	<link rel="stylesheet" href="../styles/style.css"/>
 	<link rel="stylesheet" href="../styles/topics_style.css">
-	<script src="../scripts/jquery-3.3.1.min.js"> </script>
-	<script src="../scripts/bootstrap.min.js"> </script>
-	<script src="../scripts/tutorial.js"> </script>
-    
-	<script type="text/javascript">
-        $(document).ready(function () {
-            inject_Menu();
-        });</script>
-  </head>  
-
-  <span id="menu">sdafsdf</span>
-  
+  </head>
   <body class="manpage">
 
 	  <div id="header">
+	  <br/>
+	  <A HREF="javascript:javascript:history.go(-1)">Back</a>
 	  <br/><br/>
-<!-- GIT DOC -->      <a href="file:///C:/Program%20Files/Git/mingw64/share/doc/git-doc/git-checkout.html" target="_blank">Official GIT documentation</a>
+<!-- GIT DOC -->      <a href="file:///C:/Program%20Files/Git/mingw64/share/doc/git-doc/git-rebase.html" target="_blank">Official GIT documentation</a>
 	  <hr align="left">
 
-<!-- TOPIC -->        <h1 class="short">Switching Between Branches</h1><h3>INTRODUCTION</h3>
-<!-- INTRODUCTION --><div class="sectionbody"><p>To add/edit content, a branch must 'have focus'.</p> </div>
+<!-- TOPIC -->        <h1 class="short">Rebasing</h1><h3>INTRODUCTION</h3>
+<!-- INTRODUCTION --><div class="sectionbody"><p>Rebasing is 'updating' the 'base' of a branch to point to the 'end' of another branch'. Normally done to prepare for a commit.</p> </div>
 
 	  </div>
 	  <div id="content">
@@ -41,7 +30,8 @@
 
 
 <!-- BEGIN ACTION -->
-<!-- ACTION -->		  <div class="actionparagraph"><p class = "action">ACTION:</p>  Switch Branch</div> 
+<!-- ACTION -->		  <div class="actionparagraph"><p class = "action">ACTION:</p>  
+	Rebase Branch</div> 
 		              <div class="dlist"><dl>
 <!-- COMMAND -->      <dt class="hdlist1"><em>git checkout</em> &lt;branch&gt;</dt>
 <!-- EXPLANATION -->  <dd><p>If &lt;branch&gt; exists (with the same name) in the remote, it will be 'linked' to that remote branch.</p></dd>
