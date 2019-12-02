@@ -19,5 +19,9 @@ h1,h2 {
 }
 
 .nav-link {
-   text-decoration: none;
+   text-decoration: none
 }
+
+/* a.dropdown-item { */
+	/* text-decoration: none; */
+/* } */
