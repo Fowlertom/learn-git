@@ -31,44 +31,62 @@
 <!-- INTRODUCTION --><div class="sectionbody"><p>To add/edit content, a branch must 'have focus'.</p> </div>
 
 	  </div>
-	  <div id="content">
+
+  <div id="content">
 	  <div class="sect1">
-		<h3 id="_description">DETAILS</h3>
-		<div class="sectionbody">
+	      <h3 id="_description">DETAILS</h3>
+	      <div class="sectionbody">
 
 
 
 
 
-<!-- BEGIN ACTION -->
-<!-- ACTION -->		  <div class="actionparagraph"><p class = "action">ACTION:</p>  Switch Branch</div> 
-		              <div class="dlist"><dl>
-<!-- COMMAND -->      <dt class="hdlist1"><em>git checkout</em> &lt;branch&gt;</dt>
-<!-- EXPLANATION -->  <dd><p>If &lt;branch&gt; exists (with the same name) in the remote, it will be 'linked' to that remote branch.</p></dd>
-<!-- END ACTION -->   </dl></div>
+	          <!-- BEGIN ACTION -->
+	          <!-- ACTION -->
+	          <div class="actionparagraph">
+	              <p class="action">ACTION:</p> Switch Branch
+	          </div>
+	          <div class="dlist"><dl>
+	                  <!-- COMMAND --> <dt class="hdlist1"><em>git checkout</em> &lt;branch&gt;</dt>
+	                  <!-- EXPLANATION --> <dd>
+	                      <p>If &lt;branch&gt; exists (with the same name) in the remote, it will be 'linked' to that remote branch.</p></dd>
+	                  <!-- END ACTION --> </dl>
+	          </div>
 
 
 
 
 
 
-		 
-<!-- BEGIN ACTION -->
-<!-- ACTION -->       <div class="actionparagraph"><p class = "action">ACTION:</p>  Create and Switch Branch (using an existing branch as a 'base')</div>
-                      <div class="dlist"><dl>
-<!-- COMMAND -->      <dt class="hdlist1"><em>git checkout</em> -b &lt;new_branch&gt; &lt;base_branch&gt;</dt>
-<!-- BEGIN EXPL -->   <dd><p>&lt;base_branch&gt must exist locally. This is the transactional equivalent of:</p>
-<!-- BEGIN LISTING--> <div class="listingblock"><div class="content"><pre>
+
+	          <!-- BEGIN ACTION -->
+	          <!-- ACTION -->
+	          <div class="actionparagraph">
+	              <p class="action">ACTION:</p> Create and Switch Branch (using an existing branch as a 'base')
+	          </div>
+	          <div class="dlist"><dl>
+	                  <!-- COMMAND --> <dt class="hdlist1"><em>git checkout</em> -b &lt;new_branch&gt; &lt;base_branch&gt;</dt>
+	                  <!-- BEGIN EXPL --> <dd>
+	                      <p>&lt;base_branch&gt must exist locally. This is the transactional equivalent of:</p>
+	                      <!-- BEGIN LISTING-->
+	                      <div class="listingblock">
+	                          <div class="content"><pre>
 $ git branch -f &lt;new_branch&gt; [<&lt;start point&gt;]  <b class="conum">(1)</b>
 $ git checkout &lt;new_branch&gt;                    <b class="conum">(2)</b>
 </pre></div>
-    <!-- BEGIN LIST #'s--><div class="colist arabic"><ol>
-    <li><p>create branch from another branch</p></li>
-    <li><p>switch to newly created branch</p></li>
-    <!-- END LIST #'s--></ol></div>
-<!-- END LISTING-->   </div>
-<!-- BEGIN EXPL -->   </dd>
-<!-- END ACTION -->   </dl></div>
+	                          <!-- BEGIN LIST #'s-->
+	                          <div class="colist arabic"><ol>
+	                                  <li>
+	                                      <p>create branch from another branch</p></li>
+	                                  <li>
+	                                      <p>switch to newly created branch</p></li>
+	                                  <!-- END LIST #'s--></ol>
+	                          </div>
+	                          <!-- END LISTING-->
+	                      </div>
+	                      <!-- BEGIN EXPL --> </dd>
+	                  <!-- END ACTION --> </dl>
+	          </div>
 
 
 
@@ -76,8 +94,9 @@ $ git checkout &lt;new_branch&gt;                    <b class="conum">(2)</b>
 
 
 
-     </div>
-    </div>
+	      </div>
+	  </div>
+      </div>
     <hr align="left">
   
   </body>

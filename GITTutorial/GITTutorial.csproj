@@ -104,10 +104,8 @@
     <Content Include="images\FAQ\Ruby.jpg" />
     <Content Include="index.html" />
     <Content Include="offline references\Best Git GUI clients for Windows 10.html" />
-    <Content Include="other_topics.html" />
-    <Content Include="other_tutorials.html" />
     <Content Include="rebasing\rebasing.html" />
-    <Content Include="references.html" />
+    <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-3.3.1.min.js" />
     <Content Include="scripts\tutorial.js" />
@@ -118,7 +116,7 @@
     <Content Include="styles\style.css" />
     <Content Include="styles\topics_style.css" />
     <Content Include="todo.txt" />
-    <Content Include="topics.html" />
+    <Content Include="commands.html" />
     <Content Include="Web.config" />
     <Content Include="welcome.html" />
   </ItemGroup>

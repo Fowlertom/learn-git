@@ -10,10 +10,9 @@ function get_Menu() {
 	str +="</div>";
 	str +="</li>";
 	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"GettingStarted.html\" >Getting Started</a></li>";
-	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"Topics.html\" >Topics</a></li>";
-	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"References.html\" >References</a></li>";
-	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"Other_Tutorials.html\" >Other Tutorials</a></li>";
-	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"Other_Topics.html\" >Other Topics</a></li>";
+	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"HowDoI.html\" >How Do I...</a></li>";
+	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Commands.html\" >Commands</a></li>";
+	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"Resources.html\" >Resources</a></li>";
 	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"FAQ.html\" >FAQ</a></li>";
 	str +="</ul>";
 	str +="</nav>";
