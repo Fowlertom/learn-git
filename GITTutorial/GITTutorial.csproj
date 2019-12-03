@@ -66,14 +66,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="commitcode\happypath.html" />
+    <Content Include="howdoi.html" />
+    <Content Include="fonts\readme.txt" />
     <Content Include="packages.config" />
     <Content Include="offline references\Best Git GUI clients for Windows 10.pdf" />
     <Content Include="readme.md" />
-    <Content Include="styles\fonts\fontawesome-webfont.eot" />
-    <Content Include="styles\fonts\fontawesome-webfont.ttf" />
-    <Content Include="styles\fonts\fontawesome-webfont.woff" />
-    <Content Include="styles\fonts\fontawesome-webfont.woff2" />
-    <Content Include="styles\fonts\FontAwesome.otf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
@@ -108,13 +106,12 @@
     <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-3.3.1.min.js" />
-    <Content Include="scripts\tutorial.js" />
+    <Content Include="scripts\GITTutorial.js" />
     <Content Include="styles\bootstrap.min.css" />
-    <Content Include="styles\font-awesome.css" />
     <Content Include="styles\font-awesome.min.css" />
-    <Content Include="styles\fonts\fontawesome-webfont.svg" />
-    <Content Include="styles\style.css" />
-    <Content Include="styles\topics_style.css" />
+    <Content Include="styles\google_fonts.css" />
+    <Content Include="styles\GITTutorial_navbar.css" />
+    <Content Include="styles\GITTutorial.css" />
     <Content Include="todo.txt" />
     <Content Include="commands.html" />
     <Content Include="Web.config" />
