@@ -68,29 +68,45 @@
   <ItemGroup>
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
-    <Content Include="server_actions.html" />
+    <Content Include="actions_remote.html" />
     <Content Include="packages.config" />
-    <Content Include="offline references\Best Git GUI clients for Windows 10.pdf" />
+    <Content Include="~offline resources\Best Git GUI clients for Windows 10.pdf" />
     <Content Include="readme.md" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="~reference\errors_and_solutions.txt" />
+    <Content Include="~reference\process_merge.txt" />
+    <Content Include="~reference\process_resolve_merge_conflicts.txt" />
+    <Content Include="~reference\reference.txt" />
+    <Content Include="~reference\workflow.txt" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="~powershellScripts\getlatest.ps1" />
+    <Content Include="~powershellScripts\getlatest_develop.ps1" />
+    <Content Include="~powershellScripts\getlatest_feature19_2.ps1" />
+    <Content Include="~powershellScripts\getlatest_feature19_2_WaitForKey.ps1" />
+    <Content Include="~powershellScripts\getlatest_master.ps1" />
+    <Content Include="~powershellScripts\merge.ps1" />
+    <Content Include="~powershellScripts\Undo_and_getlatest.ps1" />
+    <Content Include="~reference\Gitflow - Version 3.pptx" />
+    <Content Include="~reference\How to Setup a New Computer.docx" />
+    <Content Include="~reference\moving Git repositories.pdf" />
+    <Content Include="~reference\Undo_and_getlatest.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
-    <Content Include="branches\creating.html" />
-    <Content Include="branches\git-checkout.html" />
-    <Content Include="branches\old_creating.html" />
-    <Content Include="branches\switching.html" />
-    <Content Include="branches\template.html" />
+    <Content Include="action_branches\creating.html" />
+    <Content Include="~archive\git-checkout.html" />
+    <Content Include="~archive\old_creating.html" />
+    <Content Include="action_branches\switching.html" />
+    <Content Include="~archive\template.html" />
     <Content Include="faq.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="gettingstarted.html" />
@@ -99,8 +115,8 @@
     <Content Include="images\branches\VSCode_switching.png" />
     <Content Include="images\FAQ\Ruby.jpg" />
     <Content Include="index.html" />
-    <Content Include="offline references\Best Git GUI clients for Windows 10.html" />
-    <Content Include="rebasing\rebasing.html" />
+    <Content Include="~offline resources\Best Git GUI clients for Windows 10.html" />
+    <Content Include="action_rebasing\rebasing.html" />
     <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-3.3.1.min.js" />
@@ -111,7 +127,7 @@
     <Content Include="styles\GITTutorial_navbar.css" />
     <Content Include="styles\GITTutorial.css" />
     <Content Include="todo.txt" />
-    <Content Include="local_actions.html" />
+    <Content Include="actions_local.html" />
     <Content Include="Web.config" />
     <Content Include="welcome.html" />
   </ItemGroup>
