@@ -1,4 +1,4 @@
-function get_Menu() {
+function Create_Menu_HTML() {
     var str = "";
 	str +="<nav class=\"navbar navbar-expand-sm navbar-light\">";
 	str +="<ul class=\"navbar-nav\">";
@@ -20,19 +20,46 @@ function get_Menu() {
 	return str;
 }
 function inject_Top_Level_Menu() {
-    var str = get_Menu();
+    var str = Create_Menu_HTML();
     $("#menu").html(str);
 }
 
 function inject_Sub_Folder_Menu() {
 	// https://flaviocopes.com/javascript-regular-expressions/#groups
 
-	var str = get_Menu();
-	var replacedStr = get_Menu();
+	var replacedStr = Create_Menu_HTML();
 	
 	replacedStr = replacedStr.replace('href=\"#\"','hrXef=\"#\"');
 	replacedStr = replacedStr.replace(/href=\"/g,'href=\"..//');
 	replacedStr = replacedStr.replace('hrXef=\"#\"','href=\"#\"');
     $("#menu").html(replacedStr);
+}
+
+function EventHandler_AccordionClick() {
+    var iconClassName;
+    //open and close the accordions
+    $('.accordion')
+        .find('.accordion-toggle')
+        .click(function () {
+            //Expand or collapse this panel
+            var thisID = $(this);
+            var chevronIcon = thisID[0].childNodes[0];
+            if (chevronIcon.tagName == "I" && chevronIcon.classList[0] == "fa") {
+                iconClassName = chevronIcon.classList[1];
+                if (iconClassName == "fa-angle-double-down")
+                    $(chevronIcon).toggleClass("fa-angle-double-down fa-angle-double-right");
+                else
+                    $(chevronIcon).toggleClass("fa-angle-double-right fa-angle-double-down");
+            }
+            var nextID = thisID.next();
+            nextID.slideToggle('fast');
+            //Hide the other panels - not currently used.
+            //$(".accordion-content").not($(this).next()).slideUp('fast');
+        });
+}
+
+function EventHandlers_Register() {
+
+    EventHandler_AccordionClick();
 }
 

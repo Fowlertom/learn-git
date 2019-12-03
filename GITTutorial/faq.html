@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="styles/bootstrap.min.css"/>
 	<link rel="stylesheet" href="styles/GITTutorial_navbar.css"/>
     <link rel="stylesheet" href="styles/GITTutorial.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
 	<script src="scripts/jquery-3.3.1.min.js"> </script>
 	<script src="scripts/bootstrap.min.js"> </script>
 	<script src="scripts/GITTutorial.js"> </script>
@@ -16,12 +16,13 @@
     <script type="text/javascript">
         $(document).ready(function () {
             inject_Top_Level_Menu();
+            EventHandlers_Register();
         });</script>
   </head>  
 
   <span id="menu"></span>
   
-    <body class="manpage">
+    <body class="manpage accordion">
 
 	  <div id="header">
 		<h1 class="short">Frequently Asked Questions</h1>
@@ -29,14 +30,14 @@
 	  <div id="content">
 		  <div class="sect1">
 
-		      <div class="accordion-toggle"><i class="fa fa-angle-double-right"></i>Who is Ruby The Dog?</div>
+		      <div class="accordion-toggle"> <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size:24px"></i> Who is Ruby The Dog?</h5></div>
 		      <div class="DivIsInitiallyHidden">
                 <p>The dog of the house. Taker of food when the owners are not looking.</p>
                 <p>Is also adept at tearing apart stuffies...</p>
                 <img src="images/faq/Ruby.jpg" height="200px" class = "solidborder">
 		      </div>
 
-		      <p><a href="faq/look_and_feel.html" target="_blank">Your tutorial has the same look and feel as the official GIT Documentation. Is this on purpose?</a></p>
+		      <!--<div class="accordion-toggle"> <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size:24px"></i> Your tutorial has the same look and feel as the official GIT Documentation. Is this on purpose?</h5></div>-->
 		  </div>
       </div>
   </body>
