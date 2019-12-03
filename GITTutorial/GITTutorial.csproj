@@ -74,6 +74,11 @@
     <Content Include="styles\fonts\fontawesome-webfont.woff" />
     <Content Include="styles\fonts\fontawesome-webfont.woff2" />
     <Content Include="styles\fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,6 +96,7 @@
     <Content Include="faq.html" />
     <Content Include="FAQ\look_and_feel.html" />
     <Content Include="FAQ\who_is_ruby_the_dog.html" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="gettingstarted.html" />
     <Content Include="home.html" />
     <Content Include="images\branches\SourceTree_switching.png" />
