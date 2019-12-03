@@ -70,6 +70,8 @@
     <Content Include="fonts\readme.txt" />
     <Content Include="actions_remote.html" />
     <Content Include="packages.config" />
+    <Content Include="scripts\jquery-ui.min.js" />
+    <Content Include="styles\jquery-ui.min.css" />
     <Content Include="~offline resources\Best Git GUI clients for Windows 10.pdf" />
     <Content Include="readme.md" />
     <Content Include="fonts\fontawesome-webfont.eot" />
