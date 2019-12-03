@@ -66,9 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="commitcode\happypath.html" />
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
+    <Content Include="server_actions.html" />
     <Content Include="packages.config" />
     <Content Include="offline references\Best Git GUI clients for Windows 10.pdf" />
     <Content Include="readme.md" />
@@ -92,8 +92,6 @@
     <Content Include="branches\switching.html" />
     <Content Include="branches\template.html" />
     <Content Include="faq.html" />
-    <Content Include="FAQ\look_and_feel.html" />
-    <Content Include="FAQ\who_is_ruby_the_dog.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="gettingstarted.html" />
     <Content Include="home.html" />
@@ -113,7 +111,7 @@
     <Content Include="styles\GITTutorial_navbar.css" />
     <Content Include="styles\GITTutorial.css" />
     <Content Include="todo.txt" />
-    <Content Include="commands.html" />
+    <Content Include="local_actions.html" />
     <Content Include="Web.config" />
     <Content Include="welcome.html" />
   </ItemGroup>

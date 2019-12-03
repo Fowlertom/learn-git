@@ -11,7 +11,8 @@ function get_Menu() {
 	str +="</li>";
 	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"GettingStarted.html\" >Getting Started</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"HowDoI.html\" >How Do I...</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Commands.html\" >Commands</a></li>";
+	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"local_actions.html\" >Local Actions</a></li>";
+	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"server_actions.html\" >Server Actions</a></li>";
 	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"Resources.html\" >Resources</a></li>";
 	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"FAQ.html\" >FAQ</a></li>";
 	str +="</ul>";
