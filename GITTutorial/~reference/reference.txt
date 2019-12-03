@@ -1,0 +1,403 @@
+*****************************************
+*****************************************
+Local Paths:
+
+new location: C:\_LOCALdata\GIT
+
+old locations: C:\_LOCALdata\GIT_OLD_Location
+
+*****************************************
+*****************************************
+
+
+
+
+*****************************************
+*****************************************
+*****************************************
+*****************************************
+Frequently used commands
+
+*****************************************
+*****************************************
+*****************************************
+*****************************************
+create branch:	git Branch BRANCHNAME
+get status:	git status
+
+
+
+code work-flow actions
+----------------------
+0. create a (local) branch                     - git Branch BRANCHNAME
+0.5						- git checkout BRANCHNAME (or... git checkout -b BRANCHNAME)
+
+or steps (0 and 0.5)				- git checkout -b BRANCHNAME
+
+1. get latest                                  - git pull
+2. make 'pending changes' to (local) branch    - git add *
+3. 'commit' to (local) branch                  - git commit -m "BUGNUMBER yourcomments"
+4. migrate committed (local) branch to server  - git push -u origin "BRANCHNAME"
+5. ask for code review                         - create pull request in TFS web browser (change to the branch you created)
+6. merge to master                             - TFS web browser (click on 'complete')
+7. prune local branches
+									  - git checkout master
+									  - git pull
+									  - git remote prune origin --dry-run
+											// You'll see which branch is about to be pruned
+									  - git remote prune origin
+											// now it will prune that reference
+									  - git branch -d your-branch-name
+
+added files to wrong branch
+---------------------------
+git stash
+git checkout BRANCH_YOU_SHOULD_HAVE_ADDED_TO
+git stash apply
+
+adding files to an already committed branch
+-------------------------------------------
+make the change (You may also need to remove the files you changed)
+git checkout BRANCHNAME
+git add .
+git commit --ammend --no-edit
+git push -f
+
+
+
+*****************************************
+*****************************************
+*****************************************
+*****************************************
+				VS Code 
+*****************************************
+*****************************************
+*****************************************
+*****************************************
+
+extensions:
+- Augular language service
+- Angular snipits (Angular 7 Snippets - TypeScript, Html, Angular Material, ngRx, RxJS & Flex Layout)
+- Git Lense
+
+
+*****************************************
+*****************************************
+*****************************************
+*****************************************
+				NPM 
+*****************************************
+*****************************************
+*****************************************
+*****************************************
+
+npm run build -- --watch --outputPath "<C:\_LOCALdata\WelcomePage\Main\SFS.External\Src\SFS.Web.UI.Learner\WelcomePage>" --baseHref "/SFS.Web.UI.Learner/WelcomePage/" 
+	--doesn't work
+
+ng build --watch --outputPath "<C:\_LOCALdata\WelcomePage\Main\SFS.External\Src\SFS.Web.UI.Learner\WelcomePage>" --baseHref "/SFS.Web.UI.Learner/WelcomePage/" 
+	-- use this
+	
+to build for my machine
+-----------------------
+1. open terminal, execute: ng build --watch --baseHref "/SFS.Web.UI.Learner/WelcomePage/" 
+2. copy the output from "C:\_LOCALdata\source\ng-student-portal\dist\app" to "C:\_LOCALdata\WelcomePage\Main\SFS.External\Src\SFS.Web.UI.Learner\WelcomePage"
+3. browse to http://localhost/sfs.web.ui.learner
+
+C:\_LOCALdata\source\ng-student-portal\dist\app
+
+https://d-905967.goa.ds.gov.ab.ca 
+
+
+q: install angular as global or local???
+
+known issues
+************
+
+Cause: some of the node modules were installed with administrator rights
+
+Two ways to fix
+---------------
+- Delete the node_modules directory
+- run npm install again without administrator rights
+
+OR
+
+run npm build with administrator rights
+
+
+
+
+*****************************************
+*****************************************
+*****************************************
+*****************************************
+				GIT
+*****************************************
+*****************************************
+*****************************************
+*****************************************
+
+
+GIT Commands
+************
+
+get local copy (first time)	- in TFS online, click 'clone', click 'clone in Visual Studio'
+					or from the command line
+				- git clone 'url'
+
+http://azuredevops.ae.alberta.ca/SFS/SFS%202.0/_git/WelcomePage
+
+
+branch actions
+--------------
+
+create a branch					 -	Git Branch "BRANCHNAME"
+delete a (local) branch					 -	Git branch -D "BRANCHNAME"
+switch branches					 - 	git checkout "BRANCHNAME"
+view available branches			 -  git branch	
+view 'staged' changes in a branch- 	git checkout "BRANCHNAME"
+
+
+rename branch:
+
+- git branch -m old-name new-name
+// Delete the old branch on TFS via browser (if the old branch was pushed)
+- git remote prune origin (if the old branch was pushed)
+- git push origin -u new-name
+
+other actions
+-------------
+undo a change with a sledgehammer
+
+Step 1 : git checkout <branch_name>
+Step 2 : git pull --rebase
+Step 3 : git pull -s recursive -X theirs
+Step 4 : git reset --hard origin/<branch_name>
+
+
+
+
+other actions
+-------------
+undo a change					 		- git checkout -q -- FILENAME_INCLUDING_PATH	(or click on the 'undo' icon in the 'fork looking icon')
+view history 					 		- git log --oneline
+undo all changes & get latest	 		- git reset --hard origin (if this doesn't work, try git reset --hard origin master)
+get lastest of master to your branch	- git rebase master
+
+				- Re-base your local branch and replay the changes on the tip of master. This command rewrites history.
+				- After a re-base, history is rewritten so that "its as if the branch was created from the tip of master" - even though that it was actually created from a previous point in time.
+				- Since you've rewritten history, you need to force push your branch to the server.
+moving git repository branches - https://docs.microsoft.com/en-us/azure/devops/repos/git/move-git-repos-between-team-projects?view=azure-devops
+
+rebaseing
+-------------------------
+git checkout BRANCHTHATISAHEADOFYOU
+get lastest of BRANCHNAME to your computer	- git rebase BRANCHNAME
+git push origin BRANCHNAME --force (put your branch on the server after a rebase)
+
+
+
+informational
+-------------
+view changes					 - click on the 'fork looking icon' (source control)
+
+
+Concepts
+********
+'staging' - attach a change to a branch (aka make it a pending change)
+
+
+git reset --hard origin master this will make it exactly the same as msater but you'll lose your changes
+Before doing a hard reset, I suggest making a branch
+git checkout master
+'undo'
+git branch my-changes
+git checkout my-changes
+git checkout master
+
+
+Big References
+**************
+
+git reset --hard origin master this will make it exactly the same as msater but you'll lose your changes
+Before doing a hard reset, I suggest making a branch
+git checkout master
+'undo'
+git branch my-changes
+git checkout my-changes
+git checkout master
+git reset --hard origin (if this doesn't work, try git reset --hard origin master)
+
+git diff
+git status
+
+*****************************************
+*****************************************
+References:
+*****************************************
+*****************************************
+https://cloud.eae.alberta.ca/sites/sfs/Wiki/Git%20instructions.aspx
+https://cloud.eae.alberta.ca/sites/sfs/Wiki/Common%20Git%20Commands.aspx
+online markdown editor - https://dillinger.io/
+git for windows
+
+try this: 
+https://learngitbranching.js.org/ 
+press <esc> twice
+to get into interactive mode
+
+
+
+*****************************************
+*****************************************
+Extensions
+*****************************************
+*****************************************
+https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens 
+
+*****************************************
+*****************************************
+Common Git Commands
+*****************************************
+*****************************************
+
+branching and merging
+
+merge XXX (newer) to YYY (older)
+
+git checkout YYY
+git rebase XXX
+create a TFS pull request from XXX to YYY
+
+see: https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+
+
+
+This is a quick reference guide on the most commonly used git commands that you will use on a frequent basis (ranked from highest-to-lowest frequency).
+
+Try out these commands here: https://learngitbranching.js.org/
+
+1. git status
+- Find out which branch you're on
+- View the list of pending changes: untracked files (red), staged files for commit (green)
+- Determine if you are up-to-date with the remote branch
+
+2. git checkout <branch-name>
+- Switch the active branch
+
+3. git checkout -b <branch-name>
+- Create a new branch locally and check it out at the same time. You will need to run "git push origin <branch-name>" to push the branch to the server.
+
+4. git checkout *
+-  Undo all changes for tracked files
+
+5. git add *
+- Add all untracked and modified local files to staging
+
+6. git commit -m "<commit message>"
+- Commit all staged files to local repository
+
+7. git fetch --prune --all
+- Get latest for all remote branches from the server.  Prune any branches that have been deleted from the server (i.e. a branch could be deleted from the server via a PR)
+
+8. git push -u origin <branch-name> 
+
+- Push all local commits to the remote server (this serves the basis for a Pull Request)
+- The "-u" option will setup the branch as an "upstream" branch, so you in the future, you can just do "git push" instead of "git push origin <branch-name>"
+
+9. git push -u origin <branch-name> --force
+
+- Force push the branch to the server (completely overwrite the branch on the server if it already exists)
+- Use this when you want to force push your local dev branch to the server after an operation which has re-written history
+  i.e. git rebase
+
+10. git rebase master
+
+- Re-base your local branch and replay the changes on the tip of master. This command rewrites history.
+- After a re-base, history is rewritten so that "its as if the branch was created from the tip of master" - even though that it was actually created from a previous point in time.
+- Since you've rewritten history, you need to force push your branch to the server.
+
+This is part of the check-in dance: 
+
+a. git fetch --all  (get latest for all remote branches)
+b. git checkout <branch-name> (select the active branch)
+c. git rebase master (rebase on top of local master)  
+d. (if there are any merge conflicts, then fix, add * and commit) 
+e. git push -u origin <branch-name> --force (force push branch to server)
+
+11. git rebase -i master
+- interactively rebase the commits before you replay them on the tip of master
+- this gives you an opportunity to squash your changes prior to completing the re-base so that you can roll up the changes that will be commited and recorded on the server.
+
+12. git rebase -i HEAD~2
+- interactively rebase the last two commits. 
+- this is useful when you want to sqaush your commits on your Dev branch, before rebasing on the tip of master.
+
+13. git reset --hard origin/<branch-name>
+
+- Force get the latest of a remote branch
+- Overwrite all local files (warning, make sure you know what you're doing.  This will overwrite all the files in your local directory).
+- You should use this command if you are reviewing code locally from a PR that's been rebased.
+
+14. git branch -a
+
+- list all local and remote branches
+
+15. git branch -d <branch-name>
+
+- delete a local branch
+
+16. git push origin :<branch-name>
+
+- after deleting a local branch, push that delete to the server (notice the ":" prefix)
+
+17. git log --all --oneline --graph --decorate=short
+
+- show a log of all the commits from all branches in an ASCII graphical representation
+
+18. git reflog
+
+- show a log of all git operations (regardless of whether they are destructive operations)
+- use this command to show a complete commit history (even those that would not appear in the git log) - This is a complete commit audit trail - useful if you need to roll back a commit in an emergency, and that commit does not appear in the normal git log.
+
+19. git clean
+
+ - clean the working directory by removing files that are not under source control
+
+. git clean -df. git clean -df
+
+- force clean (make sure you know what you are doing because you will lose any changes made locally)
+- this removes any modified/untracked files and/or directories.
+- restores files and directories, and undoes all changes so that branch is back to its original state.
+
+
+
+*****************************************
+*****************************************
+Other Reference Docs.
+*****************************************
+*****************************************
+
+
+used to self train. (https://learngitbranching.js.org/)
+GIT Development Process
+https://cloud.eae.alberta.ca/sites/sfs/Wiki/Git%20instructions.aspx
+Client Side Development with Angular https://cloud.eae.alberta.ca/sites/sfs/Wiki/Client%20Side%20Development%20with%20Angular.aspx
+Angular Guidelines
+https://cloud.eae.alberta.ca/sites/sfs/Wiki/Angular%20Guidelines.aspx
+Angular NgModule Guidelines
+https://cloud.eae.alberta.ca/sites/sfs/Wiki/Angular%20NgModule%20Guidelines.aspx
+Angular Component Development
+https://cloud.eae.alberta.ca/sites/sfs/Wiki/Angular%20Component%20Development.aspx
+Angular Unit Testing Guidelines
+https://cloud.eae.alberta.ca/sites/sfs/Wiki/Angular%20Unit%20Testing%20Guidelines.aspx
+Updating Angular Related Packages
+https://cloud.eae.alberta.ca/sites/sfs/Wiki/Upgrading%20Angular-Related%20Packages.aspx
+Angular Development Principles
+https://cloud.eae.alberta.ca/sites/sfs/Wiki/Angular%20Development%20Principles.aspx
+
+
+
+# Run this script as admin account (.Z account)
+Add-LocalGroupMember -Group "Administrators" -Member "GOA\hubert.k.lin" # <- Replace your GOA username
+logoff

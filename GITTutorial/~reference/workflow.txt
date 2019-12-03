@@ -1,0 +1,21 @@
+code work-flow actions
+----------------------
+0. create a (local) branch                     - git Branch BRANCHNAME
+0.5						- git checkout BRANCHNAME (or... git checkout -b BRANCHNAME)
+
+or steps (0 and 0.5)				- git checkout -b BRANCHNAME
+
+1. get latest                                  - git pull
+2. make 'pending changes' to (local) branch    - git add *
+3. 'commit' to (local) branch                  - git commit -m "BUGNUMBER yourcomments"
+4. migrate committed (local) branch to server  - git push -u origin "BRANCHNAME"
+5. ask for code review                         - create pull request in TFS web browser (change to the branch you created)
+6. merge to master                             - TFS web browser (click on 'complete')
+7. prune local branches
+									  - git checkout master
+									  - git pull
+									  - git remote prune origin --dry-run
+											// You'll see which branch is about to be pruned
+									  - git remote prune origin
+											// now it will prune that reference
+									  - git branch -d your-branch-name
