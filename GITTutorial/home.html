@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+   <head>
     <title>James' GIT Tutorial</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="styles/google_fonts.css"/>
+	<link rel="stylesheet" href="styles/bootstrap.min.css"/>
 	<link rel="stylesheet" href="styles/GITTutorial_navbar.css"/>
+    <link rel="stylesheet" href="styles/GITTutorial.css"/>
 	<script src="scripts/jquery-3.3.1.min.js"> </script>
 	<script src="scripts/bootstrap.min.js"> </script>
 	<script src="scripts/GITTutorial.js"> </script>
@@ -15,12 +16,57 @@
         $(document).ready(function () {
             inject_Top_Level_Menu();
         });</script>
+		
+	<style>
+		#masthead {
+		height: 295px;
+		margin-top: -20px;
+		margin-bottom: 2em;
+		background: transparent url(images/git_isometric-grid.png) top right repeat;
+		background-size: 35px 21px;
+		}	
+
+	.inner {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    overflow: visible;
+	}
+	</style>
+
+		
   </head>  
 
   <span id="menu"></span>
 
-  <body>
-	<p>Please choose a menu item from above...</p>
+  <body class="manpage">
+  <div class="inner">
+
+  <a href="https://git-scm.com/"><img src="images/git_logo@2x.png" width="110" height="46" alt="Git" /></a>
+  <span id="tagline"></span>
+
+  </div> <!-- .inner -->
+
+  <div id="masthead">
+  <div class="inner">
+    <p>
+      Git is a <a href="https://git-scm.com/about/free-and-open-source">free and open source</a>
+      distributed version control system designed to handle everything from small to
+      very large projects with speed and efficiency.
+    </p>
+
+    <p>
+      Git is <a href="https://git-scm.com/doc">easy to learn</a> and has a
+      <a href="https://git-scm.com/about/small-and-fast">tiny footprint with lightning fast performance</a>.
+      It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase
+      with features like <a href="https://git-scm.com/about/branching-and-merging">cheap local branching</a>,
+      convenient <a href="https://git-scm.com/about/staging-area">staging areas</a>, and
+      <a href="https://git-scm.com/about/distributed">multiple workflows</a>.
+    </p>
+
+    <img class="illustration" src="images/git_branching-illustration@2x.png" width="389" height="251" />
+  </div> <!-- .inner -->
+</div> <!-- #masthead -->
   </body>
   
   <hr align="left">
