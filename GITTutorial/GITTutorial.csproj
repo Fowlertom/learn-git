@@ -73,8 +73,6 @@
     <Content Include="reference\git-pretty.png" />
     <Content Include="glossary.html" />
     <Content Include="scripts\jquery-3.2.1.js" />
-    <Content Include="scripts\jquery-ui.min.js" />
-    <Content Include="styles\jquery-ui.min.css" />
     <Content Include="~offline resources\Best Git GUI clients for Windows 10.pdf" />
     <Content Include="readme.md" />
     <Content Include="fonts\fontawesome-webfont.eot" />
@@ -88,6 +86,8 @@
     <Content Include="~reference\reference.txt" />
     <Content Include="~reference\workflow.txt" />
     <Content Include="reference\github-git-cheat-sheet.pdf" />
+    <Content Include="reference\progit.pdf" />
+    <Content Include="reference\git-pretty.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
