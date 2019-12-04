@@ -45,10 +45,8 @@ function EventHandler_AccordionClick() {
             //Expand or collapse this panel
             var thisID = $(this);
 
-            var chevronIcon = thisID[0].childNodes[0];
-            alert(thisID[0].innerHTML);
-            if (chevronIcon.tagName == "i" && chevronIcon.classList[0] == "fa") {
-                alert("here");
+            var chevronIcon = thisID[0].childNodes[1].childNodes[0];
+            if (chevronIcon.tagName == "I" && chevronIcon.classList[0] == "fa") {
                 iconClassName = chevronIcon.classList[1];
                 if (iconClassName == "fa-angle-double-down")
                     $(chevronIcon).toggleClass("fa-angle-double-down fa-angle-double-right");
