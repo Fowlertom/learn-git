@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/GITTutorial_navbar.css" />
     <link rel="stylesheet" href="styles/GITTutorial.css" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
     <script src="scripts/jquery-3.2.1.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script src="scripts/GITTutorial.js"></script>
@@ -15,20 +16,39 @@
     <script type="text/javascript">
         $(document).ready(function () {
             UIInitialize_BasePage();
+            EventHandlers_Register();
         });</script>
 </head>
 
 <span id="menu"></span>
 
-<body class="manpage">
+<body class="manpage accordion">
 
     <div id="header"><h1 class="short">Remote Action / Commands</h1></div>
 
     <div id="content">
-        <h3 id="_description">GIT hosted in TFS</h3><div class="sectionbody">
+
+        <h3 id="_description">GIT hosted in TFS</h3><div class="sectionbody"></div>
+        
+        <div class="accordion-toggle"> <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size:24px"></i> Moving GIT Repositories between TFS Projects</h5></div>
+        <div class="DivIsInitiallyHidden">
             <p><a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/move-git-repos-between-team-projects?view=azure-devops" target="_blank">Moving GIT Repositories between TFS Projects</a></p>
         </div>
+        
+        <div class="accordion-toggle"> <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size:24px"></i> Create a new repository</h5></div>
+        <div class="DivIsInitiallyHidden">
+            <div class="colist arabic">
+                <ol>
+                    <li><p>Select the project you want to add the repository for.</p></li>
+                    <li><p>Click the '+' (plus) icon beside the project name.</p></li>
+                    <li><p>Select 'new repository'.</p></li>
+                    <li><p>Enter the 'Repository Name', then click 'create'</p></li>
+                </ol>
+            </div>
+        </div>
+      
     </div>
+
 
 </body>
 </html>
