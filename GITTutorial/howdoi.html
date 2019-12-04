@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>James' GIT Tutorial</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/google_fonts.css"/>
-	<link rel="stylesheet" href="styles/bootstrap.min.css"/>
-	<link rel="stylesheet" href="styles/GITTutorial_navbar.css"/>
-	<link rel="stylesheet" href="styles/GITTutorial.css"/>
-	<script src="scripts/jquery-3.2.1.js"> </script>
-	<script src="scripts/bootstrap.min.js"> </script>
-	<script src="scripts/GITTutorial.js"> </script>
+    <link rel="stylesheet" href="styles/google_fonts.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/GITTutorial_navbar.css" />
+    <link rel="stylesheet" href="styles/GITTutorial.css"/>
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <script src="scripts/jquery-3.2.1.js"> </script>
+    <script src="scripts/bootstrap.min.js"> </script>
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/GITTutorial.js"> </script>
 
     <script type="text/javascript">
         $(document).ready(function () {
-            inject_Top_Level_Menu();
+            UIInitialize_BasePage();
+            EventHandlers_Register();
         });</script>
-  </head>  
+</head>
 
-  <span id="menu"></span>
-  
-    <body class="manpage">
+<span id="menu"></span>
+
+<body class="manpage accordion">
+
+    <div id="header"><h1 class="short">How Do I...</h1></div>
+
+        <div id="content">
+        <div class="accordion-toggle"> <h3 id="_description"><i class="fa fa-angle-double-right"></i> Commit (AKA 'Check-in') Code</h3></div>
+            <div class="DivIsInitiallyHidden">
+                <p><a href="commitcode/happypath.html">Normal (happy path) workflow</a></p>
+                <p><a href="branches/switching.html">Switching Branches</a></p>
+            </div>
+        </div>
+
+      
+<div id="content"><div class="sect1"><h3 id="_description">Undo All Changes</h3><div class="sectionbody">
+        <div class="DivIsInitiallyHidden">
+        <p><a href="rebasing/rebasing.html">Rebasing Branches</a></p>
+        </div>
+    </div></div></div>
+
+    <div id="content"><div class="sect1"><h3 id="_description">Pull (AKA 'Get Latest')</h3><div class="sectionbody">
+        <div class="DivIsInitiallyHidden">
+        <p><a href="rebasing/rebasing.html">Rebasing Branches</a></p>
+        </div>
+     </div></div></div>
 
 
-	  <div id="header">
-            <h1 class="short">How Do I...</h1>
-	  </div>
+    <div id="content"><div class="sect1"><h3 id="_description">Resolve Merge Conflicts</h3><div class="sectionbody">
+        <div class="DivIsInitiallyHidden">
+        <p><a href="merging/merging.html">Merging Branches</a></p>
+        </div>
+    </div></div></div>
 
-      <div id="content"><div class="sect1"><h3 id="_description">Commit (AKA 'Check-in') Code</h3><div class="sectionbody">
-
-          <p><a href="commitcode/happypath.html">Normal (happy path) workflow</a></p>
-          <p><a href="branches/switching.html">Switching Branches</a></p>
-              
-	   </div></div></div>
-
-       <div id="content"><div class="sect1"><h3 id="_description">Undo All Changes</h3><div class="sectionbody">
-
-           <p><a href="rebasing/rebasing.html">Rebasing Branches</a></p>
-              
-	   </div></div></div>
-
-       <div id="content"><div class="sect1"><h3 id="_description">Pull (AKA 'Get Latest')</h3><div class="sectionbody">
-
-           <p><a href="rebasing/rebasing.html">Rebasing Branches</a></p>
-              
-	   </div></div></div>
-
-
-      <div id="content"><div class="sect1"><h3 id="_description">Resolve Merge Conflicts</h3><div class="sectionbody">
-              
-            <p><a href="merging/merging.html">Merging Branches</a></p>
-           
-       </div></div></div>
-
-    <div id="content"><div class="sect1"><h3 id="_description">HELP!!!! How to escape a git mess, step-by-step</h3><div class="sectionbody">
-              
-            <p><a href="reference/git-pretty.png" target="_blank">Troubleshooting Flowchart</a></p>
-           
-       </div></div></div>
+    <div id="content"><div class="sect1"><h3 id="_description">HELP!!!! I messed things up. How can I fix it??</h3><div class="sectionbody">
+        <div class="DivIsInitiallyHidden">
+        <p><a href="reference/git-pretty.png" target="_blank">Troubleshooting Flowchart</a></p>
+        </div>
+     </div></div></div>
 
     </body>
  </html>

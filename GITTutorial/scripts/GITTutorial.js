@@ -20,12 +20,29 @@ function Create_Menu_HTML() {
 	str +="</nav>";
 	return str;
 }
-function inject_Top_Level_Menu() {
+
+//******************************************************************************************
+// UI Initializers
+//******************************************************************************************
+
+
+function UIInitialize_BasePage() {
+    UIInitialize_BasePageMenu();
+    UIInitialize_HideDivs();
+}
+
+function UIInitialize_SubFolderPage() {
+    UIInitialize_SubFolderPageMenu();
+    UIInitialize_HideDivs();
+}
+
+
+function UIInitialize_BasePageMenu() {
     var str = Create_Menu_HTML();
     $("#menu").html(str);
 }
 
-function inject_Sub_Folder_Menu() {
+function UIInitialize_SubFolderPageMenu() {
 	// https://flaviocopes.com/javascript-regular-expressions/#groups
 
 	var replacedStr = Create_Menu_HTML();
@@ -36,6 +53,15 @@ function inject_Sub_Folder_Menu() {
     $("#menu").html(replacedStr);
 }
 
+function UIInitialize_HideDivs() {
+    $(".DivIsInitiallyHidden").css("display", "none");
+}
+
+
+
+//******************************************************************************************
+// Event Handlers
+//******************************************************************************************
 function EventHandler_AccordionClick() {
     var iconClassName;
     //open and close the accordions

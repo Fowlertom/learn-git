@@ -14,12 +14,17 @@
     <link rel="stylesheet" href="styles/jquery-ui.min.css">
     <script src="scripts/jquery-ui.min.js"></script>
     <script src="scripts/GITTutorial.js"> </script>
-      
-    <script type="text/javascript">
-        $(document).ready(function () {
-            inject_Top_Level_Menu();
-            EventHandlers_Register();
-        });</script>
+
+      <script type="text/javascript">
+          $(document).ready(function() {
+              UIInitialize_BasePage();
+              EventHandlers_Register();
+          });
+      </script>
+
+      <style>
+            img{width:400px}
+      </style>
   </head>  
 
   <span id="menu"></span>
@@ -31,14 +36,18 @@
 	  <div id="content">
 		  <div class="sect1">
 
-		      <div class="accordion-toggle"> <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size:24px"></i> Who is Ruby The Dog?</h5></div>
+		      <div class="accordion-toggle"> <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size:24px"></i> Who is 'Ruby The Dog'?</h5></div>
 		      <div class="DivIsInitiallyHidden">
-                <p>The dog of the house. Taker of food when the owners are not looking.</p>
+                <p>The dog of the house. Steals toast when the owners are not looking.</p>
                 <p>Is also adept at tearing apart stuffies...</p>
-                <!--<img src="images/faq/Ruby.jpg" height="200px" class = "solidborder">-->
+                <img src="images/faq/Ruby.jpg" class = "solidborder">
 		      </div>
 
-		      <!--<div class="accordion-toggle"> <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size:24px"></i> Your tutorial has the same look and feel as the official GIT Documentation. Is this on purpose?</h5></div>-->
+		      <div class="accordion-toggle"> <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size:24px"></i> Your tutorial has the same look and feel as the official GIT Documentation. Is this on purpose?</h5></div>
+		      <div class="DivIsInitiallyHidden">
+                <p>Yes. I copied the styles of the GIT Documentation.</p>
+		      </div>
+              
 		  </div>
       </div>
   </body>
