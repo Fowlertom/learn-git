@@ -29,8 +29,26 @@
     <div id="content">
         <div class="accordion-toggle"> <h3 id="_description"><i class="fa fa-angle-double-right"></i> Commit (AKA 'Check-in') Code</h3></div>
         <div class="DivIsInitiallyHidden">
-            <p><a href="commitcode/happypath.html">Normal (happy path) workflow</a></p>
-            <p><a href="branches/switching.html">Switching Branches</a></p>
+            <p>The following details the normal (happy path) workflow</p>
+            <table class="w3-table-all">
+                <tbody>
+                    <tr>
+                        <th style="width:30%">Action</th>
+                        <th style="width:70%">(recommended) Command</th>
+                    </tr>
+                    <tr><td>Switch to 'base_branch'</td><td class="table_code">git checkout &lt;base_branch&gt;</td></tr>
+                    <tr><td>Get latest of 'base_branch'</td><td class="table_code">git pull</td></tr>
+                    <tr><td>Create local 'feature_branch'</td><td class="table_code">git checkout -b &lt;feature_branch&gt; &lt;base_branch&gt;</td></tr>
+                    <tr><td>*****Edit files / do work*******</td><td>-------------</td></tr>
+                    <tr><td>Stage changes to 'feature_branch'</td><td class="table_code">git add *</td></tr>
+                    <tr><td>Commit changes to 'feature_branch'</td><td class="table_code">git commit -m "yourcomments"</td></tr>
+                    <tr><td>Push changes to remote</td><td class="table_code">git push -u origin feature_branch</td></tr>
+                    <tr><td>Initiate merge to 'base_branch'</td><td>create pull request via web browser</td></tr>
+                    <tr><td>Complete merge to 'base_branch'</td><td>complete pull request (via web browser)</td></tr>
+                    <tr><td>Delete local 'feature_branch'</td><td class="table_code">git branch -d feature_branch</td></tr>
+                    <tr><td>Delete local 'feature_branch'</td><td class="table_code">git branch -d feature_branch</td></tr>
+                </tbody>
+            </table>
         </div>
     </div>
 

@@ -1,6 +1,6 @@
 code work-flow actions
 ----------------------
-0. create a (local) branch                     - git Branch BRANCHNAME
+create a local branch                     - git Branch BRANCHNAME
 0.5						- git checkout BRANCHNAME (or... git checkout -b BRANCHNAME)
 
 or steps (0 and 0.5)				- git checkout -b BRANCHNAME
@@ -19,3 +19,21 @@ or steps (0 and 0.5)				- git checkout -b BRANCHNAME
 									  - git remote prune origin
 											// now it will prune that reference
 									  - git branch -d your-branch-name
+      <table class="w3-table-all">
+            <tbody>
+                <tr>
+                    <th style="width:15%">Action</th>
+                    <th style="width:85%">Command (recommended command)</th>
+                </tr>
+                <tr><td>Switch to 'base branch'</td><td>git checkout <base_branch></td></tr>
+				<tr><td>Get latest of 'base branch'</td><td>git pull</td></tr>
+				<tr><td>Create local 'feature' branch</td><td>git checkout -b <feature_branch> <base_branch></td></tr>
+                <tr><td>Edit files / do work</td><td>-------------</td></tr>
+				<tr><td>Stage changes to 'feature' branch</td><td>git add *</td></tr>
+                <tr><td>Commit chantes to 'feature' branch</td><td>git commit -m "yourcomments"</td></tr>
+                <tr><td>Push changes to remote branch</td><td>git push -u origin feature_branch</td></tr>
+				<tr><td>Initiate merge to 'base_branch'</td><td>create pull request via web browser</td></tr>				
+                <tr><td>Complete merge to 'base_branch'</td><td>complete pull request (via web browser)</td></tr>
+                <tr><td>Delete local 'feature_branch'</td><td>git branch -d feature_branch</td></tr>
+            </tbody>
+        </table>
