@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,20 +73,25 @@
     <Content Include="packages.config" />
     <Content Include="reference\git-pretty.png" />
     <Content Include="glossary.html" />
-    <Content Include="GitWorkflows.html" />
+    <Content Include="GitFlow.html" />
+    <Content Include="reference\gitflow\GitFlowDevelopBranch.png" />
+    <Content Include="reference\gitflow\GitFlowFeatureBranches.png" />
+    <Content Include="reference\gitflow\GitFlowHotfixBranch.png" />
+    <Content Include="reference\gitflow\GitFlowMasterBranch.png" />
+    <Content Include="reference\gitflow\GitFlowReleaseBranch.png" />
     <Content Include="scripts\jquery-3.2.1.js" />
-    <Content Include="~offline resources\Best Git GUI clients for Windows 10.pdf" />
+    <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.pdf" />
     <Content Include="readme.md" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="~reference\errors_and_solutions.txt" />
-    <Content Include="~reference\process_merge.txt" />
-    <Content Include="~reference\process_resolve_merge_conflicts.txt" />
-    <Content Include="~reference\reference.txt" />
-    <Content Include="~reference\workflow.txt" />
+    <Content Include="~reference material to process\errors_and_solutions.txt" />
+    <Content Include="~reference material to process\process_merge.txt" />
+    <Content Include="~reference material to process\process_resolve_merge_conflicts.txt" />
+    <Content Include="~reference material to process\reference.txt" />
+    <Content Include="~reference material to process\workflow.txt" />
     <Content Include="reference\github-git-cheat-sheet.pdf" />
     <Content Include="reference\progit.pdf" />
     <Content Include="reference\git-pretty.pdf" />
@@ -96,17 +102,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="~powershellScripts\getlatest.ps1" />
-    <Content Include="~powershellScripts\getlatest_develop.ps1" />
-    <Content Include="~powershellScripts\getlatest_feature19_2.ps1" />
-    <Content Include="~powershellScripts\getlatest_feature19_2_WaitForKey.ps1" />
-    <Content Include="~powershellScripts\getlatest_master.ps1" />
-    <Content Include="~powershellScripts\merge.ps1" />
-    <Content Include="~powershellScripts\Undo_and_getlatest.ps1" />
-    <Content Include="~reference\Gitflow - Version 3.pptx" />
-    <Content Include="~reference\How to Setup a New Computer.docx" />
-    <Content Include="~reference\moving Git repositories.pdf" />
-    <Content Include="~reference\Undo_and_getlatest.ps1" />
+    <Content Include="~reference material to process\~powershellScripts\getlatest.ps1" />
+    <Content Include="~reference material to process\~powershellScripts\getlatest_develop.ps1" />
+    <Content Include="~reference material to process\~powershellScripts\getlatest_feature19_2.ps1" />
+    <Content Include="~reference material to process\~powershellScripts\getlatest_feature19_2_WaitForKey.ps1" />
+    <Content Include="~reference material to process\~powershellScripts\getlatest_master.ps1" />
+    <Content Include="~reference material to process\~powershellScripts\merge.ps1" />
+    <Content Include="~reference material to process\~powershellScripts\Undo_and_getlatest.ps1" />
+    <Content Include="~reference material to process\Gitflow - Version 3.pptx" />
+    <Content Include="~reference material to process\How to Setup a New Computer.docx" />
+    <Content Include="~reference material to process\Undo_and_getlatest.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
@@ -123,7 +128,7 @@
     <Content Include="images\branches\VSCode_switching.png" />
     <Content Include="images\FAQ\Ruby.jpg" />
     <Content Include="index.html" />
-    <Content Include="~offline resources\Best Git GUI clients for Windows 10.html" />
+    <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.html" />
     <Content Include="action_rebasing\rebasing.html" />
     <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -142,9 +147,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="reference\gitflow\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

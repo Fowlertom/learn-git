@@ -11,10 +11,10 @@ function Create_Menu_HTML() {
 	str +="</li>";
 	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"GettingStarted.html\" >Getting Started</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"HowDoI.html\" >How Do I...</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"actions_local.html\" >Local Actions</a></li>";
+	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"actions_local.html\" >GIT Commands</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"actions_remote.html\" >Remote Actions</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Resources.html\" >Resources</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"GitWorkFlows.html\" >GIT Workflow</a></li>";
+	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"GitFlow.html\" >GitFlow</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"glossary.html\" >Glossary</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"FAQ.html\" >FAQ</a></li>";
 	str +="</ul>";
@@ -82,8 +82,6 @@ function EventHandler_AccordionClick() {
             }
             var nextID = thisID.next();
             nextID.slideToggle('fast');
-            //Hide the other panels - not currently used.
-            //$(".accordion-content").not($(this).next()).slideUp('fast');
         });
 }
 
