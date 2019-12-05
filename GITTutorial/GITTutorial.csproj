@@ -72,6 +72,7 @@
     <Content Include="packages.config" />
     <Content Include="reference\git-pretty.png" />
     <Content Include="glossary.html" />
+    <Content Include="GitWorkflows.html" />
     <Content Include="scripts\jquery-3.2.1.js" />
     <Content Include="~offline resources\Best Git GUI clients for Windows 10.pdf" />
     <Content Include="readme.md" />
@@ -88,6 +89,7 @@
     <Content Include="reference\github-git-cheat-sheet.pdf" />
     <Content Include="reference\progit.pdf" />
     <Content Include="reference\git-pretty.pdf" />
+    <Content Include="reference\GitFlow-branching-model.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
