@@ -28,7 +28,7 @@
 <!-- GIT DOC -->      <a href="file:///C:/Program%20Files/Git/mingw64/share/doc/git-doc/git-branch.html" target="_blank">Official GIT documentation - Branching</a>
 	  <hr align="left">
 
-<!-- TOPIC -->        <h1 class="short">Creating / Deleting Branches</h1><h3>INTRODUCTION</h3>
+<!-- TOPIC -->        <h1 class="short">Create Branch</h1><h3>INTRODUCTION</h3>
 <!-- INTRODUCTION --><div class="sectionbody"><p>To add/edit any content, local branch must be created.</p> </div>
 
 	  </div>
@@ -54,21 +54,6 @@
 		              <div class="dlist"><dl>
 <!-- COMMAND -->      <dt class="hdlist1"><em>git branch</em> -f &lt;branch&gt;</dt>
 <!-- EXPLANATION -->  <dd><p>Creates local branch. Will be 'linked' to a remote branch with the same name.</p></dd>
-<!-- END ACTION -->   </dl></div>
-
-<!-- BEGIN ACTION -->
-<!-- ACTION -->		  <div class="actionparagraph"><p class = "action">ACTION:</p>  Delete Branch</div> 
-		              <div class="dlist"><dl>
-<!-- COMMAND -->      <dt class="hdlist1"><em>git branch</em> -D &lt;branch&gt;</dt>
-<!-- EXPLANATION -->  <dd><p>Deletes a local branch. Will be deleted if it has unmerged changes.This is the transactional equivalent of:</p>
-<!-- BEGIN LISTING--> <div class="listingblock"><div class="content"><pre>
-$ git branch -d -f &lt;branch&gt;<b class="conum">(1)</b>
-</pre></div>
-    <!-- BEGIN LIST #'s--><div class="colist arabic"><ol>
-    <li><p>forces a branch to be reset to it's starting point, then deletes it</p></li>
-    <!-- END LIST #'s--></ol></div>
-<!-- END LISTING-->   </div>
-<!-- BEGIN EXPL -->   </dd>
 <!-- END ACTION -->   </dl></div>
 
      </div>

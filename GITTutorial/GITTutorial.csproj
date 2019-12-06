@@ -67,6 +67,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="command_branches\create_and_switch.html" />
+    <Content Include="command_branches\delete.html" />
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
     <Content Include="actions_remote.html" />
@@ -115,10 +117,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
-    <Content Include="action_branches\creating.html" />
+    <Content Include="command_branches\create.html" />
     <Content Include="~archive\git-checkout.html" />
     <Content Include="~archive\old_creating.html" />
-    <Content Include="action_branches\switching.html" />
+    <Content Include="command_branches\switch.html" />
     <Content Include="~archive\template.html" />
     <Content Include="faq.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -129,7 +131,7 @@
     <Content Include="images\FAQ\Ruby.jpg" />
     <Content Include="index.html" />
     <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.html" />
-    <Content Include="action_rebasing\rebasing.html" />
+    <Content Include="command_rebasing\rebasing.html" />
     <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-3.3.1.min.js" />
@@ -140,7 +142,7 @@
     <Content Include="styles\GITTutorial_navbar.css" />
     <Content Include="styles\GITTutorial.css" />
     <Content Include="todo.txt" />
-    <Content Include="actions_local.html" />
+    <Content Include="git_commands.html" />
     <Content Include="Web.config" />
     <Content Include="welcome.html" />
   </ItemGroup>

@@ -11,7 +11,7 @@ function Create_Menu_HTML() {
 	str +="</li>";
 	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"GettingStarted.html\" >Getting Started</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"HowDoI.html\" >How Do I...</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"actions_local.html\" >GIT Commands</a></li>";
+	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"git_commands.html\" >GIT Commands</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"actions_remote.html\" >Remote Actions</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Resources.html\" >Resources</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"GitFlow.html\" >GitFlow</a></li>";
@@ -22,10 +22,15 @@ function Create_Menu_HTML() {
 	return str;
 }
 
+function Create_Copy_HTML() {
+    var str = "";
+    str +="<i class=\"fa fa-copy\" style=\"font-size:24px\" title=\"Copy command\"/>";
+    return str;
+}
+
 //******************************************************************************************
 // UI Initializers
 //******************************************************************************************
-
 
 function UIInitialize_BasePage() {
     UIInitialize_BasePageMenu();
@@ -41,6 +46,9 @@ function UIInitialize_SubFolderPage() {
 function UIInitialize_BasePageMenu() {
     var str = Create_Menu_HTML();
     $("#menu").html(str);
+
+    str = Create_Copy_HTML();
+    $(".copy").html(str);
 }
 
 function UIInitialize_SubFolderPageMenu() {
@@ -52,6 +60,10 @@ function UIInitialize_SubFolderPageMenu() {
 	replacedStr = replacedStr.replace(/href=\"/g,'href=\"..//');
 	replacedStr = replacedStr.replace('hrXef=\"#\"','href=\"#\"');
     $("#menu").html(replacedStr);
+
+    str = Create_Copy_HTML();
+    $(".copy").html(str);
+
 }
 
 function UIInitialize_HideDivs() {
@@ -88,7 +100,7 @@ function EventHandler_AccordionClick() {
 function EventHandler_CopyClick() {
     $('.fa-copy').click(function () {
         var thisID = $(this);
-        var target = thisID[0].parentElement.previousSibling;
+        var target = thisID[0].parentElement.parentElement.previousSibling;
         copyToClipboard(target);
         }
     );
