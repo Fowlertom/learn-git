@@ -85,15 +85,22 @@ function EventHandler_AccordionClick() {
         });
 }
 
-function EventHandlers_Register() {
-
-    EventHandler_AccordionClick();
+function EventHandler_CopyClick() {
+    $('.fa-copy').click(function () {
+        var thisID = $(this);
+        var target = thisID[0].parentElement.previousSibling;
+        copyToClipboard(target);
+        }
+    );
 }
 
 
-//document.getElementById("copyButton").addEventListener("click", function () {
-//    copyToClipboard(document.getElementById("copyTarget"));
-//});
+function EventHandlers_Register() {
+
+    EventHandler_AccordionClick();
+    EventHandler_CopyClick();
+}
+
 
 function copyToClipboard(elem) {
     // create hidden text element, if it doesn't already exist
