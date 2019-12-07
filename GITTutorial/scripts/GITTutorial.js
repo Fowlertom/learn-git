@@ -114,6 +114,7 @@ function EventHandlers_Register() {
 }
 
 
+//https://stackoverflow.com/questions/22581345/click-button-copy-to-clipboard-using-jquery
 function copyToClipboard(elem) {
     // create hidden text element, if it doesn't already exist
     var targetId = "_hiddenCopyText_";
@@ -163,7 +164,3 @@ function copyToClipboard(elem) {
     }
     return succeed;
 }
-
-
-//<input type="text" id="copyTarget" value="Text to Copy"> <button id="copyButton">Copy</button><br><br>
-

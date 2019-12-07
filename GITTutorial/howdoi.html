@@ -26,6 +26,8 @@
 
     <div id="header"><h1 class="short">How Do I...</h1></div>
 
+    <div id="content"><div class="sectionbody"><p>This page focuses on common 'processes / workflows' that need to be performed. The 'most frequently used' process(es) are listed first.</p></div></div>
+
     <div id="content">
         <div class="accordion-toggle"> <h3 id="_description"><i class="fa fa-angle-double-right"></i> Commit (AKA 'Check-in') Code</h3></div>
         <div class="DivIsInitiallyHidden">
@@ -37,20 +39,47 @@
                         <th style="width:45%">(recommended) Command</th>
                         <th style="width:15%"></th> <!--column for the copy icon-->
                     </tr>
-                <tr><td>Switch to 'base_branch'</td><td class="table_code"><a href="command_branches/switch.html" target ="_blank">git checkout &lt;base_branch&gt;</a></td><td><span class ="copy"></span></td></tr>
-                    <tr><td>Get latest of 'base_branch'</td><td class="table_code">git pull</td><td><span class ="copy"></span></td></tr>
-                    <tr><td>Create local 'feature_branch'</td><td class="table_code"><a href="command_branches/create_and_switch.html" target =" _blank">git checkout -b &lt;feature_branch&gt; &lt;base_branch&gt;</a></td><td><span class ="copy"></span></td></tr>
+                    <tr><td>Switch to 'base_branch'</td><td class="table_code"><a href="command_branches/switch.html" target="_blank">git checkout &lt;base_branch&gt;</a></td><td><span class="copy"></span></td></tr>
+                    <tr><td>Get latest of 'base_branch'</td><td class="table_code">git pull</td><td><span class="copy"></span></td></tr>
+                    <tr><td>Create local 'feature_branch'</td><td class="table_code"><a href="command_branches/create_and_switch.html" target=" _blank">git checkout -b &lt;feature_branch&gt; &lt;base_branch&gt;</a></td><td><span class="copy"></span></td></tr>
                     <tr><td>*****Edit files / do work*******</td><td>-------------</td></tr>
-                    <tr><td>Stage changes to 'feature_branch'</td><td class="table_code">git add *</td><td><span class ="copy"></span></td></tr>
-                    <tr><td>Commit changes to 'feature_branch'</td><td class="table_code">git commit -m "yourcomments"</td><td><span class ="copy"></span></td></tr>
-                    <tr><td>Push changes to remote</td><td class="table_code">git push -u origin &lt;feature_branch&gt;</td><td><span class ="copy"></span></td></tr>
+                    <tr><td>Stage changes to 'feature_branch'</td><td class="table_code">git add *</td><td><span class="copy"></span></td></tr>
+                    <tr><td>Commit changes to 'feature_branch'</td><td class="table_code">git commit -m "yourcomments"</td><td><span class="copy"></span></td></tr>
+                    <tr><td>Push changes to remote</td><td class="table_code">git push -u origin &lt;feature_branch&gt;</td><td><span class="copy"></span></td></tr>
                     <tr><td>Initiate merge to 'base_branch'</td><td>create pull request (via web browser)</td><td></td></tr>
                     <tr><td>Complete merge to 'base_branch'</td><td>complete pull request (via web browser)</td><td></td></tr>
-                    <tr><td>Delete local 'feature_branch'</td><td class="table_code"><a href="command_branches/delete.html" target =" "_blank">git branch -D &lt;feature_branch&gt;</a></td><td><span class ="copy"></span></td></tr>
+                    <tr><td>Delete local 'feature_branch'</td><td class="table_code"><a href="command_branches/delete.html" target="_blank">git branch -D &lt;feature_branch&gt;</a></td><td><span class="copy"></span></td></tr>
                 </tbody>
             </table>
         </div>
     </div>
+
+    <div id="content">
+        <div class="accordion-toggle"> <h3 id="_description"><i class="fa fa-angle-double-right"></i> Delete 'local' orphan branches</h3></div>
+        <div class="DivIsInitiallyHidden">
+            <p>The following details how to remove orphan branches / pointers / references that do not exist in the remote</p>
+            <table class="w3-table-all">
+                <tbody>
+                    <tr>
+                        <th style="width:35%">Action</th>
+                        <th style="width:45%">(recommended) Command</th>
+                        <th style="width:15%"></th> <!--column for the copy icon-->
+                    </tr>
+                    <tr><td>Switch to 'base_branch'</td><td class="table_code"><a href="command_branches/switch.html" target="_blank">git checkout &lt;base_branch&gt;</a></td><td><span class="copy"></span></td></tr>
+                    <tr><td>Get latest of 'base_branch'</td><td class="table_code">git pull</td><td><span class="copy"></span></td></tr>
+                    <tr><td>Create local 'feature_branch'</td><td class="table_code"><a href="command_branches/create_and_switch.html" target=" _blank">git checkout -b &lt;feature_branch&gt; &lt;base_branch&gt;</a></td><td><span class="copy"></span></td></tr>
+                    <tr><td>*****Edit files / do work*******</td><td>-------------</td></tr>
+                    <tr><td>Stage changes to 'feature_branch'</td><td class="table_code">git add *</td><td><span class="copy"></span></td></tr>
+                    <tr><td>Commit changes to 'feature_branch'</td><td class="table_code">git commit -m "yourcomments"</td><td><span class="copy"></span></td></tr>
+                    <tr><td>Push changes to remote</td><td class="table_code">git push -u origin &lt;feature_branch&gt;</td><td><span class="copy"></span></td></tr>
+                    <tr><td>Initiate merge to 'base_branch'</td><td>create pull request (via web browser)</td><td></td></tr>
+                    <tr><td>Complete merge to 'base_branch'</td><td>complete pull request (via web browser)</td><td></td></tr>
+                    <tr><td>Delete local 'feature_branch'</td><td class="table_code"><a href="command_branches/delete.html" target="_blank">git branch -D &lt;feature_branch&gt;</a></td><td><span class="copy"></span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 
     <div id="content">
         <div class="accordion-toggle"> <h3 id="_description"><i class="fa fa-angle-double-right"></i> Undo All Changes</h3></div>
