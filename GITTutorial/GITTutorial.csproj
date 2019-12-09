@@ -82,6 +82,7 @@
     <Content Include="reference\gitflow\GitFlowMasterBranch.png" />
     <Content Include="reference\gitflow\GitFlowReleaseBranch.png" />
     <Content Include="scripts\jquery-3.2.1.js" />
+    <Content Include="styles\GITTutorial2.css" />
     <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.pdf" />
     <Content Include="readme.md" />
     <Content Include="fonts\fontawesome-webfont.eot" />
