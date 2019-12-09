@@ -529,4 +529,7 @@ body.manpage div.sectionbody {
 /* my custom changes */
 p.action{text-decoration: underline;display:inline}
 div.actionparagraph{margin-top:2.0em;margin-bottom:2.0em;}
-#header>h1.short{color:rgba(0,0,0,.85);margin-top:1.00rem;margin-bottom:0}
+#header>h1.short{margin-top:1.00rem;margin-bottom:0}
+h1 {font-size: 32px;font-weight: bold}
+h2 {font-size: 24px;font-weight: bold}
+a:visited {color: blue;}
