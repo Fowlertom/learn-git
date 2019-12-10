@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITLE -->
+    <title>Rebasing</title>
+    <link rel="stylesheet" href="../styles/google_fonts.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/GITTutorial_navbar.css" />
+    <link rel="stylesheet" href="../styles/GITTutorial2.css" />
+    <script src="../scripts/jquery-3.2.1.js"> </script>
+    <script src="../scripts/bootstrap.min.js"> </script>
+    <script src="../scripts/GITTutorial.js"> </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            UIInitialize_SubFolderPage();
+            EventHandlers_Register();
+        });</script>
+</head>
+
+<span id="menu"></span>
+
+<body class="manpage">
+
+        <br/><br/><!-- GIT DOC --><a href="https://git.github.io/htmldocs/git-rebase.html" target="_blank">Official GIT documentation - Rebasing</a>
+
+        <div id="header"><h1 class="short">Rebasing</h1></div>
+
+        <h2>DETAILS</h2>
+
+        <div class="sectionbody">
+            <p>Rebasing is the process of re-applying a current branches commits on top of another 'tip'. Normally done when the remote branch is 'ahead' of the local branch. Should be done to prepare for a commit.</p>
+            
+            <div class="dlist">
+                <dl>
+                    <!-- COMMAND --><dt class="hdlist1"><em>git rebase </em>&lt;upstream_branch&gt; &lt;current_branch&gt; </dt>
+                    <!-- EXPLANATION -->
+                    <dd>
+                        <p>Moves the 'base' of the &lt;current_branch&gt; to the 'tip' of &lt;upstream_branch&gt; branch.</p>
+
+                        <p>This is the transactional equivalent of:</p>
+                        <!-- BEGIN LISTING-->
+                        <div class="listingblock">
+                            <div class="content">
+                                <pre>
+$ git checkout &lt;current_branch&gt; <b class="conum">(1)</b>
+$ git rebase &lt;upstream_branch&gt;  <b class="conum">(2)</b>
+</pre>
+                            </div>
+                            <div class="colist arabic">
+                                <ol>
+                                    <li><p>checkout branch</p></li>
+                                    <li><p>rebase to upstream branch</p></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <!-- BEGIN LISTING-->
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    
+        <h2>EXAMPLE</h2>
+        <div class="sectionbody">
+            <p>Assume the following history exists:</p>
+            <div class="listingblock">
+                <div class="content">
+                    <pre>          A---B---C topic
+         /
+    D---E---F---G master</pre>
+                </div>
+            </div>
+            <div class="paragraph"><p>From this point, the result of the following command:</p></div>
+            <div class="literalblock">
+                <div class="content">
+                    <pre>git rebase master topic
+</pre>
+                </div>
+            </div>
+            <div class="paragraph"><p>would be:</p></div>
+            <div class="listingblock">
+                <div class="content">
+                    <pre>                  A'--B'--C' topic
+                 /
+    D---E---F---G master</pre>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

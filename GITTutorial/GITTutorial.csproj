@@ -67,11 +67,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="command_branches\create_and_switch.html" />
-    <Content Include="command_branches\delete.html" />
+    <Content Include="command_grow\create_and_switch.html" />
+    <Content Include="command_grow\delete.html" />
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
     <Content Include="actions_remote.html" />
+    <Content Include="images\FAQ\Ruby_Avitar.jpg" />
+    <Content Include="images\git_branching-illustration%402x.png" />
+    <Content Include="images\git_isometric-grid.png" />
+    <Content Include="images\git_logo%402x.png" />
     <Content Include="packages.config" />
     <Content Include="reference\git-pretty.png" />
     <Content Include="glossary.html" />
@@ -118,10 +122,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
-    <Content Include="command_branches\create.html" />
+    <Content Include="command_grow\create.html" />
     <Content Include="~archive\git-checkout.html" />
     <Content Include="~archive\old_creating.html" />
-    <Content Include="command_branches\switch.html" />
+    <Content Include="command_grow\switch.html" />
     <Content Include="~archive\template.html" />
     <Content Include="faq.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -132,7 +136,7 @@
     <Content Include="images\FAQ\Ruby.jpg" />
     <Content Include="index.html" />
     <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.html" />
-    <Content Include="command_rebasing\rebasing.html" />
+    <Content Include="command_grow\rebasing.html" />
     <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-3.3.1.min.js" />
@@ -141,7 +145,7 @@
     <Content Include="styles\font-awesome.min.css" />
     <Content Include="styles\google_fonts.css" />
     <Content Include="styles\GITTutorial_navbar.css" />
-    <Content Include="styles\GITTutorial.css" />
+    <Content Include="styles\GITTutorial_local_doc_styles.css" />
     <Content Include="todo.txt" />
     <Content Include="git_commands.html" />
     <Content Include="Web.config" />
@@ -150,7 +154,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="command_collaborate\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
