@@ -533,4 +533,6 @@ div.actionparagraph{margin-top:2.0em;margin-bottom:2.0em;}
 h1 {font-size: 32px;font-weight: bold}
 h2 {font-size: 24px;font-weight: bold}
 a:visited {color: blue;}
-#header>h1.short{color:rgba(0,0,0,.85);margin-top:1.00rem;margin-bottom:0}
+#header>h1.short{margin-top:1.00rem;margin-bottom:0}
+em,dt  {font-weight:normal }
+dd {display: block;margin-inline-start: 40px;}
