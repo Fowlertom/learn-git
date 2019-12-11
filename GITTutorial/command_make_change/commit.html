@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TITLE -->
-    <title>Creating Branches</title>
+    <title>Commit</title>
     <link rel="stylesheet" href="../styles/google_fonts.css">
     <link rel="stylesheet" href="../styles/bootstrap.min.css" />
     <link rel="stylesheet" href="../styles/GITTutorial_navbar.css" />
-    <link rel="stylesheet" href="../styles/GITTutorial2.css" />
+    <link rel="stylesheet" href="../styles/GITTutorial2.css"/>
+    <link rel="stylesheet" href="../styles/font-awesome.min.css"/>
     <script src="../scripts/jquery-3.2.1.js"> </script>
     <script src="../scripts/bootstrap.min.js"> </script>
     <script src="../scripts/GITTutorial.js"> </script>
@@ -24,32 +25,32 @@
 
 <body class="manpage">
 
-        <br/><br/><!-- GIT DOC --><a href="https://git.github.io/htmldocs/git-branch.html" target="_blank">Official GIT documentation - Branching</a>
+        <br/><br/><!-- GIT DOC --><a href="https://git.github.io/htmldocs/git-commit.html" target="_blank">Official GIT documentation - Commit</a>
 
-        <div id="header"><h1 class="short">Create</h1></div>
+        <div id="header"><h1 class="short">Commit</h1></div>
 
         <h2>DETAILS</h2>
 
         <div class="sectionbody">
-            <p>To add/edit any content, local branch must be created.</p>
-
+            <p>Performing a 'commit' is the process of applying staged (added) changes to the current branch.</p>
+            
             <div class="dlist">
                 <dl>
-                    <!-- COMMAND --><dt class="hdlist1"><em>git branch</em> -f &lt;branch&gt;</dt>
+                    <!-- COMMAND --><dt class="hdlist1"><em>git commit -m "yourcomments"</em></dt>
                     <!-- EXPLANATION -->
                     <dd>
-                        <p>Creates local branch. Will be 'linked' to a remote branch with the same name.</p>
+                        <p>Applies staged changes to the current branch with the comment of "yourcomments".</p>
                     </dd>
                 </dl>
             </div>
 
-
             <div class="dlist">
                 <dl>
-                    <!-- COMMAND --><dt class="hdlist1"><em>git branch</em> &lt;branch&gt;</dt>
+                    <!-- COMMAND --><dt class="hdlist1"><em>git commit --ammend --no-edit</em><span class="copy"></span></dt> 
                     <!-- EXPLANATION -->
                     <dd>
-                        <p>Creates local branch.</p>
+                        <p><b>--ammend</b> will apply newly staged changes to the most recent commit. More accurately, it replaces the 'tip' of the current branch with a new commit.</p>
+                        <p><b>--no-edit</b> will re-use the most recent commit message</p>
                     </dd>
                 </dl>
             </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TITLE -->
-    <title>Pull</title>
+    <title>Add</title>
     <link rel="stylesheet" href="../styles/google_fonts.css">
     <link rel="stylesheet" href="../styles/bootstrap.min.css" />
     <link rel="stylesheet" href="../styles/GITTutorial_navbar.css" />
@@ -26,70 +26,45 @@
 
         <br/><br/><!-- GIT DOC --><a href="https://git.github.io/htmldocs/git-add.html" target="_blank">Official GIT documentation - Add</a>
 
-        <div id="header"><h1 class="short">Add (AKA 'staging')</h1></div>
+        <div id="header"><h1 class="short">Add (AKA 'stage')</h1></div>
 
         <h2>DETAILS</h2>
 
         <div class="sectionbody">
-            <p>Performing an 'add (staging)' is the process of updating the current branch with new or modified files.</p>
+            <p>Performing an 'add' / staging' is the process of updating (but not comitting) the current branch with new or modified files. This command can be performed multiple times before a commit. It only adds the content of the specified file(s) at the time the add command is run.</p>
             
             <div class="dlist">
                 <dl>
                     <!-- COMMAND --><dt class="hdlist1"><em>git add *</em></dt>
                     <!-- EXPLANATION -->
                     <dd>
-                        <p>Update (but not commit) the <b>current branch</b> with file(s) or folder(s) that are new or have changed. This command can be performed multiple times before a commit. It only adds the content of the specified file(s) at the time the add command is run.</p>
+                        <p>Adds all files / folders that or have changed. Note: will only add files/folders in the current folder / sub-folder.</p>
 
                         <p>This is the transactional equivalent of:</p>
                         <!-- BEGIN LISTING-->
                         <div class="listingblock">
                             <div class="content">
                                 <pre>
-$ git fetch<b class="conum">(1)</b>
-$ git merge<b class="conum">(2)</b>
+$ git add .
 </pre>
                             </div>
-                            <div class="colist arabic">
-                                <ol>
-                                    <li><p>fetch changes from the remote branch to your 'remote-tracking' branch</p></li>
-                                    <li>
-                                        <p>performs a <a href="https://git.github.io/htmldocs/user-manual.html#fast-forwards" target="_blank">fast-forward</a> merge of the changes</p></li>
-                                </ol>
-                            </div>
                         </div>
-                        <!-- BEGIN LISTING-->
+
                     </dd>
                 </dl>
             </div>
+
+            <div class="dlist">
+                <dl>
+                    <!-- COMMAND --><dt class="hdlist1"><em>git add *.html</em></dt>
+                    <!-- EXPLANATION -->
+                    <dd>
+                        <p>Adds changed files that have an extension of 'html'.</p>
+                    </dd>
+                </dl>
+            </div>
+
         </div>
     
-        <h2>EXAMPLE</h2>
-        <div class="sectionbody">
-            <p>Assume the following history exists:</p>
-            <div class="listingblock">
-                <div class="content">
-                    <pre>          A---B---C origin/feature_branch
-         /
-    D---E---F---G feature_branch
-        ^
-        origin/feature_branch in your repository</pre>
-                </div>
-            </div>
-            <div class="paragraph"><p>From this point, the result of the following command:</p></div>
-            <div class="literalblock">
-                <div class="content">
-                    <pre>git pull
-</pre>
-                </div>
-            </div>
-            <div class="paragraph"><p>would be:</p></div>
-            <div class="listingblock">
-                <div class="content">
-                    <pre>          A---B---C origin/feature_branch
-         /         \
-    D---E---F---G---H feature_branch</pre>
-                </div>
-            </div>
-        </div>
 </body>
 </html>

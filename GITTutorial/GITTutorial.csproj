@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="command_branch\create_and_switch.html" />
     <Content Include="command_branch\delete.html" />
+    <Content Include="command_make_change\commit.html" />
     <Content Include="command_make_change\add.html" />
     <Content Include="command_synchronize_change\pull.html" />
     <Content Include="howdoi.html" />
@@ -135,7 +136,7 @@
     <Content Include="images\FAQ\Ruby.jpg" />
     <Content Include="index.html" />
     <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.html" />
-    <Content Include="command_synchronize_change\rebasing.html" />
+    <Content Include="command_synchronize_change\rebase.html" />
     <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-3.3.1.min.js" />

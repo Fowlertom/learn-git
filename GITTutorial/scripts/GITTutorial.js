@@ -61,7 +61,7 @@ function UIInitialize_SubFolderPageMenu() {
 	replacedStr = replacedStr.replace('hrXef=\"#\"','href=\"#\"');
     $("#menu").html(replacedStr);
 
-    str = Create_Copy_HTML();
+    var str = Create_Copy_HTML();
     $(".copy").html(str);
 
 }
