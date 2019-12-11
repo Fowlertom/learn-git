@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="command_branch\create_and_switch.html" />
     <Content Include="command_branch\delete.html" />
+    <Content Include="command_synchronize\pull.html" />
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
     <Content Include="actions_remote.html" />
@@ -99,7 +100,6 @@
     <Content Include="~reference material to process\process_resolve_merge_conflicts.txt" />
     <Content Include="~reference material to process\reference.txt" />
     <Content Include="~reference material to process\workflow.txt" />
-    <Content Include="reference\github-git-cheat-sheet.pdf" />
     <Content Include="reference\progit.pdf" />
     <Content Include="reference\git-pretty.pdf" />
     <Content Include="reference\GitFlow-branching-model.pdf" />
@@ -131,12 +131,10 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="gettingstarted.html" />
     <Content Include="home.html" />
-    <Content Include="images\branches\SourceTree_switching.png" />
-    <Content Include="images\branches\VSCode_switching.png" />
     <Content Include="images\FAQ\Ruby.jpg" />
     <Content Include="index.html" />
     <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.html" />
-    <Content Include="command_syncronize\rebasing.html" />
+    <Content Include="command_synchronize\rebasing.html" />
     <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-3.3.1.min.js" />
