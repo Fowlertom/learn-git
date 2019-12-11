@@ -22,9 +22,21 @@ function Create_Menu_HTML() {
 	return str;
 }
 
-function Create_Copy_HTML() {
+function Create_CopyInTable_HTML() {
     var str = "";
-    str +="<i class=\"fa fa-copy\" style=\"font-size:24px\" title=\"Copy command\"/>";
+    str +="<i class=\"copy_in_table fa fa-copy\" style=\"font-size:24px\" title=\"Copy command\"/>";
+    return str;
+}
+
+function Create_CopyInCommand_HTML() {
+    var str = "";
+    str += "&nbsp;&nbsp;&nbsp;&nbsp;<i class=\"copy_in_command fa fa-copy\" style=\"font-size:24px\" title=\"Copy command\"/>";
+    return str;
+}
+
+function Create_Glossary_HTML() {
+    var str = "";
+    str += "<i class=\"copy_in_command fa fa-copy\" style=\"font-size:24px\" title=\"Copy command\"/>";
     return str;
 }
 
@@ -34,21 +46,27 @@ function Create_Copy_HTML() {
 
 function UIInitialize_BasePage() {
     UIInitialize_BasePageMenu();
+    UIInitialize_CopyIcons();
     UIInitialize_HideDivs();
 }
 
 function UIInitialize_SubFolderPage() {
     UIInitialize_SubFolderPageMenu();
+    UIInitialize_CopyIcons();
     UIInitialize_HideDivs();
 }
-
 
 function UIInitialize_BasePageMenu() {
     var str = Create_Menu_HTML();
     $("#menu").html(str);
+}
 
-    str = Create_Copy_HTML();
-    $(".copy").html(str);
+function UIInitialize_CopyIcons() {
+    var str = Create_CopyInTable_HTML();
+    $(".copy_in_table").html(str);
+
+    str = Create_CopyInCommand_HTML();
+    $(".copy_in_command").html(str);
 }
 
 function UIInitialize_SubFolderPageMenu() {
@@ -60,10 +78,6 @@ function UIInitialize_SubFolderPageMenu() {
 	replacedStr = replacedStr.replace(/href=\"/g,'href=\"..//');
 	replacedStr = replacedStr.replace('hrXef=\"#\"','href=\"#\"');
     $("#menu").html(replacedStr);
-
-    var str = Create_Copy_HTML();
-    $(".copy").html(str);
-
 }
 
 function UIInitialize_HideDivs() {
@@ -98,10 +112,17 @@ function EventHandler_AccordionClick() {
 }
 
 function EventHandler_CopyClick() {
-    $('.fa-copy').click(function () {
+    $('.copy_in_table.fa-copy').click(function () {
         var thisID = $(this);
         var target = thisID[0].parentElement.parentElement.previousSibling;
         copyToClipboard(target);
+        }
+    );
+
+    $('.copy_in_command.fa-copy').click(function () {
+            var thisID = $(this);
+            var target = thisID[0].parentElement.previousSibling;
+            copyToClipboard(target);
         }
     );
 }

@@ -71,6 +71,7 @@
     <Content Include="command_branch\delete.html" />
     <Content Include="command_make_change\commit.html" />
     <Content Include="command_make_change\add.html" />
+    <Content Include="command_synchronize_change\push.html" />
     <Content Include="command_synchronize_change\pull.html" />
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
