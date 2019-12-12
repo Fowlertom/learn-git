@@ -273,7 +273,7 @@ see: https://www.atlassian.com/git/tutorials/merging-vs-rebasing
 
 
 
-This is a quick reference guide on the most commonly used git commands that you will use on a frequent basis (ranked from highest-to-lowest frequency).
+This is a quick reference guide on the most commonly used Git commands that you will use on a frequent basis (ranked from highest-to-lowest frequency).
 
 Try out these commands here: https://learngitbranching.js.org/
 
