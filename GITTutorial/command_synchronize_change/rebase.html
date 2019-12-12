@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TITLE -->
-    <title>Rebasing</title>
+    <title>Rebase</title>
     <link rel="stylesheet" href="../styles/google_fonts.css">
     <link rel="stylesheet" href="../styles/bootstrap.min.css" />
     <link rel="stylesheet" href="../styles/GITTutorial_navbar.css" />
-    <link rel="stylesheet" href="../styles/GITTutorial2.css" />
+    <link rel="stylesheet" href="../styles/GITTutorial2.css"/>
+    <link rel="stylesheet" href="../styles/font-awesome.min.css"/>
     <script src="../scripts/jquery-3.2.1.js"> </script>
     <script src="../scripts/bootstrap.min.js"> </script>
     <script src="../scripts/GITTutorial.js"> </script>
@@ -31,8 +32,8 @@
         <h2>DETAILS</h2>
 
         <div class="sectionbody">
-            <p>Performing a rebase is the process of re-applying a current branches commits on top of another 'tip'. Normally done when the remote branch is 'ahead' of the local branch. Should be done to prepare for a <span class = "glossary_def" title="def=def_commit;display=commit"></span>.</p>
-            
+            <p>Performing a &quot;rebase&quot; is the process of re-applying a current branches commits on top of another 'tip'. Normally done when the <span class = "glossary_def" title="def=def_remote_tracking_branch;display=remote tracking branch"></span> is 'ahead' of the local branch (aka <span class = "glossary_def" title="def=def_working_tree;display=working tree"></span>). Should be done to prepare for a <span class = "glossary_def" title="def=def_commit;display=commit"></span>.</p>
+
             <div class="dlist">
                 <dl>
                     <!-- COMMAND --><dt class="hdlist1"><em>git rebase </em>&lt;upstream_branch&gt; &lt;current_branch&gt; </dt>
@@ -67,7 +68,7 @@ $ git rebase &lt;upstream_branch&gt;  <b class="conum">(2)</b>
             <p>Assume the following history exists:</p>
             <div class="listingblock">
                 <div class="content">
-                    <pre>          A---B---C topic
+                    <pre>          A---B---C feature_branch
          /
     D---E---F---G master</pre>
                 </div>
@@ -75,14 +76,13 @@ $ git rebase &lt;upstream_branch&gt;  <b class="conum">(2)</b>
             <div class="paragraph"><p>From this point, the result of the following command:</p></div>
             <div class="literalblock">
                 <div class="content">
-                    <pre>git rebase master topic
-</pre>
+                    <pre>git rebase master feature_branch<span class="copy_in_command"></span></pre>
                 </div>
             </div>
             <div class="paragraph"><p>would be:</p></div>
             <div class="listingblock">
                 <div class="content">
-                    <pre>                  A'--B'--C' topic
+                    <pre>                  A'--B'--C' feature_branch
                  /
     D---E---F---G master</pre>
                 </div>
