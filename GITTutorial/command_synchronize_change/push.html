@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TITLE -->
-    <title>Pull</title>
+    <title>Push</title>
     <link rel="stylesheet" href="../styles/google_fonts.css">
     <link rel="stylesheet" href="../styles/bootstrap.min.css" />
     <link rel="stylesheet" href="../styles/GITTutorial_navbar.css" />
@@ -32,33 +32,14 @@
         <h2>DETAILS</h2>
 
         <div class="sectionbody">
-            <p>Performing a 'push' is the process of updaing a &#39;remote branch&#39; with anything missing from a &#39;local branch&#39;.</p>
+            <p>Performing a 'push' is the process of updating a &#39;remote branch&#39; with anything missing from a &#39;local branch&#39;.</p>
             
             <div class="dlist">
                 <dl>
-                    <!-- COMMAND --><dt class="hdlist1"><em>git push -u origin <feature_branch> </em></dt>
+                    <!-- COMMAND --><dt class="hdlist1"><em>git push -u origin &lt;feature_branch&gt; </em></dt>
                     <!-- EXPLANATION -->
                     <dd>
-                        <p>Fetch from and integrate with another repository or a local branch into the <b>current branch</b>.</p>
-
-                        <p>This is the transactional equivalent of:</p>
-                        <!-- BEGIN LISTING-->
-                        <div class="listingblock">
-                            <div class="content">
-                                <pre>
-$ git fetch<b class="conum">(1)</b>
-$ git merge<b class="conum">(2)</b>
-</pre>
-                            </div>
-                            <div class="colist arabic">
-                                <ol>
-                                    <li><p>fetch changes from the remote branch to your 'remote-tracking' branch</p></li>
-                                    <li>
-                                        <p>performs a <a href="https://git.github.io/htmldocs/user-manual.html#fast-forwards" target="_blank">fast-forward</a> merge of the changes</p></li>
-                                </ol>
-                            </div>
-                        </div>
-                        <!-- BEGIN LISTING-->
+                        <p>Updates the &lt;origin/feature_branch&gt; with the missing commits from &lt;feature_branch&gt; If &lt;origin/feature_branch&gt; does not exist, it is created. The '-u' command adds upstream tracking reference - in case 'git pull' without arguments is used.</p>
                     </dd>
                 </dl>
             </div>
