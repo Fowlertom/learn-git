@@ -36,17 +36,17 @@
         </tr>
         <tr><td>git</td><td>an open source, distributed version-control system</td></tr>
         <tr><td>GitHub</td><td> a platform for hosting and collaborating on Git repositories</td></tr>
-        <tr><td>commit</td><td> a Git object, a snapshot of your entire repository compressed into a SHA</td></tr>
-        <tr><td>branch</td><td> a lightweight movable pointer to a commit</td></tr>
-        <tr><td>clone</td><td> a local version of a repository, including all commits and branches</td></tr>
-        <tr><td>remote</td><td> a common repository on GitHub that all team member use to exchange their changes</td></tr>
-        <tr><td>fast-fowrard merge</td><td> head of the current branch is moved forward to point at the head of the merged-in branch, without a 'merge commit' being created</td></tr>
-        <tr><td>pull request</td><td> a place to compare and discuss the differences introduced on a branch with reviews, comments, integrated tests, and more</td></tr>
-        <tr><td>origin</td><td> remote repository that a project was originally cloned from. Used instead of that original repository's URL - making referencing easier</td></tr>
-        <tr><td>HEAD</td><td> representing your current working directory, the HEAD pointer can be moved to different branches, tags, or commits when using git checkout</td></tr>
-        <tr><td>porcelain command</td><td> high level git command</td></tr>
-        <tr><td>plumbing command</td><td> low level git command</td></tr>
-        <tr><td>ahead</td><td> a (local or remote) branch has more recent commits that it's associated (local or remote) branch</td></tr>
+        <tr><td>commit</td><td> As a noun: A single point in the Git history; the entire history of a project is represented as a set of interrelated commits. The word "commit" is often used by Git in the same places other revision control systems use the words "revision" or "version". Also used as a short hand for commit object.
+<br /><br />As a verb: The action of storing a new snapshot of the project’s state in the Git history, by creating a new commit representing the current state of the <span class = "glossary_def" title="def=def_index;display=index"></span> and advancing <span class = "glossary_def" title="def=def_head;display=HEAD"></span> to point at the new commit.</td></tr>
+        <tr><td>branch</td><td> A "branch" is an active line of development. The most recent commit on a branch is referred to as the tip of that branch. The tip of the branch is referenced by a branch <span class = "glossary_def" title="def=head;display=HEAD"></span>, which moves forward as additional development is done on the branch. A single Git <span class = "glossary_def" title="def=def_repository;display=repository"></span> can track an arbitrary number of branches, but your <span class = "glossary_def" title="def=def_working_tree;display=working tree"></span> is associated with just one of them (the "current" or "checked out" branch), and <span class = "glossary_def" title="def=def_head;display=HEAD"></span> points to that branch.</td></tr>
+        <tr><td>clone</td><td> a local version of a <span class = "glossary_def" title="def=def_repository;display=repository"></span>, including all <span class = "glossary_def" title="def=def_commit;display=commits"></span> and <span class = "glossary_def" title="def=def_branch;display=branches"></span></td></tr>
+        <tr><td>origin</td><td> The default upstream <span class = "glossary_def" title="def=def_repository;display=repository"></span>. Most projects have at least one <span class = "glossary_def" title="def=def_upstream_branch;display=upstream"></span> project which they track. By default origin is used for that purpose. New upstream updates will be fetched into <span class = "glossary_def" title="def=def_remote_tracking_branch;display=remote-tracking branches"></span> named origin/name-of-upstream-branch, which you can see using <i>git branch -r</i>.</td></tr>
+        <tr><td>fast-fowrard merge</td><td> A fast-forward is a special type of <span class = "glossary_def" title="def=def_merge;display=merge"></span> where you have a <span class = "glossary_def" title="def=def_revision;display=revision"></span> and you are "merging" another branch's changes that happen to be a descendant of what you have. In such a case, you do not make a new <span class = "glossary_def" title="def=def_merge;display=merge"></span> <span class = "glossary_def" title="def=def_commit;display=commit"></span> but instead just update to his revision. This will happen frequently on a <span class = "glossary_def" title="def=def_remote_tracking_branch;display=remote-tracking branch"></span> of a remote <span class = "glossary_def" title="def=def_repository;display=repository"></span>.</td></tr>
+        <tr><td>pull request</td><td> a place to compare and discuss the differences introduced on a <span class = "glossary_def" title="def=def_branch;display=branch"></span> with reviews, comments, integrated tests, and more</td></tr>
+        <tr><td>HEAD</td><td> The current <span class = "glossary_def" title="def=def_branch;display=branch"></span>. In more detail: Your <span class = "glossary_def" title="def=def_working_tree;display=working-tree"></span> is normally derived from the state of the tree referred to by HEAD. HEAD is a reference to one of the <span class = "glossary_def" title="def=def_head;display=heads"></span> in your repository, except when using a <span class = "glossary_def" title="def=def_detached_head;display=detached HEAD"></span>, in which case it directly references an arbitrary commit.</td></tr>
+        <tr><td>porcelain</td><td> Cute name for programs and program suites depending on <span class = "glossary_def" title="def=def_core_git;display=core Git"></span>, presenting a high level access to core Git. Porcelains expose more of a <span class = "glossary_def" title="def=def_scm;display=SCM"></span> interface than the <span class = "glossary_def" title="def=def_plumbing;display=plumbing"></span>.</td></tr>
+        <tr><td>plumbing command</td><td> Cute name for <span class = "glossary_def" title="def=def_core_git;display=core Git"></span></td></tr>
+        <tr><td>ahead</td><td> a (local or remote) <span class = "glossary_def" title="def=def_branch;display=branch"></span> has more recent <span class = "glossary_def" title="def=def_commit;display=commits"></span> that it's associated (local or remote) <span class = "glossary_def" title="def=def_branch;display=branch"></span></td></tr>
         <tr><td>behind</td><td> opposite of ahead</td></tr>
 
         </tbody>
@@ -54,8 +54,6 @@
 
 </div>
 
-<br/>
-<p>The glossary above is courtesy of <a href="https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf" target="_blank">GitHub Cheat Sheet</a></p>
 
 </body>
 </html>

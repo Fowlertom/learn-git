@@ -36,7 +36,7 @@ function Create_CopyInCommand_HTML() {
 
 function Create_Glossary_HTML() {
     var str = "";
-    str += "<i class=\"copy_in_command fa fa-copy\" style=\"font-size:24px\" title=\"Copy command\"/>";
+    str += "<a href=\"https://git.github.io/htmldocs/user-manual.html#def\" target=\"_blank\">display</a>";
     return str;
 }
 
@@ -48,12 +48,14 @@ function UIInitialize_BasePage() {
     UIInitialize_BasePageMenu();
     UIInitialize_CopyIcons();
     UIInitialize_HideDivs();
+    UIInitialize_Glossary();
 }
 
 function UIInitialize_SubFolderPage() {
     UIInitialize_SubFolderPageMenu();
     UIInitialize_CopyIcons();
     UIInitialize_HideDivs();
+    UIInitialize_Glossary();
 }
 
 function UIInitialize_BasePageMenu() {
@@ -68,6 +70,25 @@ function UIInitialize_CopyIcons() {
     str = Create_CopyInCommand_HTML();
     $(".copy_in_command").html(str);
 }
+
+function UIInitialize_Glossary() {
+    //<span class = "glossary_def" title="def=def_fast_forward;display=fast-forward"> </span>
+    //<a href="https://git.github.io/htmldocs/user-manual.html#def_fast_forward" target="_blank">fast-forward</a>
+
+    var strGlossary = Create_Glossary_HTML();
+    $(".glossary_def").each(function () {
+        var thisID = $(this);
+        var title = thisID.attr("title");
+        var def = title.split(";")[0].split("=")[1];
+        var display = title.split(";")[1].split("=")[1];
+        var str = strGlossary;
+        str = str.replace("def", def);
+        str = str.replace("display", display);
+        thisID.html(str);
+        thisID.removeAttr("title");
+    });
+}
+
 
 function UIInitialize_SubFolderPageMenu() {
 	// https://flaviocopes.com/javascript-regular-expressions/#groups
