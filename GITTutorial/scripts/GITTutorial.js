@@ -12,7 +12,7 @@ function Create_Menu_HTML() {
 	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"GettingStarted.html\" >Getting Started</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"HowDoI.html\" >How Do I...</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"git_commands.html\" >Git Commands</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"actions_remote.html\" >Remote Actions</a></li>";
+	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"actions_remote.html\" >Remote Actions (TFS)</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Resources.html\" >Resources</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"GitFlow.html\" >GitFlow</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"glossary.html\" >Glossary</a></li>";
