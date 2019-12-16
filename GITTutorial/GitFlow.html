@@ -31,7 +31,7 @@
 
     <div id="content">
         <div class="sectionbody">
-            <p>A Git Workflow dictates what kind of branches to set up and how to merge them together. One of the most popular branching and merging workflow models is <a href="https://nvie.com/posts/a-successful-git-branching-model/" target="_blank">GitFlow</a>. At a glance, this is the <a href="reference/GitFlow-branching-model.pdf" target="_blank">GitFlow Workflow</a>.</p>
+            <p>A Git Workflow dictates what kind of branches to set up and how to merge them together. One of the most popular branching and merging workflow models is <a href="https://nvie.com/posts/a-successful-git-branching-model/" >GitFlow</a>. At a glance, this is the <a href="reference/GitFlow-branching-model.pdf" >GitFlow Workflow</a>.</p>
             <p><strong>IMPORTANT</strong>: There are two main branches with an infinite lifetime:</p>
             <ul>
                 <li style="color: black;">master</li>
@@ -44,7 +44,7 @@
 
 
             <div class="accordion-toggle">
-                <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size: 24px"></i>Overview</h5>
+                <h2 id="_description"><i class="fa fa-angle-double-right"></i>Overview</h2>
             </div>
 
             <div class="DivIsInitiallyHidden">
@@ -62,340 +62,141 @@
 
 
             <div class="accordion-toggle">
-                <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size: 24px"></i>GitFlow Commands</h5>
+                <h2 id="_description"><i class="fa fa-angle-double-right"></i>GitFlow Commands</h2>
             </div>
 
             <div class="DivIsInitiallyHidden">
 
-                <p>GitFlow commands courtesy <a href="https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac#connect-to-the-remote-repository" target="_blank">James M Greene</a></p>
+                <p>GitFlow commands courtesy <a href="https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac#connect-to-the-remote-repository" >James M Greene</a></p>
                 <br />
 
-                        <h2>Initialize</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
+                        <h4>Initialize</h4>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>
                             <tbody>
-                                <tr>
-                                    <td><code>git flow init</code></td>
-                                    <td><code>git init</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git commit --allow-empty -m "Initial commit"</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git checkout -b develop master</code></td>
-                                </tr>
+                            <tr><td class="table_code">git flow init</td><td><span class="copy_in_table"></span></td><td class="table_code">git init</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git commit --allow-empty -m "Initial commit"</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git checkout -b develop master</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h2>Connect to the remote repository</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
+                        <h4>Connect to the remote repository</h4>
+                        <table class="w3-table-all">
+                        <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>
+                        <tbody>
+                            <tr><td><em>N/A</em></td><td></td><td class="table_code">git remote add origin git@github.com:MYACCOUNT/MYREPO</td><td><span class="copy_in_table"></span></td></tr>
+                        </tbody>
+                        </table>
+
+                <h4>Features</h4>
+                        <h5>Create a feature branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>
                             <tbody>
-                                <tr>
-                                    <td><em>N/A</em></td>
-                                    <td><code>git remote add origin git@github.com:MYACCOUNT/MYREPO</code></td>
-                                </tr>
+                                <tr><td class="table_code">git flow feature start MYFEATURE</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout -b feature/MYFEATURE develop</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h2>Features</h2>
-                        <h3>Create a feature branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
+                        <h5>Share a feature branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>
                             <tbody>
-                                <tr>
-                                    <td><code>git flow feature start MYFEATURE</code></td>
-                                    <td><code>git checkout -b feature/MYFEATURE develop</code></td>
-                                </tr>
+                                <tr><td class="table_code">git flow feature publish MYFEATURE</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout feature/MYFEATURE</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git push origin feature/MYFEATURE</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h3>Share a feature branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
+                        <h5>Get latest for a feature branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>
                             <tbody>
-                                <tr>
-                                    <td><code>git flow feature publish MYFEATURE</code></td>
-                                    <td><code>git checkout feature/MYFEATURE</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git push origin feature/MYFEATURE</code></td>
-                                </tr>
+                                <tr><td class="table_code">git flow feature pull origin MYFEATURE</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout feature/MYFEATURE</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git pull --rebase origin feature/MYFEATURE</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h3>Get latest for a feature branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>git flow feature pull origin MYFEATURE</code></td>
-                                    <td><code>git checkout feature/MYFEATURE</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git pull --rebase origin feature/MYFEATURE</code></td>
-                                </tr>
+                        <h5>Finalize a feature branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>                            <tbody>
+                                <tr><td class="table_code">git flow feature finish MYFEATURE</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout develop</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git merge --no-ff feature/MYFEATURE</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git branch -d feature/MYFEATURE</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h3>Finalize a feature branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>git flow feature finish MYFEATURE</code></td>
-                                    <td><code>git checkout develop</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git merge --no-ff feature/MYFEATURE</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git branch -d feature/MYFEATURE</code></td>
-                                </tr>
+                        <h5>Push the merged feature branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>                            <tbody>
+                                <tr><td><em>N/A</em></td><td></td><td class="table_code">git push origin develop</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git push origin :feature/MYFEATURE <em>(if pushed)</em></td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h3>Push the merged feature branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><em>N/A</em></td>
-                                    <td><code>git push origin develop</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git push origin :feature/MYFEATURE</code> <em>(if pushed)</em></td>
-                                </tr>
+                        <h4>Releases</h4>
+                        <h5>Create a release branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>                            <tbody>
+                                <tr><td class="table_code">git flow release start 1.2.0</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout -b release/1.2.0 develop</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h2>Releases</h2>
-                        <h3>Create a release branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>git flow release start 1.2.0</code></td>
-                                    <td><code>git checkout -b release/1.2.0 develop</code></td>
-                                </tr>
+                        <h5>Share a release branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>                            <tbody>
+                                <tr><td class="table_code">git flow release publish 1.2.0</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout release/1.2.0</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git push origin release/1.2.0</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h3>Share a release branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>git flow release publish 1.2.0</code></td>
-                                    <td><code>git checkout release/1.2.0</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git push origin release/1.2.0</code></td>
-                                </tr>
+                        <h5>Get latest for a release branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>                            <tbody>
+                    <tr><td><em>N/A</em></td><td></td><td class="table_code">git checkout release/1.2.0</td><td><span class="copy_in_table"></span></td></tr>
+                    <tr><td></td><td></td><td class="table_code">git pull --rebase origin release/1.2.0</td></tr>
+                    </tbody>
+                </table>
+                <h5>Finalize a release branch</h5>
+                <table class="w3-table-all">
+                    <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead> 
+                    <tbody>
+                                <tr><td class="table_code">git flow release finish 1.2.0</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout master</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git merge --no-ff release/1.2.0</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git tag -a 1.2.0</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git checkout develop</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git merge --no-ff release/1.2.0</td></tr>
+                                <tr><td></td><td></td><td class="table_code">git branch -d release/1.2.0</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h3>Get latest for a release branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
+                        <h5>Push the merged feature branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead> 
                             <tbody>
-                                <tr>
-                                    <td><em>N/A</em></td>
-                                    <td><code>git checkout release/1.2.0</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git pull --rebase origin release/1.2.0</code></td>
-                                </tr>
+                                <tr><td><em>N/A</em></td><td></td><td class="table_code">git push origin master</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git push origin develop</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git push origin --tags</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git push origin :release/1.2.0</code> <em>(if pushed)</em></td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h3>Finalize a release branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
+                        <h4>Hotfixes</h4>
+                        <h5>Create a hotfix branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>
                             <tbody>
-                                <tr>
-                                    <td><code>git flow release finish 1.2.0</code></td>
-                                    <td><code>git checkout master</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git merge --no-ff release/1.2.0</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git tag -a 1.2.0</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git checkout develop</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git merge --no-ff release/1.2.0</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git branch -d release/1.2.0</code></td>
-                                </tr>
+                                <tr><td class="table_code">git flow hotfix start 1.2.1 [commit]</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout -b hotfix/1.2.1 [commit]</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h3>Push the merged feature branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
+                        <h5>Finalize a hotfix branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>
                             <tbody>
-                                <tr>
-                                    <td><em>N/A</em></td>
-                                    <td><code>git push origin master</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git push origin develop</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git push origin --tags</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git push origin :release/1.2.0</code> <em>(if pushed)</em></td>
-                                </tr>
+                                <tr><td class="table_code">git flow hotfix finish 1.2.1</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout master</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git merge --no-ff hotfix/1.2.1</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git tag -a 1.2.1</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git checkout develop</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git merge --no-ff hotfix/1.2.1</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git branch -d hotfix/1.2.1</td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
-                        <h2>Hotfixes</h2>
-                        <h3>Create a hotfix branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
+                        <h5>Push the merged hotfix branch</h5>
+                        <table class="w3-table-all">
+                            <thead><tr><th style="width: 40%">GitFlow Command</th><th style="width: 10%"></th> <th style="width: 40%">Git Command</th><th style="width: 10%"></th> </tr></thead>
                             <tbody>
-                                <tr>
-                                    <td><code>git flow hotfix start 1.2.1 [commit]</code></td>
-                                    <td><code>git checkout -b hotfix/1.2.1 [commit]</code></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h3>Finalize a hotfix branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>git flow hotfix finish 1.2.1</code></td>
-                                    <td><code>git checkout master</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git merge --no-ff hotfix/1.2.1</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git tag -a 1.2.1</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git checkout develop</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git merge --no-ff hotfix/1.2.1</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git branch -d hotfix/1.2.1</code></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <h3>Push the merged hotfix branch</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>gitflow</th>
-                                    <th>git</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><em>N/A</em></td>
-                                    <td><code>git push origin master</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git push origin develop</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git push origin --tags</code></td>
-                                </tr>
-                                <tr>
-                                    <td>&nbsp;</td>
-                                    <td><code>git push origin :hotfix/1.2.1</code> <em>(if pushed)</em></td>
-                                </tr>
+                                <tr><td><em>N/A</em></td><td></td><td class="table_code">git push origin master</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git push origin develop</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git push origin --tags</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code">git push origin :hotfix/1.2.1 <em>(if pushed)</em></td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
                         <h2>References</h2>
@@ -409,7 +210,7 @@
             </div>
 
             <div class="accordion-toggle">
-                <h5 id="_description"><i class="fa fa-angle-double-right" style="font-size: 24px"></i>Visual Branch Workflow</h5>
+                <h2 id="_description"><i class="fa fa-angle-double-right"></i>Visual Branch Workflow</h2>
             </div>
 
             <div class="DivIsInitiallyHidden">

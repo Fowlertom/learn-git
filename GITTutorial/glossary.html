@@ -27,18 +27,20 @@
     <div id="header"><h1 class="short">Glossary (brief)</h1></div>
 
 <div id="content">
-    <p>A complete glossary is located in the <a href="https://git.github.io/htmldocs/user-manual.html#glossary" target="_blank">Git User's Manual</a></p>
-        
+    <p>A complete glossary is located in the <a href="https://git.github.io/htmldocs/user-manual.html#glossary" >Git User's Manual</a></p>
+
     <table class="w3-table-all">
-        <tbody>
+        <thead>
         <tr>
-            <th style="width:15%">Term</th>
-            <th style="width:85%">Description</th>
+            <th style="width: 15%">Term</th>
+            <th style="width: 85%">Description</th>
         </tr>
+        </thead>
+        <tbody>
         <tr><td>git</td><td>an open source, distributed version-control system</td></tr>
         <tr><td>GitHub</td><td> a platform for hosting and collaborating on Git repositories</td></tr>
         <tr><td>commit</td><td> As a noun: A single point in the Git history; the entire history of a project is represented as a set of interrelated commits. The word "commit" is often used by Git in the same places other revision control systems use the words "revision" or "version". Also used as a short hand for commit object.
-<br /><br />As a verb: The action of storing a new snapshot of the project’s state in the Git history, by creating a new commit representing the current state of the <span class = "glossary_def" title="def=def_index;display=index"></span> and advancing <span class = "glossary_def" title="def=def_head;display=HEAD"></span> to point at the new commit.</td></tr>
+            <br/><br/>As a verb: The action of storing a new snapshot of the project’s state in the Git history, by creating a new commit representing the current state of the <span class = "glossary_def" title="def=def_index;display=index"></span> and advancing <span class = "glossary_def" title="def=def_head;display=HEAD"></span> to point at the new commit.</td></tr>
         <tr><td>branch</td><td> A "branch" is an active line of development. The most recent commit on a branch is referred to as the tip of that branch. The tip of the branch is referenced by a branch <span class = "glossary_def" title="def=head;display=HEAD"></span>, which moves forward as additional development is done on the branch. A single Git <span class = "glossary_def" title="def=def_repository;display=repository"></span> can track an arbitrary number of branches, but your <span class = "glossary_def" title="def=def_working_tree;display=working tree"></span> is associated with just one of them (the "current" or "checked out" branch), and <span class = "glossary_def" title="def=def_head;display=HEAD"></span> points to that branch.</td></tr>
         <tr><td>clone</td><td> a local version of a <span class = "glossary_def" title="def=def_repository;display=repository"></span>, including all <span class = "glossary_def" title="def=def_commit;display=commits"></span> and <span class = "glossary_def" title="def=def_branch;display=branches"></span></td></tr>
         <tr><td>origin</td><td> The default upstream <span class = "glossary_def" title="def=def_repository;display=repository"></span>. Most projects have at least one <span class = "glossary_def" title="def=def_upstream_branch;display=upstream"></span> project which they track. By default origin is used for that purpose. New upstream updates will be fetched into <span class = "glossary_def" title="def=def_remote_tracking_branch;display=remote-tracking branches"></span> named origin/name-of-upstream-branch, which you can see using <i>git branch -r</i>.</td></tr>

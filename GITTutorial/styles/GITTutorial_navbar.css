@@ -43,6 +43,10 @@ h1,h2 {
     vertical-align: top;
 }
 
+.w3-table-all>thead>tr>th {
+    color: black;
+}
+
 .w3-table-all td.table_code {
     font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
     font-weight: 400;
@@ -52,6 +56,6 @@ h1,h2 {
     border: 1px solid #ccc;
 }
 
-.w3-table-all tr:nth-child(even) {
+.w3-table-all tbody>tr:nth-child(odd) {
     background-color: #f1f1f1;
 }

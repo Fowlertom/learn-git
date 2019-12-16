@@ -73,7 +73,7 @@ function UIInitialize_CopyIcons() {
 
 function UIInitialize_Glossary() {
     //<span class = "glossary_def" title="def=def_fast_forward;display=fast-forward"> </span>
-    //<a href="https://git.github.io/htmldocs/user-manual.html#def_fast_forward" target="_blank">fast-forward</a>
+    //<a href="https://git.github.io/htmldocs/user-manual.html#def_fast_forward" >fast-forward</a>
 
     var strGlossary = Create_Glossary_HTML();
     $(".glossary_def").each(function () {
