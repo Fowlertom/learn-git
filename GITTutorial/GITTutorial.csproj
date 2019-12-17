@@ -73,6 +73,9 @@
     <Content Include="command_make_change\add.html" />
     <Content Include="command_synchronize_change\push.html" />
     <Content Include="command_synchronize_change\pull.html" />
+    <Content Include="GitFlow\GitFlow_visualworkflow.html" />
+    <Content Include="GitFlow\GitFlow_commands.html" />
+    <Content Include="GitFlow\GitFlow_overview.html" />
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
     <Content Include="actions_remote.html" />
@@ -83,7 +86,6 @@
     <Content Include="packages.config" />
     <Content Include="reference\git-pretty.png" />
     <Content Include="glossary.html" />
-    <Content Include="GitFlow.html" />
     <Content Include="reference\gitflow\GitFlowDevelopBranch.png" />
     <Content Include="reference\gitflow\GitFlowFeatureBranches.png" />
     <Content Include="reference\gitflow\GitFlowHotfixBranch.png" />

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>James' Git Tutorial</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/google_fonts.css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/GITTutorial_navbar.css" />
+    <link rel="stylesheet" href="../styles/GITTutorial2.css"/>
+    <link rel="stylesheet" href="../styles/font-awesome.min.css"/>
+    <script src="../scripts/jquery-3.2.1.js"> </script>
+    <script src="../scripts/bootstrap.min.js"> </script>
+    <script src="../scripts/GITTutorial.js"> </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            UIInitialize_SubFolderPage();
+            EventHandlers_Register();
+        });</script>
+
+      <style>
+      .w3-table-all>thead>tr>th:nth-child(1) {width: 40%}
+      .w3-table-all>thead>tr>th:nth-child(2) {width: 10%}
+      .w3-table-all>thead>tr>th:nth-child(3) {width: 40%}
+      .w3-table-all>thead>tr>th:nth-child(4) {width: 10%}
+    </style>
+
+</head>
+
+<span id="menu"></span>
+
+<body class="manpage accordion">
+
+<div id="header">
+    <div id="overview"></div>
+    <h1 class="short">GitFlow</h1>
+
+    <div id="content">
+        <div class="sectionbody">
+
+            <h2 id="_description">Overview</h2>
+
+            <p>A Git Workflow dictates what kind of branches to set up and how to merge them together. One of the most popular branching and merging workflow models is <a href="https://nvie.com/posts/a-successful-git-branching-model/" >GitFlow</a>. At a glance, this is the <a href="reference/GitFlow-branching-model.pdf" >GitFlow Workflow</a>.</p>
+            <p><strong>IMPORTANT</strong>: There are two main branches with an infinite lifetime:</p>
+            <ul>
+                <li style="color: black;">master</li>
+                <li style="color: black;">develop</li>
+            </ul>
+
+            <div id ="overview">
+                <h2 id="_description">Basic Workflow</h2>
+            </div>
+
+            <div>
+                <ol>
+                    <li>A <strong>develop</strong> branch is created from <strong>master</strong></li>
+                    <li>A <strong>release</strong> branch is created from <strong>develop</strong></li>
+                    <li>A <strong>feature</strong> branch is created from <strong>develop</strong></li>
+                    <li>When a <strong>feature</strong> is complete it is merged into the <strong>develop</strong> branch</li>
+                    <li>When it is time to make a release, a <strong>release</strong> branch is created off of <strong>develop</strong></li>
+                    <li>When the <strong>release</strong> branch is done it is merged into <strong>develop</strong> and <strong>master</strong></li>
+                    <li>If an issue in <strong>master</strong> is detected a <strong>hotfix</strong> branch is created from <strong>master</strong></li>
+                    <li>Once the <strong>hotfix</strong> is complete it is merged to both <strong>develop</strong> and <strong>master</strong></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+

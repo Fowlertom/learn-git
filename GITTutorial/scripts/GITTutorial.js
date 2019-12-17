@@ -2,19 +2,32 @@ function Create_Menu_HTML() {
     var str = "";
 	str +="<nav class=\"navbar navbar-expand-sm navbar-light\">";
 	str +="<ul class=\"navbar-nav\">";
-	str +="<li class=\"nav-item dropdown\">";
+
+	str += "<li class=\"nav-item dropdown\">";
 	str +="<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">Home</a>";
 	str +="<div class=\"dropdown-menu\">";
 	str +="<a class=\"dropdown-item\" href=\"Welcome.html\">Welcome</a>";
 	str +="<a class=\"dropdown-item\" href=\"About.html\">About</a>";
 	str +="</div>";
 	str +="</li>";
-	str +="<li class=\"nav-item\"><a class=\"nav-link\" href=\"GettingStarted.html\" >Getting Started</a></li>";
+
+	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"GettingStarted.html\" >Getting Started</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"HowDoI.html\" >How Do I...</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"git_commands.html\" >Git Commands</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"actions_remote.html\" >Remote Actions (TFS)</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Resources.html\" >Resources</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"GitFlow.html\" >GitFlow</a></li>";
+
+	str += "<li class=\"nav-item dropdown\">";
+	str += "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">GitFlow</a>";
+	str += "<div class=\"dropdown-menu\">";
+	str += "<a class=\"dropdown-item\" href=\"GitFlow\\GitFlow_overview.html\">Overview</a>";
+	str += "<a class=\"dropdown-item\" href=\"GitFlow\\GitFlow_commands.html\">Commands</a>";
+	str += "<a class=\"dropdown-item\" href=\"GitFlow\\GitFlow_visualworkflow.html\">Visual Workflow</a>";
+	str += "</div>";
+	str += "</li>";
+
+
+
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"glossary.html\" >Glossary</a></li>";
 	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"FAQ.html\" >FAQ</a></li>";
 	str +="</ul>";
@@ -36,7 +49,7 @@ function Create_CopyInCommand_HTML() {
 
 function Create_Glossary_HTML() {
     var str = "";
-    str += "<a href=\"https://git.github.io/htmldocs/user-manual.html#def\" target=\"_blank\">display</a>";
+    str += "<a href=\"https://git.github.io/htmldocs/user-manual.html#def\" >display</a>";
     return str;
 }
 
@@ -175,8 +188,11 @@ function copyToClipboard(elem) {
             target.style.position = "absolute";
             target.style.left = "-9999px";
             target.style.top = "0";
+
             target.id = targetId;
             document.body.appendChild(target);
+        }
+        else {
         }
         target.textContent = elem.textContent;
     }
