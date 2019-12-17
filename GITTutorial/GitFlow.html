@@ -4,27 +4,20 @@
     <title>James' Git Tutorial</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/google_fonts.css">
-    <link rel="stylesheet" href="../styles/bootstrap.min.css" />
-    <link rel="stylesheet" href="../styles/GITTutorial_navbar.css" />
-    <link rel="stylesheet" href="../styles/GITTutorial2.css"/>
-    <link rel="stylesheet" href="../styles/font-awesome.min.css"/>
-    <script src="../scripts/jquery-3.2.1.js"> </script>
-    <script src="../scripts/bootstrap.min.js"> </script>
-    <script src="../scripts/GITTutorial.js"> </script>
+    <link rel="stylesheet" href="styles/google_fonts.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/GITTutorial_navbar.css" />
+    <link rel="stylesheet" href="styles/GITTutorial2.css" />
+    <link rel="stylesheet" href="styles/font-awesome.min.css" />
+    <script src="scripts/jquery-3.2.1.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/GITTutorial.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            UIInitialize_SubFolderPage();
+        $(document).ready(function () {
+            UIInitialize_BasePage();
             EventHandlers_Register();
         });</script>
-
-      <style>
-      .w3-table-all>thead>tr>th:nth-child(1) {width: 40%}
-      .w3-table-all>thead>tr>th:nth-child(2) {width: 10%}
-      .w3-table-all>thead>tr>th:nth-child(3) {width: 40%}
-      .w3-table-all>thead>tr>th:nth-child(4) {width: 10%}
-    </style>
 
 </head>
 
@@ -32,25 +25,21 @@
 
 <body class="manpage accordion">
 
-<div id="header">
-    <div id="overview"></div>
-    <h1 class="short">GitFlow</h1>
-
+    <div id="header">
+        <div id="overview"></div>
+        <h1 class="short">GitFlow</h1>
+        <h2 id="_description">Overview</h2>
     <div id="content">
         <div class="sectionbody">
-
-            <h2 id="_description">Overview</h2>
-
-            <p>A Git Workflow dictates what kind of branches to set up and how to merge them together. One of the most popular branching and merging workflow models is <a href="https://nvie.com/posts/a-successful-git-branching-model/" >GitFlow</a>. At a glance, this is the <a href="reference/GitFlow-branching-model.pdf" >GitFlow Workflow</a>.</p>
+                
+            <p>A Git Workflow dictates what kind of branches to set up and how to merge them together. One of the most popular branching and merging workflow models is <a href="https://nvie.com/posts/a-successful-git-branching-model/">GitFlow</a>. At a glance, this is the <a href="reference/GitFlow-branching-model.pdf">GitFlow Workflow</a>.</p>
             <p><strong>IMPORTANT</strong>: There are two main branches with an infinite lifetime:</p>
             <ul>
                 <li style="color: black;">master</li>
                 <li style="color: black;">develop</li>
             </ul>
 
-            <div id ="overview">
-                <h2 id="_description">Basic Workflow</h2>
-            </div>
+            <h5 id="_description">Basic Workflow</h5>
 
             <div>
                 <ol>
@@ -64,6 +53,14 @@
                     <li>Once the <strong>hotfix</strong> is complete it is merged to both <strong>develop</strong> and <strong>master</strong></li>
                 </ol>
             </div>
+        </div>
+    </div>
+    
+    <div id="content">
+        <h2 id="_description">Details</h2>
+        <div class="sectionbody">
+            <p><a href="GitFlow/GitFlow_commands.html">GitFlow Commands</a></p>
+            <p><a href="GitFlow/GitFlow_visualworkflow.html">Visual Workflow</a></p>
         </div>
     </div>
 

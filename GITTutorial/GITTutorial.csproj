@@ -75,10 +75,10 @@
     <Content Include="command_synchronize_change\pull.html" />
     <Content Include="GitFlow\GitFlow_visualworkflow.html" />
     <Content Include="GitFlow\GitFlow_commands.html" />
-    <Content Include="GitFlow\GitFlow_overview.html" />
+    <Content Include="GitFlow.html" />
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
-    <Content Include="actions_remote.html" />
+    <Content Include="remote_actions.html" />
     <Content Include="images\FAQ\Ruby_Avitar.jpg" />
     <Content Include="images\git_branching-illustration%402x.png" />
     <Content Include="images\git_isometric-grid.png" />
@@ -91,6 +91,8 @@
     <Content Include="reference\gitflow\GitFlowHotfixBranch.png" />
     <Content Include="reference\gitflow\GitFlowMasterBranch.png" />
     <Content Include="reference\gitflow\GitFlowReleaseBranch.png" />
+    <Content Include="remote_actions\create_new_repository.html" />
+    <Content Include="remote_actions\create_pull_request.html" />
     <Content Include="scripts\jquery-3.2.1.js" />
     <Content Include="styles\GITTutorial2.css" />
     <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.pdf" />
