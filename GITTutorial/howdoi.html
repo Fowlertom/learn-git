@@ -26,71 +26,37 @@
 
     <div id="header"><h1 class="short">How Do I...</h1></div>
 
-    <div id="content"><div class="sectionbody"><p>This page focuses on the common 'processes / workflows' that need to be performed. The 'most frequently used' process(es) are listed first.</p></div></div>
+    <div id="content"><div class="sectionbody"><p>This page focuses on explaining how to perform 'processes' that may require several Git commands. The 'most frequently used' process(es) are listed first.</p></div></div>
 
 <div id="content">
+    <h2 id="_description">Common Tasks</h2>
+    <p>This section lists frequently performed tasks that follow a normal ('happy path') workflow.</p>
+    <div class="sectionbody">
+        <p><a href="how_do_i/commit_code.html">Commit Code</a> - 'Check-in' modified/added code</p>
+        <p><a href="command_synchronize_change/pull.html">Get Latest of <i>&lt;feature_branch&gt;</i></a> - fetch, then merge changes into <i>&lt;feature_branch&gt;</i></p>
+    </div>
+</div>
 
 <div id="content">
-        <div class="accordion-toggle"> <h2 id="_description"><i class="fa fa-angle-double-right"></i> Commit (AKA 'Check-in') Code</h2></div>
-        <div class="DivIsInitiallyHidden">
-            <p>The following details the normal (happy path) workflow.</p>
-            <table class="w3-table-all">
-                <thead>
-                <tr>
-                    <th style="width: 35%">Action</th>
-                    <th style="width: 40%">Command</th>
-                    <th style="width: 25%"></th> <!--column for the copy icon-->
-                </tr>
-                </thead>
-                <tbody>
-                <tr><td>Switch to <i>&lt;base_branch&gt;</i></td><td class="table_code"><a href="command_branch/switch.html" >git checkout &lt;base_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Get latest of <i>&lt;base_branch&gt;</i></td><td class="table_code"><a href="command_synchronize_change/pull.html" >git pull</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Create local <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="command_branch/create_and_switch.html" target=" _blank">git checkout -b &lt;feature_branch&gt; &lt;base_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>*****Edit files / do some work*****</td><td>-------------</td></tr>
-                <tr><td>Stage changes to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="command_make_change/add.html" >git add *</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Commit changes to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="command_make_change/commit.html">git commit -m "yourcomments"</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Push changes to remote</td><td class="table_code"><a href="command_synchronize_change/push.html" >git push -u origin &lt;feature_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Initiate (remote) merge to <i>&lt;base_branch&gt;</i></td><td><a href="actions_remote.html#create_pull_request" >create pull request (via web browser)</a></td><td></td></tr>
-                <tr><td>Complete (remote) merge to <i>&lt;base_branch&gt;</i></td><td>complete pull request (via web browser)</td><td></td></tr>
-                <tr><td>Switch to 'master' (or any other branch)</td><td class="table_code"><a href="command_branch/switch.html" >git checkout &lt;master&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Delete local <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="command_branch/delete.html" >git branch -d &lt;feature_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Delete (aka 'Prune') local orphaned branches</td><td >See below....</td><td></td></tr>
-                </tbody>
-            </table>
-        </div>
+    <h2 id="_description">Maintainence / Clean-up Tasks</h2>
+    <p>This section lists that that maintain / clean your local folder (<span class = "glossary_def" title="def=def_working_tree;display=working tree"></span>)</p>
+    <div class="sectionbody">
+        <p><a href="how_do_i/prune_orphan_branches.html">Prune (dead/orphaned) branches</a> - remove local orphaned branches/pointers</p>
     </div>
+</div>
 
-    <div id="content">
-        <div class="accordion-toggle"> <h2 id="_description"><i class="fa fa-angle-double-right"></i> Delete (aka 'Prune') local orphaned branches</h2></div>
-        <div class="DivIsInitiallyHidden">
-            <p>There may be 'pointers' that are orphaned when a Pull Request removes the local <i>&lt;feature_branch&gt;</i>.  The following details how to remove local orphan branches / pointers / references that do not exist in the remote</p>
-            <table class="w3-table-all">
-                <thead>
-                <tr>
-                    <th style="width: 35%">Action</th>
-                    <th style="width: 45%">Command</th>
-                    <th style="width: 15%"></th> <!--column for the copy icon-->
-                </tr>
-                </thead>
-                <tbody>
-                <tr><td>Get list of orphaned branches</td><td class="table_code"><a href="command_branch/switch.html" >git branch -a</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Determine what branches will be pruned (but do not prune them)</td><td class="table_code"><a href="command_branch/switch.html" >git remote prune origin --dry-run</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Prune orphaned branches</td><td class="table_code"><a href="command_branch/switch.html" >git remote prune origin</a></td><td><span class="copy_in_table"></span></td></tr>
-                </tbody>
-            </table>
-        </div>
+
+<div id="content">
+    <h2 id="_description">Troubleshooting</h2>
+    <p>This section lists actions that help resolve issues encountered during performance of 'normal' actions (above).</p>
+    <div class="sectionbody">
+        <p><a href="http://justinhileman.info/article/git-pretty/git-pretty.pdf" >Troubleshooting Flowchart</a> - courtesy of <a href="http://justinhileman.info/git-pretty/" >Justin Hileman</a></p>
     </div>
+</div>
 
 
-    <div id="content">
+<div id="content">
         <div class="accordion-toggle"> <h2 id="_description"><i class="fa fa-angle-double-right"></i> Undo All Changes</h2></div>
-        <div class="DivIsInitiallyHidden">
-            <p><a href="rebasing/rebasing.html">Rebasing Branches</a></p>
-        </div>
-    </div>
-
-    <div id="content">
-        <div class="accordion-toggle"> <h2 id="_description"><i class="fa fa-angle-double-right"></i> Pull (AKA 'Get Latest')</h2></div>
         <div class="DivIsInitiallyHidden">
             <p><a href="rebasing/rebasing.html">Rebasing Branches</a></p>
         </div>
@@ -103,18 +69,6 @@
             <p><a href="merging/merging.html">Merging Branches</a></p>
         </div>
     </div>
-
-<div id="content">
-    <div class="accordion-toggle">
-        <h2 id="_description"><i class="fa fa-angle-double-right"></i> HELP!!!! I messed things up. How can I fix it??
-        </h2>
-    </div>
-    <div class="DivIsInitiallyHidden">
-        <p><a href="reference/git-pretty.pdf" >Troubleshooting Flowchart</a> courtesy of <a href="http://justinhileman.info/git-pretty/" >Justin Hileman</a>
-        </p>
-    </div>
-</div>
-
 
 
 </body>
