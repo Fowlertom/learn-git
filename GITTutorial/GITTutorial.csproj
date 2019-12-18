@@ -84,15 +84,15 @@
     <Content Include="images\git_isometric-grid.png" />
     <Content Include="images\git_logo%402x.png" />
     <Content Include="packages.config" />
-    <Content Include="reference\git-pretty.png" />
     <Content Include="glossary.html" />
     <Content Include="reference\gitflow\GitFlowDevelopBranch.png" />
     <Content Include="reference\gitflow\GitFlowFeatureBranches.png" />
     <Content Include="reference\gitflow\GitFlowHotfixBranch.png" />
     <Content Include="reference\gitflow\GitFlowMasterBranch.png" />
     <Content Include="reference\gitflow\GitFlowReleaseBranch.png" />
+    <Content Include="remote_actions\create_new_branch.html" />
     <Content Include="remote_actions\create_new_repository.html" />
-    <Content Include="remote_actions\create_pull_request.html" />
+    <Content Include="remote_actions\merge_branches.html" />
     <Content Include="scripts\jquery-3.2.1.js" />
     <Content Include="styles\GITTutorial2.css" />
     <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.pdf" />
@@ -108,7 +108,6 @@
     <Content Include="~reference material to process\reference.txt" />
     <Content Include="~reference material to process\workflow.txt" />
     <Content Include="reference\progit.pdf" />
-    <Content Include="reference\git-pretty.pdf" />
     <Content Include="reference\GitFlow-branching-model.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
