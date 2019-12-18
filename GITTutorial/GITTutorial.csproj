@@ -78,6 +78,7 @@
     <Content Include="GitFlow.html" />
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
+    <Content Include="how_do_i\resolve_merge_conflicts.html" />
     <Content Include="how_do_i\prune_orphan_branches.html" />
     <Content Include="how_do_i\commit_code.html" />
     <Content Include="remote_actions.html" />
