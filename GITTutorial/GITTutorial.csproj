@@ -102,7 +102,6 @@
     <Content Include="remote_actions\merge_branches.html" />
     <Content Include="scripts\jquery-3.2.1.js" />
     <Content Include="styles\GITTutorial2.css" />
-    <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.pdf" />
     <Content Include="readme.md" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
@@ -132,17 +131,13 @@
   <ItemGroup>
     <Content Include="about.html" />
     <Content Include="command_branch\create.html" />
-    <Content Include="~archive\git-checkout.html" />
-    <Content Include="~archive\old_creating.html" />
     <Content Include="command_branch\switch.html" />
-    <Content Include="~archive\template.html" />
     <Content Include="faq.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="gettingstarted.html" />
     <Content Include="home.html" />
     <Content Include="images\FAQ\Ruby.jpg" />
     <Content Include="index.html" />
-    <Content Include="~archive\~offline resources\Best Git GUI clients for Windows 10.html" />
     <Content Include="command_synchronize_change\rebase.html" />
     <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -153,7 +148,6 @@
     <Content Include="styles\google_fonts.css" />
     <Content Include="styles\GITTutorial_navbar.css" />
     <Content Include="styles\GITTutorial_local_doc_styles.css" />
-    <Content Include="todo.txt" />
     <Content Include="git_commands.html" />
     <Content Include="Web.config" />
     <Content Include="welcome.html" />
