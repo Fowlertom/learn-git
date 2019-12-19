@@ -1,4 +1,0 @@
-Process: merging from master (with a hotfix) to develop
-Error: 'Next steps: Manually resolve these conflicts and push new changes to the source branch.'
-Reference: https://stackoverflow.com/questions/48371911/azure-devops-pull-request-git-next-steps-manually-resolve-these-conflicts-an
-See: 'process_resolve_merge_conflicts.txt'

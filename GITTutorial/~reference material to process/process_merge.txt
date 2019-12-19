@@ -1,7 +1,0 @@
-To merge from branch 'XXXX' to master:
-
-- In TFS, set 'master' as the 'compare' branch
-- in branch 'XXXX', right click and create a pull request (to the right most part of the screen)
-- follow the prompts
-
-note: before completing the PR, unlock the 'master' branch, complete it, then lock the branch
