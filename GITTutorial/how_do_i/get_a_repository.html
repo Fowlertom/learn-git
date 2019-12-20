@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>James' Git Tutorial</title>
+    <title>Get a Repository</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles/google_fonts.css">
@@ -24,9 +24,9 @@
 
 <body class="manpage accordion">
 
-<div id="header"><h1 class="short">Add More Files (to a previous &#39;commit&#39;)</h1>
+<div id="header"><h1 class="short">Download a Repository (aka &#39;clone&#39;)</h1>
     </div>
-<div id="content"><div class="sectionbody"><p>If you have already checked-in (committed) changes to a branch, you can add additional files to the same &#39;commit&#39;.</p></div></div>
+<div id="content"><div class="sectionbody"><p>Before you can start any work, you must get a local copy of a repository in your <span class = "glossary_def" title="def=def_working_tree;display=working tree"></span></p></div></div>
 
     <h2>Steps</h2>
 
@@ -35,15 +35,15 @@
             <table class="w3-table-all">
                 <thead>
                 <tr>
-                    <th style="width: 30%">Action</th>
-                    <th style="width: 30%">Command</th>
-                    <th style="width: 40%"></th> <!--column for the copy icon-->
+                    <th style="width: 40%">Action</th>
+                    <th style="width: 40%">Command</th>
+                    <th style="width: 20%"></th> <!--column for the copy icon-->
                 </tr>
                 </thead>
                 <tbody>
-                <tr><td>Switch to <i>&lt;branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html" >git checkout &lt;branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Stage changes to <i>&lt;branch&gt;</i></td><td class="table_code"><a href="../command_make_change/add.html" >git add .</a></td><td><span class="copy_in_table"></span></td></tr>
-                <tr><td>Commit changes to <i>&lt;branch&gt;</i></td><td class="table_code"><a href="../command_make_change/commit.html">git commit --ammend --no-edit</a></td><td><span class="copy_in_table"></span></td></tr>
+                <tr><td>Navigate to the <strong>parent folder</strong> that will contain the repository</td><td >Using a Git console / VS Code Terminal</td><td></td></tr>
+                <tr><td>Copy the <i>[URL]</i> of the repository</td><td >From TFS or GitHub</td><td></td></tr>
+                <tr><td>Clone the repository <i>&lt;branch&gt;</i></td><td class="table_code"><a href="../command_create_repository/clone.html">git clone <i>[URL]</i></a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
         </div>
