@@ -67,28 +67,32 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="command_branch\create_and_switch.html" />
-    <Content Include="command_branch\delete.html" />
-    <Content Include="command_create_repository\clone.html" />
-    <Content Include="command_undo_change\clean.html" />
-    <Content Include="command_undo_change\reset.html" />
-    <Content Include="command_make_change\commit.html" />
-    <Content Include="command_make_change\add.html" />
-    <Content Include="command_synchronize_change\push.html" />
-    <Content Include="command_synchronize_change\pull.html" />
-    <Content Include="GitFlow\GitFlow_visualworkflow.html" />
-    <Content Include="GitFlow\GitFlow_commands.html" />
+    <Content Include="content\command_branch\create_and_switch.html" />
+    <Content Include="content\command_branch\delete.html" />
+    <Content Include="content\command_create_repository\clone.html" />
+    <Content Include="content\command_undo_change\clean.html" />
+    <Content Include="content\command_undo_change\reset.html" />
+    <Content Include="content\command_make_change\commit.html" />
+    <Content Include="content\command_make_change\add.html" />
+    <Content Include="content\command_synchronize_change\push.html" />
+    <Content Include="content\command_synchronize_change\pull.html" />
+    <Content Include="content\getting_started\git_for_windows.html" />
+    <Content Include="content\GitFlow\GitFlow_visualworkflow.html" />
+    <Content Include="content\GitFlow\GitFlow_commands.html" />
     <Content Include="GitFlow.html" />
     <Content Include="howdoi.html" />
     <Content Include="fonts\readme.txt" />
-    <Content Include="how_do_i\get_a_repository.html" />
-    <Content Include="how_do_i\get_latest.html" />
-    <Content Include="how_do_i\merge_branches.html" />
-    <Content Include="how_do_i\undo_All_changes.html" />
-    <Content Include="how_do_i\add_to_commit.html" />
-    <Content Include="how_do_i\resolve_merge_conflicts.html" />
-    <Content Include="how_do_i\prune_orphan_branches.html" />
-    <Content Include="how_do_i\check_in.html" />
+    <Content Include="content\how_do_i\create_a_local_repository.html" />
+    <Content Include="content\how_do_i\get_latest.html" />
+    <Content Include="content\how_do_i\merge_branches.html" />
+    <Content Include="content\how_do_i\undo_All_changes.html" />
+    <Content Include="content\how_do_i\add_to_commit.html" />
+    <Content Include="content\how_do_i\resolve_merge_conflicts.html" />
+    <Content Include="content\how_do_i\prune_orphan_branches.html" />
+    <Content Include="content\how_do_i\check_in.html" />
+    <Content Include="images\git_for_windows_options1.png" />
+    <Content Include="images\git_for_windows_options2.png" />
+    <Content Include="images\git_for_windows_options3.png" />
     <Content Include="remote_actions.html" />
     <Content Include="images\FAQ\Ruby_Avitar.jpg" />
     <Content Include="images\git_branching-illustration%402x.png" />
@@ -101,9 +105,9 @@
     <Content Include="reference\gitflow\GitFlowHotfixBranch.png" />
     <Content Include="reference\gitflow\GitFlowMasterBranch.png" />
     <Content Include="reference\gitflow\GitFlowReleaseBranch.png" />
-    <Content Include="remote_actions\create_new_branch.html" />
-    <Content Include="remote_actions\create_new_repository.html" />
-    <Content Include="remote_actions\merge_branches.html" />
+    <Content Include="content\remote_actions\create_new_branch.html" />
+    <Content Include="content\remote_actions\create_new_repository.html" />
+    <Content Include="content\remote_actions\merge_branches.html" />
     <Content Include="scripts\jquery-3.2.1.js" />
     <Content Include="styles\GITTutorial2.css" />
     <Content Include="readme.md" />
@@ -115,7 +119,6 @@
     <Content Include="~reference material to process\process_resolve_merge_conflicts.txt" />
     <Content Include="~reference material to process\reference.txt" />
     <Content Include="reference\progit.pdf" />
-    <Content Include="reference\GitFlow-branching-model.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -134,15 +137,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.html" />
-    <Content Include="command_branch\create.html" />
-    <Content Include="command_branch\switch.html" />
+    <Content Include="content\command_branch\create.html" />
+    <Content Include="content\command_branch\switch.html" />
     <Content Include="faq.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="gettingstarted.html" />
     <Content Include="home.html" />
     <Content Include="images\FAQ\Ruby.jpg" />
     <Content Include="index.html" />
-    <Content Include="command_synchronize_change\rebase.html" />
+    <Content Include="content\command_synchronize_change\rebase.html" />
     <Content Include="resources.html" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jquery-3.3.1.min.js" />

@@ -21,8 +21,8 @@ function Create_Menu_HTML() {
 	str += "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">GitFlow</a>";
 	str += "<div class=\"dropdown-menu\">";
 	str += "<a class=\"dropdown-item\" href=\"GitFlow.html\">Overview</a>";
-	str += "<a class=\"dropdown-item\" href=\"GitFlow\\GitFlow_commands.html\">Commands</a>";
-	str += "<a class=\"dropdown-item\" href=\"GitFlow\\GitFlow_visualworkflow.html\">Visual Workflow</a>";
+	str += "<a class=\"dropdown-item\" href=\"Content\\GitFlow\\GitFlow_commands.html\">Commands</a>";
+	str += "<a class=\"dropdown-item\" href=\"Content\\GitFlow\\GitFlow_visualworkflow.html\">Visual Workflow</a>";
 	str += "</div>";
 	str += "</li>";
 
@@ -109,7 +109,8 @@ function UIInitialize_SubFolderPageMenu() {
 	var replacedStr = Create_Menu_HTML();
 	
 	replacedStr = replacedStr.replace('href=\"#\"','hrXef=\"#\"');
-	replacedStr = replacedStr.replace(/href=\"/g,'href=\"..//');
+	//replacedStr = replacedStr.replace(/href=\"/g, 'href=\"..//');
+	replacedStr = replacedStr.replace(/href=\"/g, 'href=\"../../');
 	replacedStr = replacedStr.replace('hrXef=\"#\"','href=\"#\"');
     $("#menu").html(replacedStr);
 }
