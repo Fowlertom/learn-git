@@ -123,21 +123,22 @@
                         </table>
                         <h5>Get latest for a release branch</h5>
                         <table class="w3-table-all">
-                            <thead><tr><th>GitFlow Command</th><th> </th> <th>Git Command</th><th></th></tr></thead>                            <tbody>
-                    <tr><td><em>N/A</em></td><td></td><td class="table_code"><a href="../command_branch/create_and_switch.html">git checkout release/1.2.0</a></td><td><span class="copy_in_table"></span></td></tr>
-                    <tr><td></td><td></td><td class="table_code">git pull --rebase origin release/1.2.0</td></tr>
-                    </tbody>
+                            <thead><tr><th>GitFlow Command</th><th> </th> <th>Git Command</th><th></th></tr></thead> 
+                            <tbody>
+                                <tr><td><em>N/A</em></td><td></td><td class="table_code"><a href="../command_branch/create_and_switch.html">git checkout release/1.2.0</a></td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code"><a href="../command_synchronize_change/pull.html">git pull --rebase origin release/1.2.0</a></td></tr>
+                            </tbody>
                 </table>
                 <h5>Finalize a release branch</h5>
                 <table class="w3-table-all">
                     <thead><tr><th>GitFlow Command</th><th> </th> <th>Git Command</th><th></th></tr></thead> 
                     <tbody>
-                                <tr><td class="table_code">git flow release finish 1.2.0</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout master</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td class="table_code">git flow release finish 1.2.0</td><td><span class="copy_in_table"></span></td><td class="table_code"><a href="../command_branch/create_and_switch.html">git checkout master</a></td><td><span class="copy_in_table"></span></td></tr>
                                 <tr><td></td><td></td><td class="table_code">git merge --no-ff release/1.2.0</td><td><span class="copy_in_table"></span></td></tr>
                                 <tr><td></td><td></td><td class="table_code">git tag -a 1.2.0</td><td><span class="copy_in_table"></span></td></tr>
-                                <tr><td></td><td></td><td class="table_code">git checkout develop</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code"><a href="../command_branch/create_and_switch.html">git checkout develop</a></td><td><span class="copy_in_table"></span></td></tr>
                                 <tr><td></td><td></td><td class="table_code">git merge --no-ff release/1.2.0</td></tr>
-                                <tr><td></td><td></td><td class="table_code">git branch -d release/1.2.0</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code"><a href="../command_branch/create.html">git branch -d release/1.2.0</a></td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
                         <h5>Push the merged feature branch</h5>
@@ -155,7 +156,7 @@
                         <table class="w3-table-all">
                             <thead><tr><th>GitFlow Command</th><th> </th> <th>Git Command</th><th></th></tr></thead>
                             <tbody>
-                                <tr><td class="table_code">git flow hotfix start 1.2.1 [commit]</td><td><span class="copy_in_table"></span></td><td class="table_code">git checkout -b hotfix/1.2.1 [commit]</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td class="table_code">git flow hotfix start 1.2.1 [commit]</td><td><span class="copy_in_table"></span></td><td class="table_code"><a href="../command_branch/create_and_switch.html">git checkout -b hotfix/1.2.1 [commit]</a></td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
                         <h5>Finalize a hotfix branch</h5>
@@ -167,7 +168,7 @@
                                 <tr><td></td><td></td><td class="table_code">git tag -a 1.2.1</td><td><span class="copy_in_table"></span></td></tr>
                                 <tr><td></td><td></td><td class="table_code"><a href="../command_branch/create_and_switch.html">git checkout develop</a></td><td><span class="copy_in_table"></span></td></tr>
                                 <tr><td></td><td></td><td class="table_code">git merge --no-ff hotfix/1.2.1</td><td><span class="copy_in_table"></span></td></tr>
-                                <tr><td></td><td></td><td class="table_code">git branch -d hotfix/1.2.1</td><td><span class="copy_in_table"></span></td></tr>
+                                <tr><td></td><td></td><td class="table_code"><a href="../command_branch/create.html">git branch -d hotfix/1.2.1</a></td><td><span class="copy_in_table"></span></td></tr>
                             </tbody>
                         </table>
                         <h5>Push the merged hotfix branch</h5>

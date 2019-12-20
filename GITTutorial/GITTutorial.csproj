@@ -86,7 +86,7 @@
     <Content Include="how_do_i\add_to_commit.html" />
     <Content Include="how_do_i\resolve_merge_conflicts.html" />
     <Content Include="how_do_i\prune_orphan_branches.html" />
-    <Content Include="how_do_i\commit_code.html" />
+    <Content Include="how_do_i\check_in.html" />
     <Content Include="remote_actions.html" />
     <Content Include="images\FAQ\Ruby_Avitar.jpg" />
     <Content Include="images\git_branching-illustration%402x.png" />
