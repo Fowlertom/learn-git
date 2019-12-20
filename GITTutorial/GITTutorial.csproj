@@ -70,6 +70,7 @@
     <Content Include="content\command_branch\create_and_switch.html" />
     <Content Include="content\command_branch\delete.html" />
     <Content Include="content\command_create_repository\clone.html" />
+    <Content Include="content\command_other\status.html" />
     <Content Include="content\command_undo_change\clean.html" />
     <Content Include="content\command_undo_change\reset.html" />
     <Content Include="content\command_make_change\commit.html" />
@@ -81,6 +82,7 @@
     <Content Include="content\GitFlow\GitFlow_commands.html" />
     <Content Include="content\GitFlow.html" />
     <Content Include="content\howdoi.html" />
+    <Content Include="content\how_do_i\get_status.html" />
     <Content Include="fonts\readme.txt" />
     <Content Include="content\how_do_i\create_a_local_repository.html" />
     <Content Include="content\how_do_i\get_latest.html" />
