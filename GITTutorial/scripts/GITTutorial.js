@@ -6,30 +6,28 @@ function Create_Menu_HTML() {
 	str += "<li class=\"nav-item dropdown\">";
 	str +="<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">Home</a>";
 	str +="<div class=\"dropdown-menu\">";
-	str +="<a class=\"dropdown-item\" href=\"Welcome.html\">Welcome</a>";
-	str +="<a class=\"dropdown-item\" href=\"About.html\">About</a>";
+    str +="<a class=\"dropdown-item\" href=\"Content\\Welcome.html\">Welcome</a>";
+    str +="<a class=\"dropdown-item\" href=\"Content\\About.html\">About</a>";
 	str +="</div>";
 	str +="</li>";
 
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"GettingStarted.html\" >Getting Started</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"HowDoI.html\" >How Do I...</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"git_commands.html\" >Git Commands</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"remote_actions.html\" >Remote Actions (TFS)</a></li>";
-    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Resources.html\" >Resources</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\GettingStarted.html\" >Getting Started</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\HowDoI.html\" >How Do I...</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\git_commands.html\" >Git Commands</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\remote_actions.html\" >Remote Actions (TFS)</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\Resources.html\" >Resources</a></li>";
 
 	str += "<li class=\"nav-item dropdown\">";
 	str += "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">GitFlow</a>";
 	str += "<div class=\"dropdown-menu\">";
-	str += "<a class=\"dropdown-item\" href=\"GitFlow.html\">Overview</a>";
+    str += "<a class=\"dropdown-item\" href=\"Content\\GitFlow.html\">Overview</a>";
 	str += "<a class=\"dropdown-item\" href=\"Content\\GitFlow\\GitFlow_commands.html\">Commands</a>";
 	str += "<a class=\"dropdown-item\" href=\"Content\\GitFlow\\GitFlow_visualworkflow.html\">Visual Workflow</a>";
 	str += "</div>";
 	str += "</li>";
-
-
-
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"glossary.html\" >Glossary</a></li>";
-	str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"FAQ.html\" >FAQ</a></li>";
+    
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\glossary.html\" >Glossary</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\FAQ.html\" >FAQ</a></li>";
 	str +="</ul>";
 	str +="</nav>";
 	return str;
@@ -57,6 +55,10 @@ function Create_Glossary_HTML() {
 // UI Initializers
 //******************************************************************************************
 
+
+//******************************************************************************************
+// Menus
+
 function UIInitialize_BasePage() {
     UIInitialize_BasePageMenu();
     UIInitialize_CopyIcons();
@@ -72,9 +74,33 @@ function UIInitialize_SubFolderPage() {
 }
 
 function UIInitialize_BasePageMenu() {
-    var str = Create_Menu_HTML();
-    $("#menu").html(str);
+    // https://flaviocopes.com/javascript-regular-expressions/#groups
+
+    var replacedStr = Create_Menu_HTML();
+    
+    replacedStr = replacedStr.replace('href=\"#\"', 'hrXef=\"#\"');
+    replacedStr = replacedStr.replace(/href=\"/g, 'href=\"..//');
+    replacedStr = replacedStr.replace('hrXef=\"#\"', 'href=\"#\"');
+
+    $("#menu").html(replacedStr);
+
 }
+
+function UIInitialize_SubFolderPageMenu() {
+    // https://flaviocopes.com/javascript-regular-expressions/#groups
+
+    var replacedStr = Create_Menu_HTML();
+
+    replacedStr = replacedStr.replace('href=\"#\"', 'hrXef=\"#\"');
+    replacedStr = replacedStr.replace(/href=\"/g, 'href=\"../../');
+    replacedStr = replacedStr.replace('hrXef=\"#\"', 'href=\"#\"');
+
+    $("#menu").html(replacedStr);
+}
+
+// Menus
+//******************************************************************************************
+
 
 function UIInitialize_CopyIcons() {
     var str = Create_CopyInTable_HTML();
@@ -100,19 +126,6 @@ function UIInitialize_Glossary() {
         thisID.html(str);
         thisID.removeAttr("title");
     });
-}
-
-
-function UIInitialize_SubFolderPageMenu() {
-	// https://flaviocopes.com/javascript-regular-expressions/#groups
-
-	var replacedStr = Create_Menu_HTML();
-	
-	replacedStr = replacedStr.replace('href=\"#\"','hrXef=\"#\"');
-	//replacedStr = replacedStr.replace(/href=\"/g, 'href=\"..//');
-	replacedStr = replacedStr.replace(/href=\"/g, 'href=\"../../');
-	replacedStr = replacedStr.replace('hrXef=\"#\"','href=\"#\"');
-    $("#menu").html(replacedStr);
 }
 
 function UIInitialize_HideDivs() {
@@ -192,8 +205,6 @@ function copyToClipboard(elem) {
 
             target.id = targetId;
             document.body.appendChild(target);
-        }
-        else {
         }
         target.textContent = elem.textContent;
     }

@@ -42,17 +42,17 @@
                 <p>A <strong>master branch</strong> is created</p>
                 <p>A <strong>develop branch</strong> is created from <strong>master</strong></p>
                 <p>New development (new features, non-emergency bug fixes) are built in <strong>feature branches</strong>:</p>
-                <p><img src="../../reference/gitflow/GitFlowFeatureBranches.png" alt="GitFlow feature branches" /></p>
+                <p><img src="../../images/gitflow/GitFlowFeatureBranches.png" alt="GitFlow feature branches" /></p>
                 <p>Feature branches are branched off of the <strong>develop branch</strong>, and finished features and fixes are merged back into the <strong>develop branch</strong> when they’re ready for release:</p>
-                <p><img src="../../reference/gitflow/GitFlowDevelopBranch.png" alt="GitFlow develop branch" /></p>
+                <p><img src="../../images/gitflow/GitFlowDevelopBranch.png" alt="GitFlow develop branch" /></p>
                 <p>When it is time to make a release, a <strong>release branch</strong> is created off of <strong>develop</strong>:</p>
-                <p><img src="../../reference/gitflow/GitFlowReleaseBranch.png" alt="GitFlow release branch" /></p>
+                <p><img src="../../images/gitflow/GitFlowReleaseBranch.png" alt="GitFlow release branch" /></p>
                 <p>The code in the <strong>release branch</strong> is deployed onto a suitable test environment, tested, and any problems are fixed directly in the release branch. This <strong>deploy -&gt; test -&gt; fix -&gt; redeploy -&gt; retest</strong> cycle continues until you’re happy that the release is good enough to release to customers.</p>
                 <p>When the release is finished, the <strong>release branch</strong> is merged into <strong>master</strong> <strong>and</strong> into <strong>develop</strong> too, to make sure that any changes made in the <strong>release branch</strong> aren’t accidentally lost by new development.</p>
-                <p><img src="../../reference/gitflow/GitFlowMasterBranch.png" alt="GitFlow master branch" /></p>
+                <p><img src="../../images/gitflow/GitFlowMasterBranch.png" alt="GitFlow master branch" /></p>
                 <p>The <strong>master branch</strong> tracks released code only. The only commits to <strong>master</strong> are merges from <strong>release branches</strong> and <strong>hotfix branches</strong>.</p>
                 <p><strong>Hotfix branches</strong> are used to create emergency fixes:</p>
-                <p><img src="../../reference/gitflow/GitFlowHotfixBranch.png" alt="GitFlow hotfix branch" /></p>
+                <p><img src="../../images/gitflow/GitFlowHotfixBranch.png" alt="GitFlow hotfix branch" /></p>
                 <p>They are branched directly from a tagged release in the <strong>master branch</strong>, and when finished are merged back into both <strong>master</strong> and <strong>develop</strong> to make sure that the hotfix isn’t accidentally lost when the next regular release occurs.</p>
             </div>
         </div>

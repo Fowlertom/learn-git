@@ -87,11 +87,6 @@ create a TFS pull request from XXX to YYY
 7. git fetch --prune --all
 - Get latest for all remote branches from the server.  Prune any branches that have been deleted from the server (i.e. a branch could be deleted from the server via a PR)
 
-8. git push -u origin <branch-name> 
-
-- Push all local commits to the remote server (this serves the basis for a Pull Request)
-- The "-u" option will setup the branch as an "upstream" branch, so you in the future, you can just do "git push" instead of "git push origin <branch-name>"
-
 9. git push -u origin <branch-name> --force
 
 - Force push the branch to the server (completely overwrite the branch on the server if it already exists)
@@ -105,10 +100,6 @@ b. git checkout <branch-name> (select the active branch)
 c. git rebase master (rebase on top of local master)  
 d. (if there are any merge conflicts, then fix, add * and commit) 
 e. git push -u origin <branch-name> --force (force push branch to server)
-
-14. git branch -a
-
-- list all local and remote branches
 
 16. git push origin :<branch-name>
 
