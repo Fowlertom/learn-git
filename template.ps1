@@ -23,6 +23,5 @@ git do_something_else
 	
 Write-Host "---------------------------------------"
 
-if (-NOT ([string]::IsNullOrEmpty($waitForKey))) {Write-Host "Press any key to continue..."; 
-$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")}
+if (-NOT ([string]::IsNullOrEmpty($waitForKey))) {Write-Host "Press any key to continue..."; $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")}
 #********************************************************

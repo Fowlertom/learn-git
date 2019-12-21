@@ -83,6 +83,7 @@
     <Content Include="content\GitFlow.html" />
     <Content Include="content\howdoi.html" />
     <Content Include="content\how_do_i\get_status.html" />
+    <Content Include="content\how_do_i\chain_commands_in_powershell.html" />
     <Content Include="fonts\readme.txt" />
     <Content Include="content\how_do_i\create_a_local_repository.html" />
     <Content Include="content\how_do_i\get_latest.html" />
@@ -127,7 +128,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="powershell\getlatest.ps1" />
+    <Content Include="~reference material to process\~powershellScripts\getlatest.ps1" />
     <Content Include="~reference material to process\~powershellScripts\getlatest_develop.ps1" />
     <Content Include="~reference material to process\~powershellScripts\getlatest_feature19_2.ps1" />
     <Content Include="~reference material to process\~powershellScripts\getlatest_feature19_2_WaitForKey.ps1" />
@@ -135,7 +136,6 @@
     <Content Include="~reference material to process\~powershellScripts\merge.ps1" />
     <Content Include="~reference material to process\~powershellScripts\Undo_and_getlatest.ps1" />
     <Content Include="~reference material to process\How to Setup a New Computer.docx" />
-    <Content Include="~reference material to process\Undo_and_getlatest.ps1" />
     <Content Include="powershell\template.ps1" />
     <Content Include="powershell\template_call.ps1" />
   </ItemGroup>
