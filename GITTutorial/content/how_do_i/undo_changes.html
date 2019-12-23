@@ -36,7 +36,7 @@
                     <li><a href="undo_changes.html#undelete">Undelete Files / Folders</a> - accidentally deleted</li>
                     <li><a href="undo_changes.html#undo_changes">Undo Changes</a> - undo changes made to files/folders. These are displayed in <span style="color: red;font-weight:bold" >'red'</span> text</li>
                     <li><a href="undo_changes.html#unstage">Unstage File</a> - files displayed in <span style="color: green;font-weight:bold" >'green'</span> text</li>
-                    <li><a href="undo_changes.html#committed">Undo Committed Changes</a> - committed to branch, but not yet pushed (to remote)</li>
+                    <li><a href="undo_changes.html#revert_committ">Revert Committed Change</a> - revert (rollback) a committ to a branch</li>
                     <li><a href="undo_changes.html#not_sure">Make Everything The Same</a> - make local branch exactly match remote (if you don't know what to choose)</li>
                 </ul>
             </div>
@@ -113,7 +113,7 @@
         </div>
     </div>
 
-<a id="committed"></a>
+<a id="revert_committ"></a>
 <h2>Committed Changes</h2>
 
     <div id="content">
@@ -128,7 +128,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Switch to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;feature_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
                     <tr><td>Undo changes done to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_make_change/restore.html">git restore .</a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
