@@ -122,7 +122,6 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="~reference material to process\process_resolve_merge_conflicts.txt" />
     <Content Include="~reference material to process\reference.txt" />
-    <Content Include="reference\progit.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
