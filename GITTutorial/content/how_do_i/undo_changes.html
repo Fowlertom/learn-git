@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Undo Changes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../styles/google_fonts.css">
+    <link rel="stylesheet" href="../../styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../styles/GITTutorial_navbar.css" />
+    <link rel="stylesheet" href="../../styles/GITTutorial2.css" />
+    <link rel="stylesheet" href="../../styles/font-awesome.min.css" />
+    <script src="../../scripts/jquery-3.2.1.js"></script>
+    <script src="../../scripts/bootstrap.min.js"></script>
+    <script src="../../scripts/GITTutorial.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            UIInitialize_SubFolderPage();
+            EventHandlers_Register();
+        });</script>
+</head>
+
+<span id="menu"></span>
+
+<body class="manpage accordion">
+
+    <div id="header">
+        <h1 class="short">Undo Changes</h1>
+    </div>
+    <div id="content">
+        <div class="sectionbody">
+            <p>If you want to undo/undelete/restore/discard changes to your <span class="glossary_def" title="def=def_working_tree;display=working tree"></span> branch (i.e. revert it to the <span class="glossary_def" title="def=def_origin;display=origin"></span> branch), the steps depend on the state of the changes.</p>
+            <h5 id="_description">I Want To:</h5>
+            <div class="colist arabic">
+                <ul>
+                    <li><a href="undo_changes.html#undelete">Undelete Files / Folders</a> - accidentally deleted</li>
+                    <li><a href="undo_changes.html#unstaged">Undo (unstaged) Changes</a> - files displayed in <span style="color: red;font-weight:bold" >'red'</span> text</li>
+                    <li><a href="undo_changes.html#staged">Undo (staged) Changes</a> - files displayed in <span style="color: green;font-weight:bold" >'green'</span> text</li>
+                    <li><a href="undo_changes.html#committed">Undo Committed Changes</a> - committed to branch, but not yet pushed (to remote)</li>
+                    <li><a href="undo_changes.html#not_sure">Make Everything The Same</a> - make local branch exactly match remote (if you don't know what to choose)</li>
+                </ul>
+            </div>
+            <p><span style="color: black;font-weight:bold" >Note:</span> This assumes the branch to 'undo' is the <a href="../command_branch/switch.html">'current'</a> branch. Use <a href="../command_branch/switch.html">git checkout &lt;feature_branch&gt;</a><span class="copy_in_command"></span></p>
+        </div>
+    </div>
+
+<a id="undelete"></a>
+<h2>Undelete Files / Folders</h2>
+
+
+    <div id="content">
+        <div class="sectionbody">
+            <p>Choose this when you accidentally delete files or folders, but have not yet staged them.</p>
+            <table class="w3-table-all">
+                <thead>
+                <tr>
+                    <th style="width: 20%">Action</th>
+                    <th style="width: 25%">Command</th>
+                    <th style="width: 55%"></th>
+                    <!--column for the copy icon-->
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td>Undelete files / folders</td><td class="table_code"><a href="../command_make_change/restore.html">git restore [FILENAME]</a></td><td><span class="copy_in_table"></span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<a id="unstaged"></a>
+<h2>Undo (unstaged) Changes</h2>
+
+    <div id="content">
+        <div class="sectionbody">
+            <p>Choose this when <a href="../command_other/status.html">git status</a> displays files/folders in <span style="color: red;font-weight:bold" >'red'</span> text.</p>
+            <table class="w3-table-all">
+                <thead>
+                <tr>
+                    <th style="width: 25%">Action</th>
+                    <th style="width: 20%">Command</th>
+                    <th style="width: 55%"></th>
+                    <!--column for the copy icon-->
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td>Undo <em>(unstaged)</em> changes</td><td class="table_code"><a href="../command_make_change/restore.html">git restore .</a></td><td><span class="copy_in_table"></span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<a id="staged"></a>
+<h2>Undo (staged) Changes</h2>
+
+    <div id="content">
+        <div class="sectionbody">
+            <p>Choose this when <a href="../command_other/status.html">git status</a> displays files/folders in <span style="color: green;font-weight:bold" >'green'</span> text.</p>
+            <table class="w3-table-all">
+                <thead>
+                <tr>
+                    <th style="width: 25%">Action</th>
+                    <th style="width: 20%">Command</th>
+                    <th style="width: 55%"></th>
+                    <!--column for the copy icon-->
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td>Undo <em>(staged)</em> changes</td><td class="table_code"><a href="../command_make_change/remove.html">git rm -f --cached . </a></td><td><span class="copy_in_table"></span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<a id="committed"></a>
+<h2>Committed Changes</h2>
+
+    <div id="content">
+        <div class="sectionbody">
+            <table class="w3-table-all">
+                <thead>
+                    <tr>
+                        <th style="width: 40%">Action</th>
+                        <th style="width: 40%">Command</th>
+                        <th style="width: 20%"></th>
+                        <!--column for the copy icon-->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Switch to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;feature_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
+                    <tr><td>Undo changes done to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_make_change/restore.html">git restore .</a></td><td><span class="copy_in_table"></span></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<a id="not_sure"></a>
+<h2>Everything</h2>
+
+    <div id="content">
+    <div class="sectionbody">
+        <table class="w3-table-all">
+            <thead>
+            <tr>
+                <th style="width: 40%">Action</th>
+                <th style="width: 40%">Command</th>
+                <th style="width: 20%"></th> <!--column for the copy icon-->
+            </tr>
+            </thead>
+            <tbody>
+            <tr><td>Switch to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;feature_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Undo changes done to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_undo_change/reset.html">git reset --hard <i>&lt;Origin/feature_branch&gt;</i></a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Delete any untracked files & folders</td><td class="table_code"><a href="../command_undo_change/clean.html">git clean -d -f</a></td><td><span class="copy_in_table"></span></td></tr>
+            </tbody>
+        </table>
+    </div>
+        </div>
+
+
+</body>
+</html>
