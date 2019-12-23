@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>James' Git Tutorial</title>
+    <title>Chain Git Commands</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../styles/google_fonts.css">
@@ -47,18 +47,20 @@
             <tbody>
             <tr><td>Save template code to 'sample.ps1'</td><td class="table_code">
 
-<pre>
+https://stackoverflow.com/questions/13738634/how-can-i-check-if-a-string-is-null-or-empty-in-powershell
+                <pre>
 if ($args.count -eq 0) 
 {
     Write-Host &quot; command &#39;param1&#39; &#39;param2&#39;&quot;;exit 0; 
 }
-$param1 = $args[0];if ([string]::IsNullOrEmpty($param1)) { throw &quot;No param1 specified.&quot;;}
+$param1 = $args[0];if (($str1)[string]::IsNullOrEmpty($param1)) { throw &quot;No param1 specified.&quot;;}
 $param2 = $args[1];if ([string]::IsNullOrEmpty($param2)) { throw &quot;No param2 specified.&quot;;}
 
 cls;
 
 Write-Host &quot;---------------------------------------&quot;; 
-Write-Host &quot;command &#39;$param1&#39; acting with &#39;$param2&#39;.&quot;; Write-Host &quot;.&quot;; 
+Write-Host &quot;command &#39;$param1&#39; acting with &#39;$param2&#39;.&quot;;
+Write-Host &quot;.&quot;; 
 
 #******************************************************** 
 # git commands 

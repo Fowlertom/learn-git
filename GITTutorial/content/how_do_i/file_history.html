@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Merge Branches</title>
+    <title>View History</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../styles/google_fonts.css">
@@ -24,22 +24,25 @@
 
 <body class="manpage accordion">
 
-<div id="header"><h1 class="short">Merge Branches</h1></div>
-<div id="content"><div class="sectionbody"><p>This page lists the steps to <span class="glossary_def" title="def=def_merge;display=merge">merge </span><i>&lt;source_branch&gt;</i> into <i>&lt;target_branch&gt;</i></p></div></div>
+<div id="header"><h1 class="short">View (file) History</h1>
+    </div>
+<div id="content">
+    <div class="sectionbody">
+        <p>If you want to see what changes were made for a file, the best way (I&#39;ve found), is to use Visual Studio (not code) Team Explorer.</p>
+    </div></div>
 
     <h2>Steps</h2>
 
 <div id="content">
-<div class="sectionbody">
-        <a id="create_pull_request"></a>
-            <div class="colist arabic">
+    <div class="sectionbody">
+        <div class="colist arabic">
+            <p><strong>Prerequisite</strong>: Install <a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=TeamExplorer&rel=16" >Microsoft Visual Studio Team Explorer</a></p>
                 <ol>
-                                       <li>Open a browser. Navigate to the TFS project hosting the repository</li>
-                    <li>Click on 'Repos' and select the repository</li>
-                    <li>Click on 'branches'</li>
-                    <li>On the right hand panel, click the '...' beside <i>&lt;target_branch&gt;</i> and select 'set as compare branch'. Unlock branch if necessary.</li>
-                    <li>Hover of the line of the <i>&lt;source_branch&gt;</i>, select 'new pull request'.</li>
-                    <li>Enter required fields, then click 'create'</li>
+                    <li>Launch Visual Studio 2017/2019.</li>
+                    <li>Click <em>File|Open|Folder...</em></li>
+                    <li>Select the 'root' folder of the local Git Repository.</li>
+                    <li>In <em>Solution Explorer</em>, find the file to view the history of</li>
+                    <li>Right click on the file, select <em>View History...</em></li>
                 </ol>
             </div>
     </div>

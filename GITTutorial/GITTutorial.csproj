@@ -82,6 +82,7 @@
     <Content Include="content\GitFlow\GitFlow_commands.html" />
     <Content Include="content\GitFlow.html" />
     <Content Include="content\howdoi.html" />
+    <Content Include="content\how_do_i\file_history.html" />
     <Content Include="content\how_do_i\get_status.html" />
     <Content Include="content\how_do_i\chain_commands_in_powershell.html" />
     <Content Include="fonts\readme.txt" />
