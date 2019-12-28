@@ -36,7 +36,7 @@
                     <li><a href="undo_changes.html#undelete">Undelete Files / Folders</a> - accidentally deleted</li>
                     <li><a href="undo_changes.html#undo_changes">Undo Changes</a> - undo changes made to files/folders. These are displayed in <span style="color: red;font-weight:bold" >'red'</span> text</li>
                     <li><a href="undo_changes.html#unstage">Unstage File</a> - files displayed in <span style="color: green;font-weight:bold" >'green'</span> text</li>
-                    <li><a href="undo_changes.html#revert_committ">Revert Committed Change</a> - revert (rollback) a committ to a branch</li>
+                    <li><a href="undo_changes.html#revert_committ">Revert Committed Change</a> - revert (rollback) a commit to a branch</li>
                     <li><a href="undo_changes.html#not_sure">Make Everything The Same</a> - make local branch exactly match remote (if you don't know what to choose)</li>
                 </ul>
             </div>
@@ -61,7 +61,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr><td>Undelete files / folders</td><td class="table_code"><a href="../command_make_change/restore.html">git restore [FILENAME]</a></td><td><span class="copy_in_table"></span></td></tr>
+                <tr><td>Undelete files / folders</td><td class="table_code"><a href="../command_undo_change/restore.html">git checkout --[FILENAME]</a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
         </div>
@@ -78,13 +78,13 @@
                 <thead>
                 <tr>
                     <th style="width: 25%">Action</th>
-                    <th style="width: 20%">Command</th>
-                    <th style="width: 55%"></th>
+                    <th style="width: 35%">Command</th>
+                    <th style="width: 40%"></th>
                     <!--column for the copy icon-->
                 </tr>
                 </thead>
                 <tbody>
-                <tr><td>Undo <em>(unstaged)</em> changes</td><td class="table_code"><a href="../command_make_change/restore.html">git restore .</a></td><td><span class="copy_in_table"></span></td></tr>
+                <tr><td>Undo <em>(unstaged)</em> changes</td><td class="table_code"><a href="../command_undo_change/restore.html">git checkout --[FILESPEC]</a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
         </div>
@@ -138,7 +138,8 @@
 <h2>Everything</h2>
 
     <div id="content">
-    <div class="sectionbody">
+        <p><strong style="color: black;"">WARNING!!</strong> Choosing this option will delete all changes in your <span class="glossary_def" title="def=def_working_tree;display=working tree"></span> folder that have made!!!</p>
+        <div class="sectionbody">
         <table class="w3-table-all">
             <thead>
             <tr>

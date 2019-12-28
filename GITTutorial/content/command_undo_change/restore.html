@@ -25,7 +25,7 @@
 
 <body class="manpage">
 
-        <br/><br/><!-- GIT DOC --><a href="https://git.github.io/htmldocs/git-restore.html">Official Git Documentation - Restore</a>
+<br/><br/><!-- GIT DOC --><a href="https://git.github.io/htmldocs/git-checkout.html">Official Git Documentation - Restore</a>
 
         <div id="header"><h1 class="short">Restore (AKA 'undo changes')</h1></div>
 
@@ -37,20 +37,20 @@
             
             <div class="dlist">
                 <dl>
-                    <!-- COMMAND --><dt class="hdlist1"><em>git restore .</em><span class="copy_in_command"></span></dt>
+                    <!-- COMMAND --><dt class="hdlist1"><em>git checkout -- [FILENAME]</em><span class="copy_in_command"></span></dt>
                     <!-- EXPLANATION -->
                     <dd>
-                        <p>'Un-does' all changes to files / folders.</p>
+                        <p>'Un-does' the change, or 'un-deletes' [FILENAME].</p>
                     </dd>
                 </dl>
             </div>
 
             <div class="dlist">
                 <dl>
-                    <!-- COMMAND --><dt class="hdlist1"><em>git restore *.html</em></dt>
+                    <!-- COMMAND --><dt class="hdlist1"><em>git checkout -- *.html</em></dt>
                     <!-- EXPLANATION -->
                     <dd>
-                        <p>'Un-does' changes done to files with an extension of 'html'.</p>
+                        <p>'Un-does' changes, or 'un-deletes' files with an extension of 'html'.</p>
                     </dd>
                 </dl>
             </div>
