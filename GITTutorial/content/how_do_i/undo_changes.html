@@ -33,14 +33,15 @@
             <h5 id="_description">I Want To:</h5>
             <div class="colist arabic">
                 <ul>
-                    <li><a href="undo_changes.html#undelete">Undelete Files / Folders</a> - accidentally deleted</li>
-                    <li><a href="undo_changes.html#undo_changes">Undo Changes</a> - changes to files/folders - displayed in <span style="color: red;font-weight:bold" >'red'</span> text</li>
-                    <li><a href="undo_changes.html#unstage">Unstage Files / Folders</a> - will not be committed - displayed in <span style="color: green;font-weight:bold" >'green'</span> text</li>
+                    <li><a href="undo_changes.html#undelete">Undelete Files / Folders</a> - that were accidentally removed</li>
+                    <li><a href="undo_changes.html#undo_changes_unstaged">Undo Changes</a> - to <strong>unstaged</strong> files/folders (listed in <span style="color: red;font-weight:bold"> 'red'</span> text)</li>
+                    <li><a href="undo_changes.html#undo_changes_staged">Undo Changes</a> - to <strong>staged</strong> files/folders (listed in <span style="color: green;font-weight:bold"> 'green'</span> text)</li>
+                    <li><a href="undo_changes.html#stage_to_unstage">Change State of Files / Folders</a> - from <strong>staged</strong> to <strong>unstaged</strong> (from <span style="color: green;font-weight:bold"> 'green'</span> -&gt; <span style="color: red;font-weight:bold"> 'red'</span>)</li>
                     <li><a href="undo_changes.html#revert_committ">Revert Committed Change</a> - revert (rollback) a commit to a branch</li>
                     <li><a href="undo_changes.html#not_sure">Make Everything The Same</a> - make local branch exactly match remote (if you don't know what to choose)</li>
                 </ul>
             </div>
-            <p><span style="color: black;font-weight:bold" >Note:</span> This assumes the branch to 'undo' is the <a href="../command_branch/switch.html">'current'</a> branch. Use <a href="../command_branch/switch.html">git checkout &lt;feature_branch&gt;</a><span class="copy_in_command"></span></p>
+            <p><span style="color: black;font-weight:bold" >Note:</span> This assumes the branch to perform 'undo' actions on is the <a href="../command_branch/switch.html">'current'</a> branch. Use <a href="../command_branch/switch.html">git checkout &lt;feature_branch&gt;</a><span class="copy_in_command"></span></p>
         </div>
     </div>
 
@@ -50,7 +51,7 @@
 
     <div id="content">
         <div class="sectionbody">
-            <p>Choose this when you accidentally delete files or folders, but have not yet staged them.</p>
+            <p>Choose this when you have accidentally deleted files or folders, but have not yet staged them.</p>
             <table class="w3-table-all">
                 <thead>
                 <tr>
@@ -67,13 +68,13 @@
         </div>
     </div>
 
-<a id="undo_changes"></a>
-<h2>Undo Changes</h2>
+<a id="undo_changes_unstaged"></a>
+<h2>Undo Changes (unstaged)</h2>
 
     <div id="content">
         <div class="sectionbody">
-            <p>Choose this when you want to undo/revert changes made to files folders.</p>
-            <p><a href="../command_other/status.html">git status</a> will display eligible files/folders in <span style="color: red;font-weight:bold" >'red'</span> text.</p>
+            <p>Choose this when you want to undo changes to <span style="color: black;font-weight:bold">unstaged</span> files / folders.</p>
+            <p><a href="../command_other/status.html">git status</a> will list eligible files/folders in <span style="color: red;font-weight:bold" >'red'</span> text.</p>
             <table class="w3-table-all">
                 <thead>
                 <tr>
@@ -84,19 +85,43 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr><td>Undo / revert changes</td><td class="table_code"><a href="../command_undo_change/restore.html">git checkout --[FILESPEC]</a></td><td><span class="copy_in_table"></span></td></tr>
+                <tr><td>Undo changes</td><td class="table_code"><a href="../command_undo_change/restore.html">git checkout --[FILESPEC]</a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-<a id="unstage"></a>
+<a id="undo_changes_staged"></a>
+<h2>Undo Changes (staged)</h2>
+
+<div id="content">
+    <div class="sectionbody">
+        <p>Choose this when you want to undo changes to <span style="color: black;font-weight:bold">staged</span> files / folders.</p>
+        <p><a href="../command_other/status.html">git status</a> will list eligible files/folders in <span style="color: green;font-weight:bold" >'green'</span> text.</p>
+        <table class="w3-table-all">
+            <thead>
+            <tr>
+                <th style="width: 20%">Action</th>
+                <th style="width: 25%">Command</th>
+                <th style="width: 55%"></th>
+                <!--column for the copy icon-->
+            </tr>
+            </thead>
+            <tbody>
+            <tr><td>Unstage files / folders</td><td class="table_code"><a href="../command_undo_change/reset.html">git reset --[FILESPEC] </a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Undo changes</td><td class="table_code"><a href="../command_undo_change/restore.html">git checkout --[FILESPEC]</a></td><td><span class="copy_in_table"></span></td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<a id="stage_to_unstage"></a>
 <h2>Unstage Files / Folders</h2>
 
     <div id="content">
         <div class="sectionbody">
             <p>Choose this when you want to remove files/folders from being commited.</p>
-            <p><a href="../command_other/status.html">git status</a> will display eligible files/folders in <span style="color: green;font-weight:bold" >'green'</span> text.</p>
+            <p><a href="../command_other/status.html">git status</a> will display eligible files/folders in <span style="color: green;font-weight:bold">'green'</span> text.</p>
             <table class="w3-table-all">
                 <thead>
                 <tr>
@@ -128,7 +153,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Undo changes done to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_make_change/restore.html">git restore .</a></td><td><span class="copy_in_table"></span></td></tr>
+                    <tr><td>Undo changes done to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_make_change/revert.html">git revert .</a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
         </div>
