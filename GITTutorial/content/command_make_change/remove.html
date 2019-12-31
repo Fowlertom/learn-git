@@ -32,14 +32,14 @@
         <h2>DETAILS</h2>
 
         <div class="sectionbody">
-            <p>Performing a 'remove' is the process of removing a file from version control (<span class="glossary_def" title="def=def_working_tree;display=working tree"></span>), and leaving it in your working folder.</p>
+            <p>Performing a 'remove' is the process of removing a file / folder from version control (<span class="glossary_def" title="def=def_working_tree;display=working tree"></span>), and leaving it in your working folder.</p>
             
             <div class="dlist">
                 <dl>
-                    <!-- COMMAND --><dt class="hdlist1"><em>git rm -f --cached [FILENAME]</em><span class="copy_in_command"></span></dt>
+                    <!-- COMMAND --><dt class="hdlist1"><em>git rm -f --cached --[PATHSPEC]</em><span class="copy_in_command"></span></dt>
                     <!-- EXPLANATION -->
                     <dd>
-                        <p>Removes [FILENAME] from being but does not delete it.</p>
+                        <p>Removes <span class="glossary_def" title="def=def_pathspec;display=[PATHSPEC]"></span> from being tracked, but does not delete it.</p>
                          <dd>
                         <p><b>-f</b> force removal</p>
                         <p><b>--cached</b> do not delete file after it is unstaged</p>
@@ -50,7 +50,7 @@
 
             <div class="dlist">
                 <dl>
-                    <!-- COMMAND --><dt class="hdlist1"><em>git rm -f --cached *.html</em></dt>
+                    <!-- COMMAND --><dt class="hdlist1"><em>git rm -f --cached --*.html</em></dt>
                     <!-- EXPLANATION -->
                     <dd>
                         <p>Removes 'staged' files wtih an extension of 'html'.</p>
