@@ -36,7 +36,7 @@
                     <li><a href="undo_changes.html#undelete">Undelete Files / Folders</a> - that were accidentally removed (<a href="../command_other/status.html">git status</a> lists as <span style="color: red;font-weight:bold">'red'</span>)</li>
                     <li><a href="undo_changes.html#undo_changes_unstaged">Undo Changes</a> - to <strong>unstaged</strong> files/folders (<a href="../command_other/status.html">git status</a> lists as <span style="color: red;font-weight:bold">'red'</span>)</li>
                     <li><a href="undo_changes.html#undo_changes_staged">Undo Changes</a> - to <strong>staged</strong> files/folders (<a href="../command_other/status.html">git status</a> lists as <span style="color: green;font-weight:bold">'green'</span>)</li>
-                    <li><a href="undo_changes.html#stage_to_unstage">Change State of Files / Folders</a> - from <strong>staged</strong> to <strong>unstaged</strong> (from <span style="color: green;font-weight:bold"> 'green'</span> -&gt; <span style="color: red;font-weight:bold">'red'</span>)</li>
+                    <li><a href="undo_changes.html#stage_to_unstage">Change Staged to Unstaged</a> - of files / folders (from <span style="color: green;font-weight:bold"> 'green'</span> -&gt; <span style="color: red;font-weight:bold">'red'</span>)</li>
                     <li><a href="undo_changes.html#revert_committ">Revert Committed Change</a> - revert (rollback) a commit to a branch</li>
                     <li><a href="undo_changes.html#not_sure">Make Everything The Same</a> - make local branch exactly match remote (if you don't know what to choose)</li>
                 </ul>
@@ -66,6 +66,7 @@
                 <tr><td>Undelete files / folders</td><td class="table_code"><a href="../command_undo_change/restore.html">git checkout --  [PATHSPEC]</a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
+            <p>Afterwards, the files / folders will not appear using <a href="../command_other/status.html">git status</a></p>
         </div>
     </div>
 
@@ -89,6 +90,7 @@
                 <tr><td>Undo changes</td><td class="table_code"><a href="../command_undo_change/restore.html">git checkout --  [PATHSPEC]</a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
+            <p>Afterwards, the files / folders will not appear using <a href="../command_other/status.html">git status</a></p>
         </div>
     </div>
 
@@ -113,15 +115,16 @@
             <tr><td>Undo changes</td><td class="table_code"><a href="../command_undo_change/restore.html">git checkout --  [PATHSPEC]</a></td><td><span class="copy_in_table"></span></td></tr>
             </tbody>
         </table>
+        <p>Afterwards, the files / folders will not appear using <a href="../command_other/status.html">git status</a></p>
     </div>
 </div>
 
 <a id="stage_to_unstage"></a>
-<h2>Unstage Files / Folders</h2>
+<h2>Change Staged to Unstaged</h2>
 
     <div id="content">
         <div class="sectionbody">
-            <p>Choose this when you want to remove files/folders from being commited.</p>
+            <p>Choose this when you want to remove files/folders from being eligible to be commited.</p>
             <p>Perform this action on <span style="color: green;font-weight:bold" >green files/folders</span> (from <a href="../command_other/status.html">git status</a>).</p>
             <table class="w3-table-all">
                 <thead>
@@ -136,6 +139,7 @@
                 <tr><td>Unstage files / folders</td><td class="table_code"><a href="../command_undo_change/reset.html">git reset --  [PATHSPEC]</a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
+            <p>Afterwards, the files / folders will appear as <span style="color: red;font-weight:bold" >red</span> using <a href="../command_other/status.html">git status</a></p>
         </div>
     </div>
 
