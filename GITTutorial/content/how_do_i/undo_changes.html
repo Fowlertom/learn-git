@@ -36,8 +36,8 @@
                     <li><a href="undo_changes.html#undelete">Undelete Files / Folders</a> - that were accidentally removed (<a href="../command_other/status.html">git status</a> lists as <span style="color: red;font-weight:bold">'red'</span>)</li>
                     <li><a href="undo_changes.html#undo_changes_unstaged">Undo Changes</a> - to <strong>unstaged</strong> files/folders (<a href="../command_other/status.html">git status</a> lists as <span style="color: red;font-weight:bold">'red'</span>)</li>
                     <li><a href="undo_changes.html#undo_changes_staged">Undo Changes</a> - to <strong>staged</strong> files/folders (<a href="../command_other/status.html">git status</a> lists as <span style="color: green;font-weight:bold">'green'</span>)</li>
-                    <li><a href="undo_changes.html#stage_to_unstage">Change Staged to Unstaged</a> - of files / folders (from <span style="color: green;font-weight:bold"> 'green'</span> -&gt; <span style="color: red;font-weight:bold">'red'</span>)</li>
-                    <li><a href="undo_changes.html#revert_committ">Revert Committed Change</a> - revert (rollback) a commit to a branch</li>
+                    <li><a href="undo_changes.html#stage_to_unstage">Change Staged (files / folders) to Unstaged</a> - of files / folders (from <span style="color: green;font-weight:bold"> 'green'</span> -&gt; <span style="color: red;font-weight:bold">'red'</span>)</li>
+                    <li><a href="undo_changes.html#revert_commit">Undo a Commit</a> - made to a branch</li>
                     <li><a href="undo_changes.html#not_sure">Make Everything The Same</a> - make local branch exactly match remote (if you don't know what to choose)</li>
                 </ul>
             </div>
@@ -120,7 +120,7 @@
 </div>
 
 <a id="stage_to_unstage"></a>
-<h2>Change Staged to Unstaged</h2>
+<h2>Change Staged (files / folders) to Unstaged</h2>
 
     <div id="content">
         <div class="sectionbody">
@@ -143,8 +143,8 @@
         </div>
     </div>
 
-<a id="revert_committ"></a>
-<h2>Committed Changes</h2>
+<a id="revert_commit"></a>
+<h2>Undo a Commit (made to a branch)</h2>
 
     <div id="content">
         <div class="sectionbody">
@@ -158,7 +158,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Undo changes done to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_make_change/revert.html">git revert .</a></td><td><span class="copy_in_table"></span></td></tr>
+                    <tr><td>Undo a commit made to <i>&lt;feature_branch&gt;</i></td><td class="table_code"><a href="../command_make_change/revert.html">git revert .</a></td><td><span class="copy_in_table"></span></td></tr>
                 </tbody>
             </table>
         </div>
