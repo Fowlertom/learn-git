@@ -71,6 +71,7 @@
     <Content Include="content\command_branch\delete.html" />
     <Content Include="content\command_create_repository\clone.html" />
     <Content Include="content\command_make_change\remove.html" />
+    <Content Include="content\command_undo_change\revert.html" />
     <Content Include="content\command_undo_change\restore.html" />
     <Content Include="content\command_other\status.html" />
     <Content Include="content\command_undo_change\clean.html" />
