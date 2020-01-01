@@ -27,32 +27,35 @@
 
         <br/><br/><!-- GIT DOC --><a href="https://git.github.io/htmldocs/git-revert.html">Official Git Documentation - Revert</a>
 
-        <div id="header"><h1 class="short">Revert (undo change to index)</h1></div>
+        <div id="header"><h1 class="short">Revert a Commit</h1></div>
 
         <h2>DETAILS</h2>
 
         <div class="sectionbody">
-            <p>Performing a 'reset' is the process of returning a branch to a state before any merges.</p>
-            <p>If you are 'resetting' from origin, you are undoing all local commits - effectively if you delete the working tree and get a new copy.</p>
-            <p>If you are 'resetting' a file / folder, you are moving it from being staged (to be eligible to be comitted).</p>            
+            <p>Performing a 'revert' is the process of creating a new commit that reverses an earlier commit.</p>
             <div class="dlist">
 
                  <dl>
-                    <!-- COMMAND --><dt class="hdlist1">git reset --  [PATHSPEC]<span class="copy_in_command"></span></dt>
+                    <!-- COMMAND --><dt class="hdlist1">git revert --no-edit [SHA-1]<span class="copy_in_command"></span></dt>
                     <!-- EXPLANATION -->
                     <dd>
-                        <p>Removes <span class="glossary_def" title="def=def_pathspec;display=[PATHSPEC]"></span> from being staged.</p>
-                    </dd>
-                </dl>
-                <dl>
-                    <!-- COMMAND --><dt class="hdlist1"><em>git reset --hard <i>&lt;Origin/feature_branch&gt;</i></em><span class="copy_in_command"></span></dt>
-                    <!-- EXPLANATION -->
-                    <dd>
-                        <p>Discards any commits on the current branch in your working tree and makes the current branch identical to <i>&lt;Origin/feature_branch&gt;</i>.</p>
+                        <p>Creates a new commit that effectively reverses the changes of <span class="glossary_def" title="def=def_SHA1;display=[SHA-1]"></span></p>
+                        <p><b>[SHA-1]</b> a (40-byte hexadecimal string) that idenfies a commit. You can also use a leading substring that is unique within the repository. E.g. dae86e1950b1277e545cee180551750029cfe735 and dae86e both name the same commit object if there is no other object in your repository whose object name starts with dae86e.</p>
+                        <p><b>--no-edit</b> do not start the commit message editor</p>
                     </dd>
                 </dl>
             </div>
-            
+            <div class="dlist">
+
+                <dl>
+                    <!-- COMMAND --><dt class="hdlist1">git revert --no-edit [GIT_REVISION]<span class="copy_in_command"></span></dt>
+                    <!-- EXPLANATION -->
+                    <dd>
+                        <p><b>[GIT_REVISION]</b> <a href="https://git.github.io/htmldocs/gitrevisions.html">revision parameter</a> a way to speficy a commit object</p>
+
+                    </dd>
+                </dl>
+            </div>            
         </div>
     
 </body>
