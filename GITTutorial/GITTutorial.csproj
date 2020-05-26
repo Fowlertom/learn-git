@@ -88,7 +88,6 @@
     <Content Include="content\how_do_i\file_history.html" />
     <Content Include="content\how_do_i\get_status.html" />
     <Content Include="content\how_do_i\chain_commands_in_powershell.html" />
-    <Content Include="fonts\readme.txt" />
     <Content Include="content\how_do_i\create_a_local_repository.html" />
     <Content Include="content\how_do_i\get_latest.html" />
     <Content Include="content\how_do_i\merge_branches.html" />
