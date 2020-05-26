@@ -115,7 +115,7 @@
     <Content Include="content\remote_actions\create_new_repository.html" />
     <Content Include="content\remote_actions\merge_branches.html" />
     <Content Include="scripts\jquery-3.2.1.js" />
-    <Content Include="styles\GITTutorial2.css" />
+    <Content Include="styles\GITTutorial.css" />
     <Content Include="readme.md" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
