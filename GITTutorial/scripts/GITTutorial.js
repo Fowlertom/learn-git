@@ -62,14 +62,12 @@ function Create_Glossary_HTML() {
 function UIInitialize_BasePage() {
     UIInitialize_BasePageMenu();
     UIInitialize_CopyIcons();
-    UIInitialize_HideDivs();
     UIInitialize_Glossary();
 }
 
 function UIInitialize_SubFolderPage() {
     UIInitialize_SubFolderPageMenu();
     UIInitialize_CopyIcons();
-    UIInitialize_HideDivs();
     UIInitialize_Glossary();
 }
 
@@ -128,36 +126,11 @@ function UIInitialize_Glossary() {
     });
 }
 
-function UIInitialize_HideDivs() {
-    $(".DivIsInitiallyHidden").css("display", "none");
-}
-
 
 
 //******************************************************************************************
 // Event Handlers
 //******************************************************************************************
-function EventHandler_AccordionClick() {
-    var iconClassName;
-    //open and close the accordions
-    $('.accordion')
-        .find('.accordion-toggle')
-        .click(function () {
-            //Expand or collapse this panel
-            var thisID = $(this);
-
-            var chevronIcon = thisID[0].childNodes[1].childNodes[0];
-            if (chevronIcon.tagName == "I" && chevronIcon.classList[0] == "fa") {
-                iconClassName = chevronIcon.classList[1];
-                if (iconClassName == "fa-angle-double-down")
-                    $(chevronIcon).toggleClass("fa-angle-double-down fa-angle-double-right");
-                else
-                    $(chevronIcon).toggleClass("fa-angle-double-right fa-angle-double-down");
-            }
-            var nextID = thisID.next();
-            nextID.slideToggle('fast');
-        });
-}
 
 function EventHandler_CopyClick() {
     $('.copy_in_table.fa-copy').click(function () {
@@ -178,7 +151,6 @@ function EventHandler_CopyClick() {
 
 function EventHandlers_Register() {
 
-    EventHandler_AccordionClick();
     EventHandler_CopyClick();
 }
 
