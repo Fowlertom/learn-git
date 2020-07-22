@@ -25,20 +25,9 @@
 <body class="manpage">
 
 <div id="header"><h1 class="short">Resolve Merge Conflicts</h1></div>
-<div id="content"><div class="sectionbody"><p>If a <span class = "glossary_def" title="def=def_remote_tracking_branch;display=remote-tracking branch"></span> is 'ahead' of your local branch, you may encounter <span class = "glossary_def" title="def=def_merge;display=merge"></span> conflicts. If you have local <span class = "glossary_def" title="def=def_commit;display=commits"></span> you want to preserve, you will have to manually resolve the conflicts.</p></div></div>
+<div id="content"><div class="sectionbody"><p>If a <i>&lt;target_branch&gt;</i> is <a href="../glossary.html#ahead">ahead</a> of a <i>&lt;source_branch&gt;</i>, you may encounter <span class = "glossary_def" title="def=def_merge;display=merge"></span> conflicts. This page describes how to manually resolve merge conflicts.</p><p><a href="https://code.visualstudio.com/Download" >Microsoft Visual Studio Code</a> is the best tool (in my opinion) to resolve merge conflicts.</p></div></div>
 
-<!--<div id="content"><div class="sectionbody">     
 
-    <h5 id="_description">Options</h5>
-
-    <div>
-        <ol>
-            <li>Perform a <a href="../command_synchronize_change/rebase.html">rebase</a> (recommended).</li>
-            <li>Resolve merge conflicts manually. See below.</li>
-        </ol>
-    </div>
-</div>
-</div>-->
 
 <h2>Resolve Conflicts Manually</h2>
 
@@ -53,7 +42,15 @@
             </tr>
             </thead>
             <tbody>
-            <tr><td>To come...</td><td class="table_code"><a href="../command_branch/switch.html">command goes here</a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Start Visual Studio Code</td><td class="table_code"></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Navigate to the local git repository</td><td>Click &#39;File | Open Folder...&#39; </td><td></td></tr>
+            <tr><td>Switch to <i>&lt;source_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;source_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Get latest of <i>&lt;source_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/pull.html">git pull</a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Switch to <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;target_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Get latest of <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/pull.html">git pull</a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Merge commits of <i>&lt;source_branch&gt;</i> into <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/merge.html">git merge &lt;source_branch&gt; </a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Right Click, select <strong>'Git Bash Here'</strong></td><td></td><td></td></tr>
+            <tr><td>Copy the <i>[URL]</i> of the repository</td><td>From TFS or <a href="https://github.com/">GitHub</a></td><td></td></tr>
             </tbody>
         </table>
     </div>

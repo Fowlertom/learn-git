@@ -26,11 +26,29 @@
 
 <div id="header"><h1 class="short">Merge Branches (<em>&lt;source_branch&gt;</em> into <em>&lt;target_branch&gt;</em>)</h1>
     </div>
-<div id="content"><div class="sectionbody"><p>These steps will merge the contents of <i>&lt;source_branch&gt;</i> into <i>&lt;target_branch&gt;</i> in your <span class = "glossary_def" title="def=def_working_tree;display=working tree"></span>.</p></div></div>
+<div id="content"><div class="sectionbody"><p>These steps will merge the contents of <i>&lt;source_branch&gt;</i> into <i>&lt;target_branch&gt;</i> in your <span class = "glossary_def" title="def=def_working_tree;display=working tree"></span>. There are two different ways to merge code:</p></div>
+<div id="content"><div class="sectionbody"><p></p>
+        <div class="colist arabic">
+            <div>
+                <ul>
+                    <li><span class = "glossary_def" title="def=def_merge;display=Merge"></span></li>
+                    <li><a href="../command_synchronize_change/rebase.html">Rebase</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="content"><div class="sectionbody"><p>There is a great article by Atlassian on <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">merging vs rebasing</a>.</p></div>
+<div id="content"><div class="sectionbody"><p>In summary,  <span class = "glossary_def" title="def=def_merge;display=merging"></span> retains history while <a href="../command_synchronize_change/rebase.html">rebasing</a> re-writes history. The importance of history will dictate the method chosen.</p></div>
 
-    <h2>Steps</h2>
+<h2>Merging</h2>
 
-    <div id="content">
+<div id="content"><div class="sectionbody"><p>If the <i>&lt;target_branch&gt;</i> is <strong>NOT</strong> <a href="../glossary.html#ahead">ahead</a> of the <i>&lt;source_branch&gt;</i>, the easiest way to perform the merge is using the <a href="../remote_actions/merge_branches.html">TFS Pull Request</a>.</p></div></div>
+<div id="content"><div class="sectionbody"><p><strong>WARNING</strong>: Merging using a TFS Pull Request <strong>should only be done</strong> if the <i>&lt;target_branch&gt;</i> is <strong>NOT</strong> <a href="../glossary.html#ahead">ahead</a> of the <i>&lt;source_branch&gt;</i>.</p></div></div>
+<br/>
+<div id="content"><div class="sectionbody"><p>If the <i>&lt;target_branch&gt;</i> is <a href="../glossary.html#ahead">ahead</a> of the <i>&lt;source_branch&gt;</i>, you will need to merge the branches locally and resolve any conflicts. The following steps describe how to perform a 'local' merge.</p></div></div>
+
+<div id="content">
     <div class="sectionbody">
         <table class="w3-table-all">
             <thead>
@@ -45,12 +63,43 @@
             <tr><td>Get latest of <i>&lt;source_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/pull.html">git pull</a></td><td><span class="copy_in_table"></span></td></tr>
             <tr><td>Switch to <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;target_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
             <tr><td>Get latest of <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/pull.html">git pull</a></td><td><span class="copy_in_table"></span></td></tr>
-            <tr><td>Merge commits of <i>&lt;source_branch&gt;</i> into <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/rebase.html">git rebase &lt;source_branch&gt; &lt;target_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
-            <tr><td>(Force) Push changes to remote <i>&lt;target_branch&gt;</td><td class="table_code"><a href="../command_synchronize_change/push.html">git push -f origin &lt;target_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Merge commits of <i>&lt;source_branch&gt;</i> into <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/merge.html">git merge &lt;source_branch&gt; </a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td><a href="../how_do_i/resolve_merge_conflicts.html">Resolve conflicts</a> (if any exist)<td class="table_code"></td><td></td></tr>
+            <tr><td>Commit changes to <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_make_change/commit.html">git commit -m "yourcomments"</a></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Push changes to remote</td><td class="table_code"><a href="../command_synchronize_change/push.html">git push -u origin &lt;target_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
             </tbody>
         </table>
     </div>
+
+</div>
+
+
+
+
+<h2>Rebasing</h2>
+
+    <div id="content">
+        <div class="sectionbody">
+            <table class="w3-table-all">
+                <thead>
+                <tr>
+                    <th style="width: 30%">Action</th>
+                    <th style="width: 40%">Command</th>
+                    <th style="width: 30%"></th> <!--column for the copy icon-->
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td>Switch to <i>&lt;source_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;source_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
+                <tr><td>Get latest of <i>&lt;source_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/pull.html">git pull</a></td><td><span class="copy_in_table"></span></td></tr>
+                <tr><td>Switch to <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;target_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
+                <tr><td>Get latest of <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/pull.html">git pull</a></td><td><span class="copy_in_table"></span></td></tr>
+                <tr><td>Merge commits of <i>&lt;source_branch&gt;</i> into <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/rebase.html">git rebase &lt;source_branch&gt; &lt;target_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
+                <tr><td>(Force) Push changes to remote <i>&lt;target_branch&gt;</td><td class="table_code"><a href="../command_synchronize_change/push.html">git push -f origin &lt;target_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
+                </tbody>
+            </table>
         </div>
+
+    </div>
 
 </body>
 </html>
