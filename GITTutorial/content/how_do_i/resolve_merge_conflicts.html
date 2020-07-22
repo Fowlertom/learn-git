@@ -42,15 +42,33 @@
             </tr>
             </thead>
             <tbody>
-            <tr><td>Start Visual Studio Code</td><td class="table_code"></td><td><span class="copy_in_table"></span></td></tr>
+            <tr><td>Start Visual Studio Code</td><td class="table_code">-------------</td><td><span class="copy_in_table"></span></td></tr>
             <tr><td>Navigate to the local git repository</td><td>Click &#39;File | Open Folder...&#39; </td><td></td></tr>
+            <tr><td>Open a terminal window</td><td>Click &#39;Terminal | New Terminal&#39; </td><td></td></tr>
             <tr><td>Switch to <i>&lt;source_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;source_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
             <tr><td>Get latest of <i>&lt;source_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/pull.html">git pull</a></td><td><span class="copy_in_table"></span></td></tr>
             <tr><td>Switch to <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_branch/switch.html">git checkout &lt;target_branch&gt;</a></td><td><span class="copy_in_table"></span></td></tr>
             <tr><td>Get latest of <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/pull.html">git pull</a></td><td><span class="copy_in_table"></span></td></tr>
             <tr><td>Merge commits of <i>&lt;source_branch&gt;</i> into <i>&lt;target_branch&gt;</i></td><td class="table_code"><a href="../command_synchronize_change/merge.html">git merge &lt;source_branch&gt; </a></td><td><span class="copy_in_table"></span></td></tr>
-            <tr><td>Right Click, select <strong>'Git Bash Here'</strong></td><td></td><td></td></tr>
-            <tr><td>Copy the <i>[URL]</i> of the repository</td><td>From TFS or <a href="https://github.com/">GitHub</a></td><td></td></tr>
+            <tr><td>If conflicts are reported, navigate to Soure Control</td><td>Click &#39;View | SCM&#39;</td><td></td></tr>
+            <tr><td>Select file with conflict</td><td> Under &#39;Merge Changes&#39; select the file with a &#39;C' on the right hand side   </td><td></td></tr>
+            <tr><td>Navigate to the conflict</td><td class="table_code">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD 
+                <br />
+                <em>code from target_branch 
+                <br />
+                </em>======= 
+                <br />
+                <em>code from source_branch 
+                <br />
+                </em>&gt;&gt;&gt;&gt;&gt;&gt;&gt; &lt;source_branch&gt;</td><td></td></tr>
+            <tr><td>Resolve the conflict</td><td>Above '<<<<<<< HEAD', click either:<ul><li>'Accept Current Change'</li><li>'Accept Incoming Change'</li></ul></td><td></td></tr>
+            <tr><td>Perform the above two steps until all conflicts have been resolved</td><td>-------------</td><td></td></tr>
+            <tr><td>Save the file, close the file</td><td>Click &#39;File | Save&#39;, Click &#39;File | Close Editor&#39;</td><td></td></tr>
+            <tr><td>&#39;Stage&#39; the changed file</td><td>Click the 'Plus' icon. The icon is visible when you hover over the file.<br />
+                <br />
+                Note: the file may not appear in the &#39;staged changes&#39; section if you have chosen the changes that are already in the <em>&lt;target_branch&gt; </em></td><td></td></tr>
+            <tr><td>Conclude resolving conflicts</td><td class="table_code"><a href="https://git.github.io/htmldocs/git-merge.html">git merge --continue</a></td><td><span class="copy_in_table"></span></td><td></td></tr>
+            <tr><td>Enter the commit message, then close commit window </td><td>In the editor window, enter the commit message on the first line. Click 'File | Close Editor'</td><td></td><td></td></tr>
             </tbody>
         </table>
     </div>
