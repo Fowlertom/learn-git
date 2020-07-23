@@ -139,7 +139,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="content\gettingstarted.html" />
     <Content Include="home.html" />
-    <Content Include="images\FAQ\Ruby.jpg" />
+    <Content Include="images\faq\Ruby.jpg" />
     <Content Include="index.html" />
     <Content Include="content\command_synchronize_change\rebase.html" />
     <Content Include="content\resources.html" />
