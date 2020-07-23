@@ -1,41 +1,41 @@
 function Create_Menu_HTML() {
     var str = "";
-	str +="<nav class=\"navbar navbar-expand-sm navbar-light\">";
-	str +="<ul class=\"navbar-nav\">";
+    str += "<nav class=\"navbar navbar-expand-sm navbar-light\">";
+    str += "<ul class=\"navbar-nav\">";
 
-	str += "<li class=\"nav-item dropdown\">";
-	str +="<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">Home</a>";
-	str +="<div class=\"dropdown-menu\">";
-    str +="<a class=\"dropdown-item\" href=\"Content\\Welcome.html\">Welcome</a>";
-    str +="<a class=\"dropdown-item\" href=\"Content\\About.html\">About</a>";
-	str +="</div>";
-	str +="</li>";
+    str += "<li class=\"nav-item dropdown\">";
+    str += "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">Home</a>";
+    str += "<div class=\"dropdown-menu\">";
+    str += "<a class=\"dropdown-item\" href=\"content\\Welcome.html\">Welcome</a>";
+    str += "<a class=\"dropdown-item\" href=\"content\\About.html\">About</a>";
+    str += "</div>";
+    str += "</li>";
 
-    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\GettingStarted.html\" >Getting Started</a></li>";
-    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\HowDoI.html\" >How Do I...</a></li>";
-    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\git_commands.html\" >Git Commands</a></li>";
-    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\remote_actions.html\" >Remote Actions (TFS)</a></li>";
-    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\Resources.html\" >Resources</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"content\\gettingstarted.html\" >Getting Started</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"content\\howdoi.html\" >How Do I...</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"content\\git_commands.html\" >Git Commands</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"content\\remote_actions.html\" >Remote Actions (TFS)</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"content\\resources.html\" >Resources</a></li>";
 
-	str += "<li class=\"nav-item dropdown\">";
-	str += "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">GitFlow</a>";
-	str += "<div class=\"dropdown-menu\">";
-    str += "<a class=\"dropdown-item\" href=\"Content\\GitFlow.html\">Overview</a>";
-	str += "<a class=\"dropdown-item\" href=\"Content\\GitFlow\\GitFlow_commands.html\">Commands</a>";
-	str += "<a class=\"dropdown-item\" href=\"Content\\GitFlow\\GitFlow_visualworkflow.html\">Visual Workflow</a>";
-	str += "</div>";
-	str += "</li>";
-    
-    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\glossary.html\" >Glossary</a></li>";
-    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"Content\\FAQ.html\" >FAQ</a></li>";
-	str +="</ul>";
-	str +="</nav>";
-	return str;
+    str += "<li class=\"nav-item dropdown\">";
+    str += "<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbardrop\" data-toggle=\"dropdown\">GitFlow</a>";
+    str += "<div class=\"dropdown-menu\">";
+    str += "<a class=\"dropdown-item\" href=\"content\\GitFlow.html\">Overview</a>";
+    str += "<a class=\"dropdown-item\" href=\"content\\GitFlow\\GitFlow_commands.html\">Commands</a>";
+    str += "<a class=\"dropdown-item\" href=\"content\\GitFlow\\GitFlow_visualworkflow.html\">Visual Workflow</a>";
+    str += "</div>";
+    str += "</li>";
+
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"content\\glossary.html\" >Glossary</a></li>";
+    str += "<li class=\"nav-item\"><a class=\"nav-link\" href=\"content\\faq.html\" >FAQ</a></li>";
+    str += "</ul>";
+    str += "</nav>";
+    return str;
 }
 
 function Create_CopyInTable_HTML() {
     var str = "";
-    str +="<i class=\"copy_in_table fa fa-copy\" style=\"font-size:24px\" title=\"Copy command\"/>";
+    str += "<i class=\"copy_in_table fa fa-copy\" style=\"font-size:24px\" title=\"Copy command\"/>";
     return str;
 }
 
@@ -75,10 +75,10 @@ function UIInitialize_BasePageMenu() {
     // https://flaviocopes.com/javascript-regular-expressions/#groups
 
     var replacedStr = Create_Menu_HTML();
-    
-    replacedStr = replacedStr.replace('href=\"#\"', 'hrXef=\"#\"');
+
+    replacedStr = replacedStr.replace(/href=\"#\"/g, 'hrXef=\"#\"');
     replacedStr = replacedStr.replace(/href=\"/g, 'href=\"../');
-    replacedStr = replacedStr.replace('hrXef=\"#\"', 'href=\"#\"');
+    replacedStr = replacedStr.replace(/hrXef=\"#\"/g, 'href=\"#\"');
 
     $("#menu").html(replacedStr);
 
@@ -89,9 +89,10 @@ function UIInitialize_SubFolderPageMenu() {
 
     var replacedStr = Create_Menu_HTML();
 
-    replacedStr = replacedStr.replace('href=\"#\"', 'hrXef=\"#\"');
+    replacedStr = replacedStr.replace(/href=\"#\"/g, 'hrXef=\"#\"');
     replacedStr = replacedStr.replace(/href=\"/g, 'href=\"../../');
-    replacedStr = replacedStr.replace('hrXef=\"#\"', 'href=\"#\"');
+    replacedStr = replacedStr.replace(/hrXef=\"#\"/g, 'href=\"#\"');
+
 
     $("#menu").html(replacedStr);
 }
@@ -137,14 +138,14 @@ function EventHandler_CopyClick() {
         var thisID = $(this);
         var target = thisID[0].parentElement.parentElement.previousSibling;
         copyToClipboard(target);
-        }
+    }
     );
 
     $('.copy_in_command.fa-copy').click(function () {
-            var thisID = $(this);
-            var target = thisID[0].parentElement.previousSibling;
-            copyToClipboard(target);
-        }
+        var thisID = $(this);
+        var target = thisID[0].parentElement.previousSibling;
+        copyToClipboard(target);
+    }
     );
 }
 
